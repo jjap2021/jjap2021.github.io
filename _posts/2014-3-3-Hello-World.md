@@ -1,9 +1,10 @@
 ---
 layout: post
-title: Deal or No Deal and Risk Tendencies
+title: Deal or No Deal and Risk Tendencies | Washington College Senior Capstone Experience
 ---
+** THIS IS A WORK IN PROGRESS **
 
-Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).
+While in my Information Economics class, the concept of marginal utility and risk aversion was introduced and my professor had described how difficult something like this was to measure. Pretty much immediately, I thought about connecting this topic to my other class in Machine Learning and creating some model to give me a measure of one's utility. Realizing the undertaking would be a bit more than a little side project, I proposed it to my advisor, Dr. Poulsen, and we thought it would be robust enough to serve as a project I would present to the public.
 
 ![_config.yml]({{ site.baseurl }}/images/config.png)
 
