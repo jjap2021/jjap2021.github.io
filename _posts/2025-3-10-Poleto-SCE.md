@@ -33,8 +33,6 @@ I discovered three resources, with some help from Dr. Poulsen, directly relating
 
 # Simulations of Risk Aversion
 
-# 
-
 
 
 ![_config.yml]({{ site.baseurl }}/images/config.png)
