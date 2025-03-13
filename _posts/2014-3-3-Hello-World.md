@@ -25,7 +25,14 @@ Risk aversion, in simplest terms, is one's tendency to avoid uncertainty, most c
 
 ## Deal or No Deal Side
 
-I discovered three resources, with some help from Dr. Poulsen, directly relating to Deal or No Deal and the functions of the game. The three articles analyzed three different datasets of "Deal or No Deal" and came to similar conclusions. The biggest issue, both ethically and functionally from the standpoint of the game, was that offers were substantially larger in the postgame as compared to the average of the cases left on the board.
+I found three resources, with some help from Dr. Poulsen, directly relating to Deal or No Deal and the functions of the game. The three articles analyzed three different datasets of "Deal or No Deal" and came to similar conclusions. The biggest issue, both ethically and functionally from the standpoint of the game, was that offers were substantially larger in the postgame as compared to the average of the cases left on the board.
+
+### Are Deal or No Deal Offers Fair? - Shifflet (2011)
+Shifflet analyzed 75 episodes to determine how mathematically "fair" the Banker was being in its offers. The author compared offers made during the game and hypothetical offers, after the contestant took a deal. He found that offers during play averaged 76% of the expected value of cases left on the board while hypothetical offers averaged 96%.
+
+### Can the Banker's Offers be Predicted? - Ritcey & Ranjan (2010)
+
+### I figured out how Deal or No Deal works (kind of) - Jared Stock (2021)
 
 # What The Data Tells Us
 
