@@ -31,12 +31,28 @@ I found three resources, with some help from Dr. Poulsen, directly relating to D
 Shifflet analyzed 75 episodes to determine how mathematically "fair" the Banker was being in its offers. The author compared offers made during the game and hypothetical offers, after the contestant took a deal. He found that offers during play averaged 76% of the expected value of cases left on the board while hypothetical offers averaged 96%.
 
 ### Can the Banker's Offers be Predicted? - Ritcey & Ranjan (2010)
+This study analyzed 100 different games of Deal or No Deal to create a mathematical model for the Banker's offers. Ritcey and Ranjan tested three kinds of models: an apporach using proportions, a linear regression model, and a model using key cases as indicators. In the end, the study found that the indicator model was the most accurate, but the researchers further clarified that model would prove incorrect since the Banker noticably deviates from the expected value of remaining cases.
 
 ### I figured out how Deal or No Deal works (kind of) - Jared Stock (2021)
+Stocker's goal was to create an algorithm to predict the Banker's offers as well. Generally, the offers increased over time but were typically a percentage of the board's average. Again, following that which was found by other researchers, Stocker found that the Banker did not necessarily follow a set pattern. Most notably, he found that the Banker tends to offer more in their offer after the contestant has accepted an offer and suggests that the offers are based in a way to highten viewers interests and manipulate contestant psychology.
+
+## Machine Learning theory and utility
 
 # What The Data Tells Us
 
+
 # Creating the Banker
 
+## Methods:
+
+### Linear Regression
+
+### L1 Regularization (LASSO)
+
+### L2 Regression
+
+
 # Simulations of Risk Aversion Types
+
+##
 
