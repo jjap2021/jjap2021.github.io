@@ -4,12 +4,14 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+I am currently a Data Science major with a double-minor in Economics and History at Washington College in Chestertown, MD. My biggest interests in the field are Artificial Intelligence, Large Language Models, Machine Learning, and Big Data. I have extensive experience with Python (with several packages like Pandas, SciKitLearn, MatPlotLib, and more), R, and SQL which I use for both professional work, classwork, and side projects to keep me busy. Below is a description of my time these past four years:
 
-### More Information
+# Favorite Courses
 
-A place to include any other types of information that you'd like to include about yourself.
+# Job Experience and Leadership Positions
 
-### Contact me
+# Goals For The Future
 
-[email@domain.com](mailto:email@domain.com)
+# Contact me
+
+[jjap2021@gmail.com](mailto:email@domain.com)
