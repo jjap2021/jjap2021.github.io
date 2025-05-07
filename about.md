@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-I am currently a Data Science major with a double-minor in Economics and History at Washington College in Chestertown, MD. My biggest interests in the field are Artificial Intelligence, Large Language Models, Machine Learning, and Big Data. I have extensive experience with Python (with several packages like Pandas, SciKitLearn, MatPlotLib, and more), R, and SQL which I use for professional work, classwork, and side projects to keep me busy. Below is a description of my time these past four years:
+I am currently a Data Science major with a double-minor in Economics and History at Washington College in Chestertown, MD. My biggest interests in the field are Artificial Intelligence, Large Language Models, Machine Learning, and Big Data. I have extensive experience with Python (with several packages like Pandas, SciKitLearn, MatPlotLib, and more), R, and SQL which I use for professional work, classwork, and side projects to keep me busy.
 
 
 ## Contact me
