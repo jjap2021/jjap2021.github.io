@@ -10,8 +10,7 @@ I have extensive experience with Python (with several packages like Pandas, SciK
 
 ### Upcoming projects:
 - Recreating The Datagorgon
-- Time series x Baseball statistics
-
+- Kaggle Data Science Competition
 
 ## Contact me
 
