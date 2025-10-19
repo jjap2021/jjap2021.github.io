@@ -3,8 +3,6 @@ layout: post
 title: Creating a Progressive Web App (PWA)
 ---
 
-## Preface
-
 A long-time hobby of mine has been expanding the scope of my music library. I’ve always enjoyed discovering new artists and letting my playlists wander—often by following whatever recommended song Apple Music’s algorithm throws my way.  
 
 In high school, I was lucky enough to have a group of friends who shared that same curiosity for new music. Together, we started **Album Club**.  
@@ -70,10 +68,15 @@ Create and run invite only “album club” leagues. Each season is one full rou
 # 8. Deciding on Platform(s)
 
 **Frontend:** Next.js (App Router) + Tailwind
+
 **Backend/DB:** Supabase (Postgres, SQL, RLS, Edge Functions)
+
 **Hosting:** Vercel (frontend) + Supabase (backend)
+
 **Auth:** None initially (invite link + optional password stored on league)
+
 **Exports:** SQL to CSV endpoints (or Supabase RPC)
+
 **Future:** Add Spotify/Apple/YouTube metadata by provider ID; optional Discord/Calendar later
 
 
