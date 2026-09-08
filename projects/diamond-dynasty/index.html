@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Diamond Dynasty | Fantasy Football League History
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="dashboard.css"
+    >
+</head>
+
+
+<body>
+
+<header class="hero">
+
+    <div class="container">
+
+        <h1>
+            Fantasy Football League History
+        </h1>
+
+        <p class="league-name">
+            Diamond Dynasty
+        </p>
+
+        <p class="subtitle">
+            Records, rivalries, streaks, and statistics
+            from the Diamond Dynasty fantasy football league.
+        </p>
+
+        <div class="hero-meta">
+
+            <span>
+                10 Franchises
+            </span>
+
+            <span>
+                2022–Present
+            </span>
+
+            <span id="game-count">
+                Loading games...
+            </span>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<nav class="dashboard-nav">
+
+    <div class="container nav-links">
+
+        <a href="#standings">
+            Standings
+        </a>
+
+        <a href="#records">
+            Records
+        </a>
+
+        <a href="#streaks">
+            Streaks
+        </a>
+
+        <a href="#rivalries">
+            Rivalries
+        </a>
+
+    </div>
+
+</nav>
+
+
+<main class="container">
+
+
+    <!-- RECORD BOOK -->
+
+    <section
+        id="records"
+        class="section"
+    >
+
+        <div class="section-heading">
+
+            <p class="eyebrow">
+                League History
+            </p>
+
+            <h2>
+                Record Book
+            </h2>
+
+        </div>
+
+        <div
+            id="record-cards"
+            class="record-grid"
+        >
+            <p>
+                Loading records...
+            </p>
+        </div>
+
+    </section>
+
+
+
+    <!-- ALL-TIME STANDINGS -->
+
+    <section
+        id="standings"
+        class="section"
+    >
+
+        <div class="section-heading">
+
+            <p class="eyebrow">
+                Franchise History
+            </p>
+
+            <h2>
+                All-Time Standings
+            </h2>
+
+            <p class="section-description">
+                Click any column heading to sort the standings.
+            </p>
+
+        </div>
+
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th data-sort="rank">
+                            #
+                            <span class="sort-icon"></span>
+                        </th>
+
+                        <th data-sort="manager">
+                            Franchise
+                            <span class="sort-icon"></span>
+                        </th>
+
+                        <th data-sort="wins">
+                            Record
+                            <span class="sort-icon"></span>
+                        </th>
+
+                        <th data-sort="win_pct">
+                            Win %
+                            <span class="sort-icon"></span>
+                        </th>
+
+                        <th data-sort="points_for">
+                            PF
+                            <span class="sort-icon"></span>
+                        </th>
+
+                        <th data-sort="points_against">
+                            PA
+                            <span class="sort-icon"></span>
+                        </th>
+
+                        <th data-sort="point_diff">
+                            Diff
+                            <span class="sort-icon"></span>
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="standings-body">
+
+                    <tr>
+                        <td colspan="7">
+                            Loading standings...
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- STREAKS -->
+
+    <section
+        id="streaks"
+        class="section"
+    >
+
+        <div class="section-heading">
+
+            <p class="eyebrow">
+                Hot & Cold
+            </p>
+
+            <h2>
+                League Streaks
+            </h2>
+
+        </div>
+
+
+        <div
+            id="streak-cards"
+            class="streak-grid"
+        >
+
+            <p>
+                Loading streaks...
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- RIVALRIES -->
+
+    <section
+        id="rivalries"
+        class="section"
+    >
+
+        <div class="section-heading">
+
+            <p class="eyebrow">
+                Head-to-Head
+            </p>
+
+            <h2>
+                Rivalry Explorer
+            </h2>
+
+            <p class="section-description">
+                Select two franchises to explore
+                their complete matchup history.
+            </p>
+
+        </div>
+
+
+        <div class="rivalry-selector">
+
+            <select id="manager-one">
+
+                <option value="">
+                    Select franchise
+                </option>
+
+            </select>
+
+
+            <span class="versus">
+                vs
+            </span>
+
+
+            <select id="manager-two">
+
+                <option value="">
+                    Select franchise
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div
+            id="rivalry-result"
+            class="rivalry-result"
+        >
+
+            <p>
+                Select two franchises above.
+            </p>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<footer>
+
+    <div class="container">
+
+        <p>
+            Diamond Dynasty League Dashboard
+            · Data sourced from Sleeper
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script src="dashboard.js"></script>
+
+</body>
+
+</html>
