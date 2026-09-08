@@ -1,0 +1,638 @@
+{
+  "unique_picks": 82,
+  "total_movements": 151,
+  "trade_frequency": [
+    {
+      "times_traded": 1,
+      "picks": 42
+    },
+    {
+      "times_traded": 2,
+      "picks": 24
+    },
+    {
+      "times_traded": 3,
+      "picks": 8
+    },
+    {
+      "times_traded": 4,
+      "picks": 5
+    },
+    {
+      "times_traded": 5,
+      "picks": 2
+    },
+    {
+      "times_traded": 7,
+      "picks": 1
+    }
+  ],
+  "by_round": [
+    {
+      "round": 1,
+      "picks": 27
+    },
+    {
+      "round": 2,
+      "picks": 33
+    },
+    {
+      "round": 3,
+      "picks": 22
+    }
+  ],
+  "by_original_franchise": [
+    {
+      "franchise": "etmoyer",
+      "picks": 15
+    },
+    {
+      "franchise": "Danthecan",
+      "picks": 12
+    },
+    {
+      "franchise": "PhillyBooBird",
+      "picks": 12
+    },
+    {
+      "franchise": "acricci",
+      "picks": 9
+    },
+    {
+      "franchise": "steeeeeeeeeve",
+      "picks": 9
+    },
+    {
+      "franchise": "Mummanator",
+      "picks": 7
+    },
+    {
+      "franchise": "jackpotFTW",
+      "picks": 6
+    },
+    {
+      "franchise": "Pnewport",
+      "picks": 6
+    },
+    {
+      "franchise": "ComradeCMP",
+      "picks": 3
+    },
+    {
+      "franchise": "RJRJRJ123",
+      "picks": 3
+    }
+  ],
+  "most_traded_picks": [
+    {
+      "pick_id": "PICK-2026-R2-F1",
+      "pick_season": 2026,
+      "round": 2,
+      "original_roster_id": 1,
+      "original_franchise": "Danthecan",
+      "current_roster_id": 10,
+      "current_franchise": "Mummanator",
+      "times_traded": 7,
+      "movements": [
+        {
+          "transaction_id": "1160271636759752704",
+          "league_season": 2024,
+          "week": 10,
+          "created": "2024-11-07T15:20:24.309000+00:00",
+          "from_roster_id": 1,
+          "from_franchise": "Danthecan",
+          "to_roster_id": 5,
+          "to_franchise": "etmoyer"
+        },
+        {
+          "transaction_id": "1184269631372398592",
+          "league_season": 2025,
+          "week": 1,
+          "created": "2025-01-12T20:39:52.085000+00:00",
+          "from_roster_id": 5,
+          "from_franchise": "etmoyer",
+          "to_roster_id": 1,
+          "to_franchise": "Danthecan"
+        },
+        {
+          "transaction_id": "1252738467381649410",
+          "league_season": 2025,
+          "week": 1,
+          "created": "2025-07-20T19:10:34.680000+00:00",
+          "from_roster_id": 1,
+          "from_franchise": "Danthecan",
+          "to_roster_id": 5,
+          "to_franchise": "etmoyer"
+        },
+        {
+          "transaction_id": "1273406579516911616",
+          "league_season": 2025,
+          "week": 2,
+          "created": "2025-09-15T19:58:16.608000+00:00",
+          "from_roster_id": 5,
+          "from_franchise": "etmoyer",
+          "to_roster_id": 10,
+          "to_franchise": "Mummanator"
+        },
+        {
+          "transaction_id": "1280733237416566784",
+          "league_season": 2025,
+          "week": 5,
+          "created": "2025-10-06T01:11:47.975000+00:00",
+          "from_roster_id": 10,
+          "from_franchise": "Mummanator",
+          "to_roster_id": 6,
+          "to_franchise": "RJRJRJ123"
+        },
+        {
+          "transaction_id": "1377385076832079872",
+          "league_season": 2026,
+          "week": 1,
+          "created": "2026-06-29T18:11:42.196000+00:00",
+          "from_roster_id": 6,
+          "from_franchise": "RJRJRJ123",
+          "to_roster_id": 3,
+          "to_franchise": "PhillyBooBird"
+        },
+        {
+          "transaction_id": "1392584191891230720",
+          "league_season": 2026,
+          "week": 1,
+          "created": "2026-08-10T16:47:33.611000+00:00",
+          "from_roster_id": 3,
+          "from_franchise": "PhillyBooBird",
+          "to_roster_id": 10,
+          "to_franchise": "Mummanator"
+        }
+      ]
+    },
+    {
+      "pick_id": "PICK-2024-R1-F5",
+      "pick_season": 2024,
+      "round": 1,
+      "original_roster_id": 5,
+      "original_franchise": "etmoyer",
+      "current_roster_id": 8,
+      "current_franchise": "Pnewport",
+      "times_traded": 5,
+      "movements": [
+        {
+          "transaction_id": "992912574503079936",
+          "league_season": 2023,
+          "week": 1,
+          "created": "2023-08-03T19:35:14.486000+00:00",
+          "from_roster_id": 5,
+          "from_franchise": "etmoyer",
+          "to_roster_id": 1,
+          "to_franchise": "Danthecan"
+        },
+        {
+          "transaction_id": "1031003928340578304",
+          "league_season": 2023,
+          "week": 11,
+          "created": "2023-11-16T22:16:40.944000+00:00",
+          "from_roster_id": 1,
+          "from_franchise": "Danthecan",
+          "to_roster_id": 7,
+          "to_franchise": "jackpotFTW"
+        },
+        {
+          "transaction_id": "1031342760713990144",
+          "league_season": 2023,
+          "week": 11,
+          "created": "2023-11-17T20:43:04.877000+00:00",
+          "from_roster_id": 7,
+          "from_franchise": "jackpotFTW",
+          "to_roster_id": 1,
+          "to_franchise": "Danthecan"
+        },
+        {
+          "transaction_id": "1031347553939378176",
+          "league_season": 2023,
+          "week": 11,
+          "created": "2023-11-17T21:02:07.671000+00:00",
+          "from_roster_id": 1,
+          "from_franchise": "Danthecan",
+          "to_roster_id": 9,
+          "to_franchise": "acricci"
+        },
+        {
+          "transaction_id": "1125953808812711936",
+          "league_season": 2024,
+          "week": 1,
+          "created": "2024-08-04T22:33:36.532000+00:00",
+          "from_roster_id": 9,
+          "from_franchise": "acricci",
+          "to_roster_id": 8,
+          "to_franchise": "Pnewport"
+        }
+      ]
+    },
+    {
+      "pick_id": "PICK-2026-R2-F5",
+      "pick_season": 2026,
+      "round": 2,
+      "original_roster_id": 5,
+      "original_franchise": "etmoyer",
+      "current_roster_id": 2,
+      "current_franchise": "steeeeeeeeeve",
+      "times_traded": 5,
+      "movements": [
+        {
+          "transaction_id": "1030027762809446400",
+          "league_season": 2023,
+          "week": 10,
+          "created": "2023-11-14T05:37:44.945000+00:00",
+          "from_roster_id": 5,
+          "from_franchise": "etmoyer",
+          "to_roster_id": 9,
+          "to_franchise": "acricci"
+        },
+        {
+          "transaction_id": "1256749864276987904",
+          "league_season": 2025,
+          "week": 1,
+          "created": "2025-07-31T20:50:26.228000+00:00",
+          "from_roster_id": 9,
+          "from_franchise": "acricci",
+          "to_roster_id": 1,
+          "to_franchise": "Danthecan"
+        },
+        {
+          "transaction_id": "1385071038798254081",
+          "league_season": 2026,
+          "week": 1,
+          "created": "2026-07-20T23:12:58.327000+00:00",
+          "from_roster_id": 1,
+          "from_franchise": "Danthecan",
+          "to_roster_id": 9,
+          "to_franchise": "acricci"
+        },
+        {
+          "transaction_id": "1391270526839697408",
+          "league_season": 2026,
+          "week": 1,
+          "created": "2026-08-07T01:47:31.457000+00:00",
+          "from_roster_id": 9,
+          "from_franchise": "acricci",
+          "to_roster_id": 3,
+          "to_franchise": "PhillyBooBird"
+        },
+        {
+          "transaction_id": "1392031032802291712",
+          "league_season": 2026,
+          "week": 1,
+          "created": "2026-08-09T04:09:30.208000+00:00",
+          "from_roster_id": 3,
+          "from_franchise": "PhillyBooBird",
+          "to_roster_id": 2,
+          "to_franchise": "steeeeeeeeeve"
+        }
+      ]
+    },
+    {
+      "pick_id": "PICK-2023-R1-F10",
+      "pick_season": 2023,
+      "round": 1,
+      "original_roster_id": 10,
+      "original_franchise": "Mummanator",
+      "current_roster_id": 10,
+      "current_franchise": "Mummanator",
+      "times_traded": 4,
+      "movements": [
+        {
+          "transaction_id": "878504142338072576",
+          "league_season": 2022,
+          "week": 3,
+          "created": "2022-09-22T02:36:58.652000+00:00",
+          "from_roster_id": 10,
+          "from_franchise": "Mummanator",
+          "to_roster_id": 7,
+          "to_franchise": "jackpotFTW"
+        },
+        {
+          "transaction_id": "896506843676057600",
+          "league_season": 2022,
+          "week": 10,
+          "created": "2022-11-10T18:53:17.125000+00:00",
+          "from_roster_id": 7,
+          "from_franchise": "jackpotFTW",
+          "to_roster_id": 8,
+          "to_franchise": "Pnewport"
+        },
+        {
+          "transaction_id": "918339309521080320",
+          "league_season": 2023,
+          "week": 1,
+          "created": "2023-01-10T00:47:42.610000+00:00",
+          "from_roster_id": 8,
+          "from_franchise": "Pnewport",
+          "to_roster_id": 1,
+          "to_franchise": "Danthecan"
+        },
+        {
+          "transaction_id": "991146994171191296",
+          "league_season": 2023,
+          "week": 1,
+          "created": "2023-07-29T22:39:27.332000+00:00",
+          "from_roster_id": 1,
+          "from_franchise": "Danthecan",
+          "to_roster_id": 10,
+          "to_franchise": "Mummanator"
+        }
+      ]
+    },
+    {
+      "pick_id": "PICK-2025-R2-F1",
+      "pick_season": 2025,
+      "round": 2,
+      "original_roster_id": 1,
+      "original_franchise": "Danthecan",
+      "current_roster_id": 9,
+      "current_franchise": "acricci",
+      "times_traded": 4,
+      "movements": [
+        {
+          "transaction_id": "1031347553939378176",
+          "league_season": 2023,
+          "week": 11,
+          "created": "2023-11-17T21:02:07.671000+00:00",
+          "from_roster_id": 1,
+          "from_franchise": "Danthecan",
+          "to_roster_id": 9,
+          "to_franchise": "acricci"
+        },
+        {
+          "transaction_id": "1075131665439154176",
+          "league_season": 2024,
+          "week": 1,
+          "created": "2024-03-17T16:44:33.322000+00:00",
+          "from_roster_id": 9,
+          "from_franchise": "acricci",
+          "to_roster_id": 7,
+          "to_franchise": "jackpotFTW"
+        },
+        {
+          "transaction_id": "1183890604080459776",
+          "league_season": 2025,
+          "week": 1,
+          "created": "2025-01-11T19:33:44.937000+00:00",
+          "from_roster_id": 7,
+          "from_franchise": "jackpotFTW",
+          "to_roster_id": 1,
+          "to_franchise": "Danthecan"
+        },
+        {
+          "transaction_id": "1184366855820095488",
+          "league_season": 2025,
+          "week": 1,
+          "created": "2025-01-13T03:06:12.200000+00:00",
+          "from_roster_id": 1,
+          "from_franchise": "Danthecan",
+          "to_roster_id": 9,
+          "to_franchise": "acricci"
+        }
+      ]
+    },
+    {
+      "pick_id": "PICK-2026-R2-F6",
+      "pick_season": 2026,
+      "round": 2,
+      "original_roster_id": 6,
+      "original_franchise": "RJRJRJ123",
+      "current_roster_id": 1,
+      "current_franchise": "Danthecan",
+      "times_traded": 4,
+      "movements": [
+        {
+          "transaction_id": "1184246411642601472",
+          "league_season": 2025,
+          "week": 1,
+          "created": "2025-01-12T19:07:36.070000+00:00",
+          "from_roster_id": 6,
+          "from_franchise": "RJRJRJ123",
+          "to_roster_id": 1,
+          "to_franchise": "Danthecan"
+        },
+        {
+          "transaction_id": "1184366855820095488",
+          "league_season": 2025,
+          "week": 1,
+          "created": "2025-01-13T03:06:12.200000+00:00",
+          "from_roster_id": 1,
+          "from_franchise": "Danthecan",
+          "to_roster_id": 9,
+          "to_franchise": "acricci"
+        },
+        {
+          "transaction_id": "1275161541448073216",
+          "league_season": 2025,
+          "week": 3,
+          "created": "2025-09-20T16:11:52.138000+00:00",
+          "from_roster_id": 9,
+          "from_franchise": "acricci",
+          "to_roster_id": 6,
+          "to_franchise": "RJRJRJ123"
+        },
+        {
+          "transaction_id": "1377164131047608320",
+          "league_season": 2026,
+          "week": 1,
+          "created": "2026-06-29T03:33:44.615000+00:00",
+          "from_roster_id": 6,
+          "from_franchise": "RJRJRJ123",
+          "to_roster_id": 1,
+          "to_franchise": "Danthecan"
+        }
+      ]
+    },
+    {
+      "pick_id": "PICK-2026-R2-F9",
+      "pick_season": 2026,
+      "round": 2,
+      "original_roster_id": 9,
+      "original_franchise": "acricci",
+      "current_roster_id": 6,
+      "current_franchise": "RJRJRJ123",
+      "times_traded": 4,
+      "movements": [
+        {
+          "transaction_id": "1391270526839697408",
+          "league_season": 2026,
+          "week": 1,
+          "created": "2026-08-07T01:47:31.457000+00:00",
+          "from_roster_id": 9,
+          "from_franchise": "acricci",
+          "to_roster_id": 3,
+          "to_franchise": "PhillyBooBird"
+        },
+        {
+          "transaction_id": "1391624440256671744",
+          "league_season": 2026,
+          "week": 1,
+          "created": "2026-08-08T01:13:50.991000+00:00",
+          "from_roster_id": 3,
+          "from_franchise": "PhillyBooBird",
+          "to_roster_id": 5,
+          "to_franchise": "etmoyer"
+        },
+        {
+          "transaction_id": "1391868573743316992",
+          "league_season": 2026,
+          "week": 1,
+          "created": "2026-08-08T17:23:56.950000+00:00",
+          "from_roster_id": 5,
+          "from_franchise": "etmoyer",
+          "to_roster_id": 2,
+          "to_franchise": "steeeeeeeeeve"
+        },
+        {
+          "transaction_id": "1392583914064723968",
+          "league_season": 2026,
+          "week": 1,
+          "created": "2026-08-10T16:46:27.373000+00:00",
+          "from_roster_id": 2,
+          "from_franchise": "steeeeeeeeeve",
+          "to_roster_id": 6,
+          "to_franchise": "RJRJRJ123"
+        }
+      ]
+    },
+    {
+      "pick_id": "PICK-2026-R3-F3",
+      "pick_season": 2026,
+      "round": 3,
+      "original_roster_id": 3,
+      "original_franchise": "PhillyBooBird",
+      "current_roster_id": 7,
+      "current_franchise": "jackpotFTW",
+      "times_traded": 4,
+      "movements": [
+        {
+          "transaction_id": "1073757185626308608",
+          "league_season": 2024,
+          "week": 1,
+          "created": "2024-03-13T21:42:51.798000+00:00",
+          "from_roster_id": 3,
+          "from_franchise": "PhillyBooBird",
+          "to_roster_id": 5,
+          "to_franchise": "etmoyer"
+        },
+        {
+          "transaction_id": "1273406579516911616",
+          "league_season": 2025,
+          "week": 2,
+          "created": "2025-09-15T19:58:16.608000+00:00",
+          "from_roster_id": 5,
+          "from_franchise": "etmoyer",
+          "to_roster_id": 10,
+          "to_franchise": "Mummanator"
+        },
+        {
+          "transaction_id": "1280733237416566784",
+          "league_season": 2025,
+          "week": 5,
+          "created": "2025-10-06T01:11:47.975000+00:00",
+          "from_roster_id": 10,
+          "from_franchise": "Mummanator",
+          "to_roster_id": 6,
+          "to_franchise": "RJRJRJ123"
+        },
+        {
+          "transaction_id": "1288557896728072192",
+          "league_season": 2025,
+          "week": 8,
+          "created": "2025-10-27T15:24:12.129000+00:00",
+          "from_roster_id": 6,
+          "from_franchise": "RJRJRJ123",
+          "to_roster_id": 7,
+          "to_franchise": "jackpotFTW"
+        }
+      ]
+    },
+    {
+      "pick_id": "PICK-2023-R1-F1",
+      "pick_season": 2023,
+      "round": 1,
+      "original_roster_id": 1,
+      "original_franchise": "Danthecan",
+      "current_roster_id": 3,
+      "current_franchise": "PhillyBooBird",
+      "times_traded": 3,
+      "movements": [
+        {
+          "transaction_id": "875473937264422912",
+          "league_season": 2022,
+          "week": 1,
+          "created": "2022-09-13T17:56:01.464000+00:00",
+          "from_roster_id": 1,
+          "from_franchise": "Danthecan",
+          "to_roster_id": 7,
+          "to_franchise": "jackpotFTW"
+        },
+        {
+          "transaction_id": "896289913228738560",
+          "league_season": 2022,
+          "week": 10,
+          "created": "2022-11-10T04:31:16.876000+00:00",
+          "from_roster_id": 7,
+          "from_franchise": "jackpotFTW",
+          "to_roster_id": 1,
+          "to_franchise": "Danthecan"
+        },
+        {
+          "transaction_id": "896510897357721600",
+          "league_season": 2022,
+          "week": 10,
+          "created": "2022-11-10T19:09:23.598000+00:00",
+          "from_roster_id": 1,
+          "from_franchise": "Danthecan",
+          "to_roster_id": 3,
+          "to_franchise": "PhillyBooBird"
+        }
+      ]
+    },
+    {
+      "pick_id": "PICK-2023-R2-F1",
+      "pick_season": 2023,
+      "round": 2,
+      "original_roster_id": 1,
+      "original_franchise": "Danthecan",
+      "current_roster_id": 3,
+      "current_franchise": "PhillyBooBird",
+      "times_traded": 3,
+      "movements": [
+        {
+          "transaction_id": "875473937264422912",
+          "league_season": 2022,
+          "week": 1,
+          "created": "2022-09-13T17:56:01.464000+00:00",
+          "from_roster_id": 1,
+          "from_franchise": "Danthecan",
+          "to_roster_id": 7,
+          "to_franchise": "jackpotFTW"
+        },
+        {
+          "transaction_id": "878848768290930688",
+          "league_season": 2022,
+          "week": 3,
+          "created": "2022-09-23T01:26:23.882000+00:00",
+          "from_roster_id": 7,
+          "from_franchise": "jackpotFTW",
+          "to_roster_id": 5,
+          "to_franchise": "etmoyer"
+        },
+        {
+          "transaction_id": "990690311607300096",
+          "league_season": 2023,
+          "week": 1,
+          "created": "2023-07-28T16:24:45.724000+00:00",
+          "from_roster_id": 5,
+          "from_franchise": "etmoyer",
+          "to_roster_id": 3,
+          "to_franchise": "PhillyBooBird"
+        }
+      ]
+    }
+  ]
+}

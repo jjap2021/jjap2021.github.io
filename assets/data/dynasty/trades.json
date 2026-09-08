@@ -1,0 +1,6736 @@
+[
+  {
+    "transaction_id": "875473937264422912",
+    "league_season": 2022,
+    "week": 1,
+    "leg": 1,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1663091761464,
+    "created": "2022-09-13T17:56:01.464000+00:00",
+    "status_updated_timestamp": 1663308627076,
+    "status_updated": "2022-09-16T06:10:27.076000+00:00",
+    "creator_user_id": "517079980760150016",
+    "roster_ids": [
+      1,
+      7
+    ],
+    "franchises": [
+      "Danthecan",
+      "jackpotFTW"
+    ],
+    "adds": [
+      {
+        "player_id": "7601",
+        "name": "Rondale Moore",
+        "position": "WR",
+        "team": null,
+        "roster_id": 7,
+        "franchise": "jackpotFTW"
+      },
+      {
+        "player_id": "8146",
+        "name": "Garrett Wilson",
+        "position": "WR",
+        "team": "NYJ",
+        "roster_id": 1,
+        "franchise": "Danthecan"
+      },
+      {
+        "player_id": "8151",
+        "name": "Kenneth Walker",
+        "position": "RB",
+        "team": "KC",
+        "roster_id": 1,
+        "franchise": "Danthecan"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "7601",
+        "name": "Rondale Moore",
+        "position": "WR",
+        "team": null,
+        "roster_id": 1,
+        "franchise": "Danthecan"
+      },
+      {
+        "player_id": "8146",
+        "name": "Garrett Wilson",
+        "position": "WR",
+        "team": "NYJ",
+        "roster_id": 7,
+        "franchise": "jackpotFTW"
+      },
+      {
+        "player_id": "8151",
+        "name": "Kenneth Walker",
+        "position": "RB",
+        "team": "KC",
+        "roster_id": 7,
+        "franchise": "jackpotFTW"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2023-R1-F1",
+        "season": 2023,
+        "round": 1,
+        "original_roster_id": 1,
+        "original_franchise": "Danthecan",
+        "previous_owner_roster_id": 1,
+        "previous_owner_franchise": "Danthecan",
+        "new_owner_roster_id": 7,
+        "new_owner_franchise": "jackpotFTW"
+      },
+      {
+        "pick_id": "PICK-2023-R2-F1",
+        "season": 2023,
+        "round": 2,
+        "original_roster_id": 1,
+        "original_franchise": "Danthecan",
+        "previous_owner_roster_id": 1,
+        "previous_owner_franchise": "Danthecan",
+        "new_owner_roster_id": 7,
+        "new_owner_franchise": "jackpotFTW"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {
+      "is_counter": 1
+    }
+  },
+  {
+    "transaction_id": "878364668685680640",
+    "league_season": 2022,
+    "week": 3,
+    "leg": 3,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1663780965542,
+    "created": "2022-09-21T17:22:45.542000+00:00",
+    "status_updated_timestamp": 1663999847330,
+    "status_updated": "2022-09-24T06:10:47.330000+00:00",
+    "creator_user_id": "517079980760150016",
+    "roster_ids": [
+      1,
+      2
+    ],
+    "franchises": [
+      "Danthecan",
+      "steeeeeeeeeve"
+    ],
+    "adds": [
+      {
+        "player_id": "4199",
+        "name": "Aaron Jones",
+        "position": "RB",
+        "team": "MIN",
+        "roster_id": 2,
+        "franchise": "steeeeeeeeeve"
+      },
+      {
+        "player_id": "6943",
+        "name": "Gabe Davis",
+        "position": "WR",
+        "team": null,
+        "roster_id": 1,
+        "franchise": "Danthecan"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "4199",
+        "name": "Aaron Jones",
+        "position": "RB",
+        "team": "MIN",
+        "roster_id": 1,
+        "franchise": "Danthecan"
+      },
+      {
+        "player_id": "6943",
+        "name": "Gabe Davis",
+        "position": "WR",
+        "team": null,
+        "roster_id": 2,
+        "franchise": "steeeeeeeeeve"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2023-R1-F2",
+        "season": 2023,
+        "round": 1,
+        "original_roster_id": 2,
+        "original_franchise": "steeeeeeeeeve",
+        "previous_owner_roster_id": 2,
+        "previous_owner_franchise": "steeeeeeeeeve",
+        "new_owner_roster_id": 1,
+        "new_owner_franchise": "Danthecan"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {
+      "is_counter": 1
+    }
+  },
+  {
+    "transaction_id": "878504142338072576",
+    "league_season": 2022,
+    "week": 3,
+    "leg": 3,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1663814218652,
+    "created": "2022-09-22T02:36:58.652000+00:00",
+    "status_updated_timestamp": 1664086206856,
+    "status_updated": "2022-09-25T06:10:06.856000+00:00",
+    "creator_user_id": "559132295743279104",
+    "roster_ids": [
+      7,
+      10
+    ],
+    "franchises": [
+      "jackpotFTW",
+      "Mummanator"
+    ],
+    "adds": [
+      {
+        "player_id": "1479",
+        "name": "Keenan Allen",
+        "position": "WR",
+        "team": "IND",
+        "roster_id": 10,
+        "franchise": "Mummanator"
+      },
+      {
+        "player_id": "2216",
+        "name": "Mike Evans",
+        "position": "WR",
+        "team": "SF",
+        "roster_id": 7,
+        "franchise": "jackpotFTW"
+      },
+      {
+        "player_id": "4217",
+        "name": "George Kittle",
+        "position": "TE",
+        "team": "SF",
+        "roster_id": 10,
+        "franchise": "Mummanator"
+      },
+      {
+        "player_id": "5001",
+        "name": "Dalton Schultz",
+        "position": "TE",
+        "team": "HOU",
+        "roster_id": 7,
+        "franchise": "jackpotFTW"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "1479",
+        "name": "Keenan Allen",
+        "position": "WR",
+        "team": "IND",
+        "roster_id": 7,
+        "franchise": "jackpotFTW"
+      },
+      {
+        "player_id": "2216",
+        "name": "Mike Evans",
+        "position": "WR",
+        "team": "SF",
+        "roster_id": 10,
+        "franchise": "Mummanator"
+      },
+      {
+        "player_id": "4217",
+        "name": "George Kittle",
+        "position": "TE",
+        "team": "SF",
+        "roster_id": 7,
+        "franchise": "jackpotFTW"
+      },
+      {
+        "player_id": "5001",
+        "name": "Dalton Schultz",
+        "position": "TE",
+        "team": "HOU",
+        "roster_id": 10,
+        "franchise": "Mummanator"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2023-R1-F10",
+        "season": 2023,
+        "round": 1,
+        "original_roster_id": 10,
+        "original_franchise": "Mummanator",
+        "previous_owner_roster_id": 10,
+        "previous_owner_franchise": "Mummanator",
+        "new_owner_roster_id": 7,
+        "new_owner_franchise": "jackpotFTW"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {
+      "is_counter": 1
+    }
+  },
+  {
+    "transaction_id": "878848768290930688",
+    "league_season": 2022,
+    "week": 3,
+    "leg": 3,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1663896383882,
+    "created": "2022-09-23T01:26:23.882000+00:00",
+    "status_updated_timestamp": 1664086206856,
+    "status_updated": "2022-09-25T06:10:06.856000+00:00",
+    "creator_user_id": "559132295743279104",
+    "roster_ids": [
+      5,
+      7
+    ],
+    "franchises": [
+      "etmoyer",
+      "jackpotFTW"
+    ],
+    "adds": [
+      {
+        "player_id": "1689",
+        "name": "Adam Thielen",
+        "position": "WR",
+        "team": null,
+        "roster_id": 7,
+        "franchise": "jackpotFTW"
+      },
+      {
+        "player_id": "6783",
+        "name": "Jerry Jeudy",
+        "position": "WR",
+        "team": "CLE",
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "1689",
+        "name": "Adam Thielen",
+        "position": "WR",
+        "team": null,
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      },
+      {
+        "player_id": "6783",
+        "name": "Jerry Jeudy",
+        "position": "WR",
+        "team": "CLE",
+        "roster_id": 7,
+        "franchise": "jackpotFTW"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2023-R2-F1",
+        "season": 2023,
+        "round": 2,
+        "original_roster_id": 1,
+        "original_franchise": "Danthecan",
+        "previous_owner_roster_id": 7,
+        "previous_owner_franchise": "jackpotFTW",
+        "new_owner_roster_id": 5,
+        "new_owner_franchise": "etmoyer"
+      },
+      {
+        "pick_id": "PICK-2023-R1-F5",
+        "season": 2023,
+        "round": 1,
+        "original_roster_id": 5,
+        "original_franchise": "etmoyer",
+        "previous_owner_roster_id": 5,
+        "previous_owner_franchise": "etmoyer",
+        "new_owner_roster_id": 7,
+        "new_owner_franchise": "jackpotFTW"
+      },
+      {
+        "pick_id": "PICK-2023-R2-F7",
+        "season": 2023,
+        "round": 2,
+        "original_roster_id": 7,
+        "original_franchise": "jackpotFTW",
+        "previous_owner_roster_id": 7,
+        "previous_owner_franchise": "jackpotFTW",
+        "new_owner_roster_id": 5,
+        "new_owner_franchise": "etmoyer"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {
+      "is_counter": 1
+    }
+  },
+  {
+    "transaction_id": "889539867544055808",
+    "league_season": 2022,
+    "week": 7,
+    "leg": 7,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1666445340575,
+    "created": "2022-10-22T13:29:00.575000+00:00",
+    "status_updated_timestamp": 1666543701208,
+    "status_updated": "2022-10-23T16:48:21.208000+00:00",
+    "creator_user_id": "626798676303499264",
+    "roster_ids": [
+      2,
+      6
+    ],
+    "franchises": [
+      "steeeeeeeeeve",
+      "RJRJRJ123"
+    ],
+    "adds": [
+      {
+        "player_id": "4983",
+        "name": "DJ Moore",
+        "position": "WR",
+        "team": "BUF",
+        "roster_id": 6,
+        "franchise": "RJRJRJ123"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "4983",
+        "name": "DJ Moore",
+        "position": "WR",
+        "team": "BUF",
+        "roster_id": 2,
+        "franchise": "steeeeeeeeeve"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2024-R2-F6",
+        "season": 2024,
+        "round": 2,
+        "original_roster_id": 6,
+        "original_franchise": "RJRJRJ123",
+        "previous_owner_roster_id": 6,
+        "previous_owner_franchise": "RJRJRJ123",
+        "new_owner_roster_id": 2,
+        "new_owner_franchise": "steeeeeeeeeve"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "890772079870574592",
+    "league_season": 2022,
+    "week": 7,
+    "leg": 7,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1666739122887,
+    "created": "2022-10-25T23:05:22.887000+00:00",
+    "status_updated_timestamp": 1666739865850,
+    "status_updated": "2022-10-25T23:17:45.850000+00:00",
+    "creator_user_id": "559135658332524544",
+    "roster_ids": [
+      2,
+      5
+    ],
+    "franchises": [
+      "steeeeeeeeeve",
+      "etmoyer"
+    ],
+    "adds": [
+      {
+        "player_id": "3164",
+        "name": "Ezekiel Elliott",
+        "position": "RB",
+        "team": null,
+        "roster_id": 2,
+        "franchise": "steeeeeeeeeve"
+      },
+      {
+        "player_id": "7528",
+        "name": "Najee Harris",
+        "position": "RB",
+        "team": "NYG",
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "3164",
+        "name": "Ezekiel Elliott",
+        "position": "RB",
+        "team": null,
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      },
+      {
+        "player_id": "7528",
+        "name": "Najee Harris",
+        "position": "RB",
+        "team": "NYG",
+        "roster_id": 2,
+        "franchise": "steeeeeeeeeve"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2023-R3-F5",
+        "season": 2023,
+        "round": 3,
+        "original_roster_id": 5,
+        "original_franchise": "etmoyer",
+        "previous_owner_roster_id": 5,
+        "previous_owner_franchise": "etmoyer",
+        "new_owner_roster_id": 2,
+        "new_owner_franchise": "steeeeeeeeeve"
+      },
+      {
+        "pick_id": "PICK-2023-R2-F7",
+        "season": 2023,
+        "round": 2,
+        "original_roster_id": 7,
+        "original_franchise": "jackpotFTW",
+        "previous_owner_roster_id": 5,
+        "previous_owner_franchise": "etmoyer",
+        "new_owner_roster_id": 2,
+        "new_owner_franchise": "steeeeeeeeeve"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "896289913228738560",
+    "league_season": 2022,
+    "week": 10,
+    "leg": 10,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1668054676876,
+    "created": "2022-11-10T04:31:16.876000+00:00",
+    "status_updated_timestamp": 1668106995305,
+    "status_updated": "2022-11-10T19:03:15.305000+00:00",
+    "creator_user_id": "559132295743279104",
+    "roster_ids": [
+      1,
+      7
+    ],
+    "franchises": [
+      "Danthecan",
+      "jackpotFTW"
+    ],
+    "adds": [
+      {
+        "player_id": "2197",
+        "name": "Brandin Cooks",
+        "position": "WR",
+        "team": null,
+        "roster_id": 1,
+        "franchise": "Danthecan"
+      },
+      {
+        "player_id": "8146",
+        "name": "Garrett Wilson",
+        "position": "WR",
+        "team": "NYJ",
+        "roster_id": 7,
+        "franchise": "jackpotFTW"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "2197",
+        "name": "Brandin Cooks",
+        "position": "WR",
+        "team": null,
+        "roster_id": 7,
+        "franchise": "jackpotFTW"
+      },
+      {
+        "player_id": "8146",
+        "name": "Garrett Wilson",
+        "position": "WR",
+        "team": "NYJ",
+        "roster_id": 1,
+        "franchise": "Danthecan"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2023-R1-F1",
+        "season": 2023,
+        "round": 1,
+        "original_roster_id": 1,
+        "original_franchise": "Danthecan",
+        "previous_owner_roster_id": 7,
+        "previous_owner_franchise": "jackpotFTW",
+        "new_owner_roster_id": 1,
+        "new_owner_franchise": "Danthecan"
+      },
+      {
+        "pick_id": "PICK-2023-R1-F7",
+        "season": 2023,
+        "round": 1,
+        "original_roster_id": 7,
+        "original_franchise": "jackpotFTW",
+        "previous_owner_roster_id": 7,
+        "previous_owner_franchise": "jackpotFTW",
+        "new_owner_roster_id": 1,
+        "new_owner_franchise": "Danthecan"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "896506843676057600",
+    "league_season": 2022,
+    "week": 10,
+    "leg": 10,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1668106397125,
+    "created": "2022-11-10T18:53:17.125000+00:00",
+    "status_updated_timestamp": 1668107001911,
+    "status_updated": "2022-11-10T19:03:21.911000+00:00",
+    "creator_user_id": "694581224353632256",
+    "roster_ids": [
+      7,
+      8
+    ],
+    "franchises": [
+      "jackpotFTW",
+      "Pnewport"
+    ],
+    "adds": [
+      {
+        "player_id": "6786",
+        "name": "CeeDee Lamb",
+        "position": "WR",
+        "team": "DAL",
+        "roster_id": 7,
+        "franchise": "jackpotFTW"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "6786",
+        "name": "CeeDee Lamb",
+        "position": "WR",
+        "team": "DAL",
+        "roster_id": 8,
+        "franchise": "Pnewport"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2023-R1-F10",
+        "season": 2023,
+        "round": 1,
+        "original_roster_id": 10,
+        "original_franchise": "Mummanator",
+        "previous_owner_roster_id": 7,
+        "previous_owner_franchise": "jackpotFTW",
+        "new_owner_roster_id": 8,
+        "new_owner_franchise": "Pnewport"
+      },
+      {
+        "pick_id": "PICK-2023-R1-F5",
+        "season": 2023,
+        "round": 1,
+        "original_roster_id": 5,
+        "original_franchise": "etmoyer",
+        "previous_owner_roster_id": 7,
+        "previous_owner_franchise": "jackpotFTW",
+        "new_owner_roster_id": 8,
+        "new_owner_franchise": "Pnewport"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "896510897357721600",
+    "league_season": 2022,
+    "week": 10,
+    "leg": 10,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1668107363598,
+    "created": "2022-11-10T19:09:23.598000+00:00",
+    "status_updated_timestamp": 1668107624186,
+    "status_updated": "2022-11-10T19:13:44.186000+00:00",
+    "creator_user_id": "517079980760150016",
+    "roster_ids": [
+      1,
+      3
+    ],
+    "franchises": [
+      "Danthecan",
+      "PhillyBooBird"
+    ],
+    "adds": [
+      {
+        "player_id": "6803",
+        "name": "Brandon Aiyuk",
+        "position": "WR",
+        "team": "SF",
+        "roster_id": 3,
+        "franchise": "PhillyBooBird"
+      },
+      {
+        "player_id": "8144",
+        "name": "Chris Olave",
+        "position": "WR",
+        "team": "NO",
+        "roster_id": 1,
+        "franchise": "Danthecan"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "6803",
+        "name": "Brandon Aiyuk",
+        "position": "WR",
+        "team": "SF",
+        "roster_id": 1,
+        "franchise": "Danthecan"
+      },
+      {
+        "player_id": "8144",
+        "name": "Chris Olave",
+        "position": "WR",
+        "team": "NO",
+        "roster_id": 3,
+        "franchise": "PhillyBooBird"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2023-R1-F1",
+        "season": 2023,
+        "round": 1,
+        "original_roster_id": 1,
+        "original_franchise": "Danthecan",
+        "previous_owner_roster_id": 1,
+        "previous_owner_franchise": "Danthecan",
+        "new_owner_roster_id": 3,
+        "new_owner_franchise": "PhillyBooBird"
+      },
+      {
+        "pick_id": "PICK-2023-R1-F2",
+        "season": 2023,
+        "round": 1,
+        "original_roster_id": 2,
+        "original_franchise": "steeeeeeeeeve",
+        "previous_owner_roster_id": 1,
+        "previous_owner_franchise": "Danthecan",
+        "new_owner_roster_id": 3,
+        "new_owner_franchise": "PhillyBooBird"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "900926835284709376",
+    "league_season": 2022,
+    "week": 11,
+    "leg": 11,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1669160205244,
+    "created": "2022-11-22T23:36:45.244000+00:00",
+    "status_updated_timestamp": 1669407951034,
+    "status_updated": "2022-11-25T20:25:51.034000+00:00",
+    "creator_user_id": "559133018459394048",
+    "roster_ids": [
+      3,
+      9
+    ],
+    "franchises": [
+      "PhillyBooBird",
+      "acricci"
+    ],
+    "adds": [
+      {
+        "player_id": "4098",
+        "name": "Kareem Hunt",
+        "position": "RB",
+        "team": null,
+        "roster_id": 3,
+        "franchise": "PhillyBooBird"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "4098",
+        "name": "Kareem Hunt",
+        "position": "RB",
+        "team": null,
+        "roster_id": 9,
+        "franchise": "acricci"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2023-R2-F3",
+        "season": 2023,
+        "round": 2,
+        "original_roster_id": 3,
+        "original_franchise": "PhillyBooBird",
+        "previous_owner_roster_id": 3,
+        "previous_owner_franchise": "PhillyBooBird",
+        "new_owner_roster_id": 9,
+        "new_owner_franchise": "acricci"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "902046370729476096",
+    "league_season": 2022,
+    "week": 12,
+    "leg": 12,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1669427123294,
+    "created": "2022-11-26T01:45:23.294000+00:00",
+    "status_updated_timestamp": 1669427174298,
+    "status_updated": "2022-11-26T01:46:14.298000+00:00",
+    "creator_user_id": "517079980760150016",
+    "roster_ids": [
+      1,
+      7
+    ],
+    "franchises": [
+      "Danthecan",
+      "jackpotFTW"
+    ],
+    "adds": [
+      {
+        "player_id": "6768",
+        "name": "Tua Tagovailoa",
+        "position": "QB",
+        "team": "ATL",
+        "roster_id": 1,
+        "franchise": "Danthecan"
+      },
+      {
+        "player_id": "6943",
+        "name": "Gabe Davis",
+        "position": "WR",
+        "team": null,
+        "roster_id": 7,
+        "franchise": "jackpotFTW"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "6768",
+        "name": "Tua Tagovailoa",
+        "position": "QB",
+        "team": "ATL",
+        "roster_id": 7,
+        "franchise": "jackpotFTW"
+      },
+      {
+        "player_id": "6943",
+        "name": "Gabe Davis",
+        "position": "WR",
+        "team": null,
+        "roster_id": 1,
+        "franchise": "Danthecan"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2024-R2-F1",
+        "season": 2024,
+        "round": 2,
+        "original_roster_id": 1,
+        "original_franchise": "Danthecan",
+        "previous_owner_roster_id": 1,
+        "previous_owner_franchise": "Danthecan",
+        "new_owner_roster_id": 7,
+        "new_owner_franchise": "jackpotFTW"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "918339309521080320",
+    "league_season": 2023,
+    "week": 1,
+    "leg": 1,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1673311662610,
+    "created": "2023-01-10T00:47:42.610000+00:00",
+    "status_updated_timestamp": 1673311837085,
+    "status_updated": "2023-01-10T00:50:37.085000+00:00",
+    "creator_user_id": "694581224353632256",
+    "roster_ids": [
+      1,
+      8
+    ],
+    "franchises": [
+      "Danthecan",
+      "Pnewport"
+    ],
+    "adds": [
+      {
+        "player_id": "4018",
+        "name": "Joe Mixon",
+        "position": "RB",
+        "team": null,
+        "roster_id": 8,
+        "franchise": "Pnewport"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "4018",
+        "name": "Joe Mixon",
+        "position": "RB",
+        "team": null,
+        "roster_id": 1,
+        "franchise": "Danthecan"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2023-R1-F10",
+        "season": 2023,
+        "round": 1,
+        "original_roster_id": 10,
+        "original_franchise": "Mummanator",
+        "previous_owner_roster_id": 8,
+        "previous_owner_franchise": "Pnewport",
+        "new_owner_roster_id": 1,
+        "new_owner_franchise": "Danthecan"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "990484879584370688",
+    "league_season": 2023,
+    "week": 1,
+    "leg": 1,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1690512506913,
+    "created": "2023-07-28T02:48:26.913000+00:00",
+    "status_updated_timestamp": 1690561438406,
+    "status_updated": "2023-07-28T16:23:58.406000+00:00",
+    "creator_user_id": "559132295743279104",
+    "roster_ids": [
+      5,
+      7
+    ],
+    "franchises": [
+      "etmoyer",
+      "jackpotFTW"
+    ],
+    "adds": [
+      {
+        "player_id": "2216",
+        "name": "Mike Evans",
+        "position": "WR",
+        "team": "SF",
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      },
+      {
+        "player_id": "3199",
+        "name": "Michael Thomas",
+        "position": "WR",
+        "team": null,
+        "roster_id": 7,
+        "franchise": "jackpotFTW"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "2216",
+        "name": "Mike Evans",
+        "position": "WR",
+        "team": "SF",
+        "roster_id": 7,
+        "franchise": "jackpotFTW"
+      },
+      {
+        "player_id": "3199",
+        "name": "Michael Thomas",
+        "position": "WR",
+        "team": null,
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      }
+    ],
+    "draft_picks": [],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "990690311607300096",
+    "league_season": 2023,
+    "week": 1,
+    "leg": 1,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1690561485724,
+    "created": "2023-07-28T16:24:45.724000+00:00",
+    "status_updated_timestamp": 1690562289997,
+    "status_updated": "2023-07-28T16:38:09.997000+00:00",
+    "creator_user_id": "559135658332524544",
+    "roster_ids": [
+      3,
+      5
+    ],
+    "franchises": [
+      "PhillyBooBird",
+      "etmoyer"
+    ],
+    "adds": [
+      {
+        "player_id": "2216",
+        "name": "Mike Evans",
+        "position": "WR",
+        "team": "SF",
+        "roster_id": 3,
+        "franchise": "PhillyBooBird"
+      },
+      {
+        "player_id": "8137",
+        "name": "George Pickens",
+        "position": "WR",
+        "team": "DAL",
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "2216",
+        "name": "Mike Evans",
+        "position": "WR",
+        "team": "SF",
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      },
+      {
+        "player_id": "8137",
+        "name": "George Pickens",
+        "position": "WR",
+        "team": "DAL",
+        "roster_id": 3,
+        "franchise": "PhillyBooBird"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2023-R2-F1",
+        "season": 2023,
+        "round": 2,
+        "original_roster_id": 1,
+        "original_franchise": "Danthecan",
+        "previous_owner_roster_id": 5,
+        "previous_owner_franchise": "etmoyer",
+        "new_owner_roster_id": 3,
+        "new_owner_franchise": "PhillyBooBird"
+      },
+      {
+        "pick_id": "PICK-2023-R2-F5",
+        "season": 2023,
+        "round": 2,
+        "original_roster_id": 5,
+        "original_franchise": "etmoyer",
+        "previous_owner_roster_id": 5,
+        "previous_owner_franchise": "etmoyer",
+        "new_owner_roster_id": 3,
+        "new_owner_franchise": "PhillyBooBird"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "990809668417118208",
+    "league_season": 2023,
+    "week": 1,
+    "leg": 1,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1690589942605,
+    "created": "2023-07-29T00:19:02.605000+00:00",
+    "status_updated_timestamp": 1690660122184,
+    "status_updated": "2023-07-29T19:48:42.184000+00:00",
+    "creator_user_id": "559135658332524544",
+    "roster_ids": [
+      5,
+      8
+    ],
+    "franchises": [
+      "etmoyer",
+      "Pnewport"
+    ],
+    "adds": [
+      {
+        "player_id": "5870",
+        "name": "Daniel Jones",
+        "position": "QB",
+        "team": "IND",
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      },
+      {
+        "player_id": "7591",
+        "name": "Justin Fields",
+        "position": "QB",
+        "team": "KC",
+        "roster_id": 8,
+        "franchise": "Pnewport"
+      },
+      {
+        "player_id": "8112",
+        "name": "Drake London",
+        "position": "WR",
+        "team": "ATL",
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "5870",
+        "name": "Daniel Jones",
+        "position": "QB",
+        "team": "IND",
+        "roster_id": 8,
+        "franchise": "Pnewport"
+      },
+      {
+        "player_id": "7591",
+        "name": "Justin Fields",
+        "position": "QB",
+        "team": "KC",
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      },
+      {
+        "player_id": "8112",
+        "name": "Drake London",
+        "position": "WR",
+        "team": "ATL",
+        "roster_id": 8,
+        "franchise": "Pnewport"
+      }
+    ],
+    "draft_picks": [],
+    "waiver_budget": [],
+    "settings": {
+      "is_counter": 1
+    }
+  },
+  {
+    "transaction_id": "991146994171191296",
+    "league_season": 2023,
+    "week": 1,
+    "leg": 1,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1690670367332,
+    "created": "2023-07-29T22:39:27.332000+00:00",
+    "status_updated_timestamp": 1690671337952,
+    "status_updated": "2023-07-29T22:55:37.952000+00:00",
+    "creator_user_id": "517079980760150016",
+    "roster_ids": [
+      1,
+      10
+    ],
+    "franchises": [
+      "Danthecan",
+      "Mummanator"
+    ],
+    "adds": [
+      {
+        "player_id": "7561",
+        "name": "Elijah Mitchell",
+        "position": "RB",
+        "team": null,
+        "roster_id": 10,
+        "franchise": "Mummanator"
+      },
+      {
+        "player_id": "8155",
+        "name": "Breece Hall",
+        "position": "RB",
+        "team": "NYJ",
+        "roster_id": 1,
+        "franchise": "Danthecan"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "7561",
+        "name": "Elijah Mitchell",
+        "position": "RB",
+        "team": null,
+        "roster_id": 1,
+        "franchise": "Danthecan"
+      },
+      {
+        "player_id": "8155",
+        "name": "Breece Hall",
+        "position": "RB",
+        "team": "NYJ",
+        "roster_id": 10,
+        "franchise": "Mummanator"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2023-R1-F10",
+        "season": 2023,
+        "round": 1,
+        "original_roster_id": 10,
+        "original_franchise": "Mummanator",
+        "previous_owner_roster_id": 1,
+        "previous_owner_franchise": "Danthecan",
+        "new_owner_roster_id": 10,
+        "new_owner_franchise": "Mummanator"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "991151250035081216",
+    "league_season": 2023,
+    "week": 1,
+    "leg": 1,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1690671382009,
+    "created": "2023-07-29T22:56:22.009000+00:00",
+    "status_updated_timestamp": 1690672534398,
+    "status_updated": "2023-07-29T23:15:34.398000+00:00",
+    "creator_user_id": "559135658332524544",
+    "roster_ids": [
+      5,
+      10
+    ],
+    "franchises": [
+      "etmoyer",
+      "Mummanator"
+    ],
+    "adds": [
+      {
+        "player_id": "1426",
+        "name": "DeAndre Hopkins",
+        "position": "WR",
+        "team": null,
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      },
+      {
+        "player_id": "4040",
+        "name": "JuJu Smith-Schuster",
+        "position": "WR",
+        "team": null,
+        "roster_id": 10,
+        "franchise": "Mummanator"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "1426",
+        "name": "DeAndre Hopkins",
+        "position": "WR",
+        "team": null,
+        "roster_id": 10,
+        "franchise": "Mummanator"
+      },
+      {
+        "player_id": "4040",
+        "name": "JuJu Smith-Schuster",
+        "position": "WR",
+        "team": null,
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2025-R3-F5",
+        "season": 2025,
+        "round": 3,
+        "original_roster_id": 5,
+        "original_franchise": "etmoyer",
+        "previous_owner_roster_id": 5,
+        "previous_owner_franchise": "etmoyer",
+        "new_owner_roster_id": 10,
+        "new_owner_franchise": "Mummanator"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "992545511318077440",
+    "league_season": 2023,
+    "week": 1,
+    "leg": 1,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1691003799803,
+    "created": "2023-08-02T19:16:39.803000+00:00",
+    "status_updated_timestamp": 1691003914277,
+    "status_updated": "2023-08-02T19:18:34.277000+00:00",
+    "creator_user_id": "517079980760150016",
+    "roster_ids": [
+      1,
+      4
+    ],
+    "franchises": [
+      "Danthecan",
+      "ComradeCMP"
+    ],
+    "adds": [
+      {
+        "player_id": "5185",
+        "name": "Allen Lazard",
+        "position": "WR",
+        "team": null,
+        "roster_id": 4,
+        "franchise": "ComradeCMP"
+      },
+      {
+        "player_id": "9757",
+        "name": "Kendre Miller",
+        "position": "RB",
+        "team": "NO",
+        "roster_id": 1,
+        "franchise": "Danthecan"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "5185",
+        "name": "Allen Lazard",
+        "position": "WR",
+        "team": null,
+        "roster_id": 1,
+        "franchise": "Danthecan"
+      },
+      {
+        "player_id": "9757",
+        "name": "Kendre Miller",
+        "position": "RB",
+        "team": "NO",
+        "roster_id": 4,
+        "franchise": "ComradeCMP"
+      }
+    ],
+    "draft_picks": [],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "992912574503079936",
+    "league_season": 2023,
+    "week": 1,
+    "leg": 1,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1691091314486,
+    "created": "2023-08-03T19:35:14.486000+00:00",
+    "status_updated_timestamp": 1691091389837,
+    "status_updated": "2023-08-03T19:36:29.837000+00:00",
+    "creator_user_id": "517079980760150016",
+    "roster_ids": [
+      1,
+      5
+    ],
+    "franchises": [
+      "Danthecan",
+      "etmoyer"
+    ],
+    "adds": [
+      {
+        "player_id": "1426",
+        "name": "DeAndre Hopkins",
+        "position": "WR",
+        "team": null,
+        "roster_id": 1,
+        "franchise": "Danthecan"
+      },
+      {
+        "player_id": "5859",
+        "name": "A.J. Brown",
+        "position": "WR",
+        "team": "NE",
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      },
+      {
+        "player_id": "5967",
+        "name": "Tony Pollard",
+        "position": "RB",
+        "team": "TEN",
+        "roster_id": 1,
+        "franchise": "Danthecan"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "1426",
+        "name": "DeAndre Hopkins",
+        "position": "WR",
+        "team": null,
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      },
+      {
+        "player_id": "5859",
+        "name": "A.J. Brown",
+        "position": "WR",
+        "team": "NE",
+        "roster_id": 1,
+        "franchise": "Danthecan"
+      },
+      {
+        "player_id": "5967",
+        "name": "Tony Pollard",
+        "position": "RB",
+        "team": "TEN",
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2024-R1-F5",
+        "season": 2024,
+        "round": 1,
+        "original_roster_id": 5,
+        "original_franchise": "etmoyer",
+        "previous_owner_roster_id": 5,
+        "previous_owner_franchise": "etmoyer",
+        "new_owner_roster_id": 1,
+        "new_owner_franchise": "Danthecan"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "1008168737947668480",
+    "league_season": 2023,
+    "week": 2,
+    "leg": 2,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1694728667297,
+    "created": "2023-09-14T21:57:47.297000+00:00",
+    "status_updated_timestamp": 1694728686195,
+    "status_updated": "2023-09-14T21:58:06.195000+00:00",
+    "creator_user_id": "559133018459394048",
+    "roster_ids": [
+      1,
+      3
+    ],
+    "franchises": [
+      "Danthecan",
+      "PhillyBooBird"
+    ],
+    "adds": [
+      {
+        "player_id": "8119",
+        "name": "Jahan Dotson",
+        "position": "WR",
+        "team": "ATL",
+        "roster_id": 3,
+        "franchise": "PhillyBooBird"
+      },
+      {
+        "player_id": "8121",
+        "name": "Romeo Doubs",
+        "position": "WR",
+        "team": "NE",
+        "roster_id": 1,
+        "franchise": "Danthecan"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "8119",
+        "name": "Jahan Dotson",
+        "position": "WR",
+        "team": "ATL",
+        "roster_id": 1,
+        "franchise": "Danthecan"
+      },
+      {
+        "player_id": "8121",
+        "name": "Romeo Doubs",
+        "position": "WR",
+        "team": "NE",
+        "roster_id": 3,
+        "franchise": "PhillyBooBird"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2025-R3-F3",
+        "season": 2025,
+        "round": 3,
+        "original_roster_id": 3,
+        "original_franchise": "PhillyBooBird",
+        "previous_owner_roster_id": 3,
+        "previous_owner_franchise": "PhillyBooBird",
+        "new_owner_roster_id": 1,
+        "new_owner_franchise": "Danthecan"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "1010223568422084608",
+    "league_season": 2023,
+    "week": 3,
+    "leg": 3,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1695218577059,
+    "created": "2023-09-20T14:02:57.059000+00:00",
+    "status_updated_timestamp": 1695223725098,
+    "status_updated": "2023-09-20T15:28:45.098000+00:00",
+    "creator_user_id": "559135658332524544",
+    "roster_ids": [
+      5,
+      10
+    ],
+    "franchises": [
+      "etmoyer",
+      "Mummanator"
+    ],
+    "adds": [
+      {
+        "player_id": "6790",
+        "name": "D'Andre Swift",
+        "position": "RB",
+        "team": "CHI",
+        "roster_id": 10,
+        "franchise": "Mummanator"
+      },
+      {
+        "player_id": "7564",
+        "name": "Ja'Marr Chase",
+        "position": "WR",
+        "team": "CIN",
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      },
+      {
+        "player_id": "8137",
+        "name": "George Pickens",
+        "position": "WR",
+        "team": "DAL",
+        "roster_id": 10,
+        "franchise": "Mummanator"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "6790",
+        "name": "D'Andre Swift",
+        "position": "RB",
+        "team": "CHI",
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      },
+      {
+        "player_id": "7564",
+        "name": "Ja'Marr Chase",
+        "position": "WR",
+        "team": "CIN",
+        "roster_id": 10,
+        "franchise": "Mummanator"
+      },
+      {
+        "player_id": "8137",
+        "name": "George Pickens",
+        "position": "WR",
+        "team": "DAL",
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2024-R3-F5",
+        "season": 2024,
+        "round": 3,
+        "original_roster_id": 5,
+        "original_franchise": "etmoyer",
+        "previous_owner_roster_id": 5,
+        "previous_owner_franchise": "etmoyer",
+        "new_owner_roster_id": 10,
+        "new_owner_franchise": "Mummanator"
+      },
+      {
+        "pick_id": "PICK-2025-R1-F5",
+        "season": 2025,
+        "round": 1,
+        "original_roster_id": 5,
+        "original_franchise": "etmoyer",
+        "previous_owner_roster_id": 5,
+        "previous_owner_franchise": "etmoyer",
+        "new_owner_roster_id": 10,
+        "new_owner_franchise": "Mummanator"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "1012240196894814208",
+    "league_season": 2023,
+    "week": 3,
+    "leg": 3,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1695699378754,
+    "created": "2023-09-26T03:36:18.754000+00:00",
+    "status_updated_timestamp": 1695700256167,
+    "status_updated": "2023-09-26T03:50:56.167000+00:00",
+    "creator_user_id": "559135658332524544",
+    "roster_ids": [
+      4,
+      5
+    ],
+    "franchises": [
+      "ComradeCMP",
+      "etmoyer"
+    ],
+    "adds": [
+      {
+        "player_id": "1166",
+        "name": "Kirk Cousins",
+        "position": "QB",
+        "team": "LV",
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      },
+      {
+        "player_id": "421",
+        "name": "Matthew Stafford",
+        "position": "QB",
+        "team": "LAR",
+        "roster_id": 4,
+        "franchise": "ComradeCMP"
+      },
+      {
+        "player_id": "5850",
+        "name": "Josh Jacobs",
+        "position": "RB",
+        "team": "GB",
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      },
+      {
+        "player_id": "5987",
+        "name": "Alexander Mattison",
+        "position": "RB",
+        "team": null,
+        "roster_id": 4,
+        "franchise": "ComradeCMP"
+      },
+      {
+        "player_id": "6783",
+        "name": "Jerry Jeudy",
+        "position": "WR",
+        "team": "CLE",
+        "roster_id": 4,
+        "franchise": "ComradeCMP"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "1166",
+        "name": "Kirk Cousins",
+        "position": "QB",
+        "team": "LV",
+        "roster_id": 4,
+        "franchise": "ComradeCMP"
+      },
+      {
+        "player_id": "421",
+        "name": "Matthew Stafford",
+        "position": "QB",
+        "team": "LAR",
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      },
+      {
+        "player_id": "5850",
+        "name": "Josh Jacobs",
+        "position": "RB",
+        "team": "GB",
+        "roster_id": 4,
+        "franchise": "ComradeCMP"
+      },
+      {
+        "player_id": "5987",
+        "name": "Alexander Mattison",
+        "position": "RB",
+        "team": null,
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      },
+      {
+        "player_id": "6783",
+        "name": "Jerry Jeudy",
+        "position": "WR",
+        "team": "CLE",
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      }
+    ],
+    "draft_picks": [],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "1015270268564045824",
+    "league_season": 2023,
+    "week": 5,
+    "leg": 5,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1696421804136,
+    "created": "2023-10-04T12:16:44.136000+00:00",
+    "status_updated_timestamp": 1696516842821,
+    "status_updated": "2023-10-05T14:40:42.821000+00:00",
+    "creator_user_id": "559135658332524544",
+    "roster_ids": [
+      2,
+      5
+    ],
+    "franchises": [
+      "steeeeeeeeeve",
+      "etmoyer"
+    ],
+    "adds": [
+      {
+        "player_id": "3214",
+        "name": "Hunter Henry",
+        "position": "TE",
+        "team": "NE",
+        "roster_id": 2,
+        "franchise": "steeeeeeeeeve"
+      },
+      {
+        "player_id": "3294",
+        "name": "Dak Prescott",
+        "position": "QB",
+        "team": "DAL",
+        "roster_id": 2,
+        "franchise": "steeeeeeeeeve"
+      },
+      {
+        "player_id": "6770",
+        "name": "Joe Burrow",
+        "position": "QB",
+        "team": "CIN",
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "3214",
+        "name": "Hunter Henry",
+        "position": "TE",
+        "team": "NE",
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      },
+      {
+        "player_id": "3294",
+        "name": "Dak Prescott",
+        "position": "QB",
+        "team": "DAL",
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      },
+      {
+        "player_id": "6770",
+        "name": "Joe Burrow",
+        "position": "QB",
+        "team": "CIN",
+        "roster_id": 2,
+        "franchise": "steeeeeeeeeve"
+      }
+    ],
+    "draft_picks": [],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "1015275768508788736",
+    "league_season": 2023,
+    "week": 5,
+    "leg": 5,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1696423115425,
+    "created": "2023-10-04T12:38:35.425000+00:00",
+    "status_updated_timestamp": 1696516835591,
+    "status_updated": "2023-10-05T14:40:35.591000+00:00",
+    "creator_user_id": "559135658332524544",
+    "roster_ids": [
+      2,
+      5
+    ],
+    "franchises": [
+      "steeeeeeeeeve",
+      "etmoyer"
+    ],
+    "adds": [
+      {
+        "player_id": "5045",
+        "name": "Courtland Sutton",
+        "position": "WR",
+        "team": "DEN",
+        "roster_id": 2,
+        "franchise": "steeeeeeeeeve"
+      },
+      {
+        "player_id": "7670",
+        "name": "Joshua Palmer",
+        "position": "WR",
+        "team": "BUF",
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "5045",
+        "name": "Courtland Sutton",
+        "position": "WR",
+        "team": "DEN",
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      },
+      {
+        "player_id": "7670",
+        "name": "Joshua Palmer",
+        "position": "WR",
+        "team": "BUF",
+        "roster_id": 2,
+        "franchise": "steeeeeeeeeve"
+      }
+    ],
+    "draft_picks": [],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "1030010893893488640",
+    "league_season": 2023,
+    "week": 10,
+    "leg": 10,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1699936243082,
+    "created": "2023-11-14T04:30:43.082000+00:00",
+    "status_updated_timestamp": 1699937821562,
+    "status_updated": "2023-11-14T04:57:01.562000+00:00",
+    "creator_user_id": "559133018459394048",
+    "roster_ids": [
+      3,
+      9
+    ],
+    "franchises": [
+      "PhillyBooBird",
+      "acricci"
+    ],
+    "adds": [
+      {
+        "player_id": "4663",
+        "name": "Austin Ekeler",
+        "position": "RB",
+        "team": null,
+        "roster_id": 3,
+        "franchise": "PhillyBooBird"
+      },
+      {
+        "player_id": "7588",
+        "name": "Javonte Williams",
+        "position": "RB",
+        "team": "DAL",
+        "roster_id": 9,
+        "franchise": "acricci"
+      },
+      {
+        "player_id": "7611",
+        "name": "Rhamondre Stevenson",
+        "position": "RB",
+        "team": "NE",
+        "roster_id": 9,
+        "franchise": "acricci"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "4663",
+        "name": "Austin Ekeler",
+        "position": "RB",
+        "team": null,
+        "roster_id": 9,
+        "franchise": "acricci"
+      },
+      {
+        "player_id": "7588",
+        "name": "Javonte Williams",
+        "position": "RB",
+        "team": "DAL",
+        "roster_id": 3,
+        "franchise": "PhillyBooBird"
+      },
+      {
+        "player_id": "7611",
+        "name": "Rhamondre Stevenson",
+        "position": "RB",
+        "team": "NE",
+        "roster_id": 3,
+        "franchise": "PhillyBooBird"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2024-R2-F3",
+        "season": 2024,
+        "round": 2,
+        "original_roster_id": 3,
+        "original_franchise": "PhillyBooBird",
+        "previous_owner_roster_id": 3,
+        "previous_owner_franchise": "PhillyBooBird",
+        "new_owner_roster_id": 9,
+        "new_owner_franchise": "acricci"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "1030023453082382336",
+    "league_season": 2023,
+    "week": 10,
+    "leg": 10,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1699939237426,
+    "created": "2023-11-14T05:20:37.426000+00:00",
+    "status_updated_timestamp": 1699939807098,
+    "status_updated": "2023-11-14T05:30:07.098000+00:00",
+    "creator_user_id": "559193893851738112",
+    "roster_ids": [
+      4,
+      9
+    ],
+    "franchises": [
+      "ComradeCMP",
+      "acricci"
+    ],
+    "adds": [
+      {
+        "player_id": "4039",
+        "name": "Cooper Kupp",
+        "position": "WR",
+        "team": "SEA",
+        "roster_id": 9,
+        "franchise": "acricci"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "4039",
+        "name": "Cooper Kupp",
+        "position": "WR",
+        "team": "SEA",
+        "roster_id": 4,
+        "franchise": "ComradeCMP"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2024-R2-F3",
+        "season": 2024,
+        "round": 2,
+        "original_roster_id": 3,
+        "original_franchise": "PhillyBooBird",
+        "previous_owner_roster_id": 9,
+        "previous_owner_franchise": "acricci",
+        "new_owner_roster_id": 4,
+        "new_owner_franchise": "ComradeCMP"
+      },
+      {
+        "pick_id": "PICK-2024-R3-F9",
+        "season": 2024,
+        "round": 3,
+        "original_roster_id": 9,
+        "original_franchise": "acricci",
+        "previous_owner_roster_id": 9,
+        "previous_owner_franchise": "acricci",
+        "new_owner_roster_id": 4,
+        "new_owner_franchise": "ComradeCMP"
+      },
+      {
+        "pick_id": "PICK-2025-R2-F9",
+        "season": 2025,
+        "round": 2,
+        "original_roster_id": 9,
+        "original_franchise": "acricci",
+        "previous_owner_roster_id": 9,
+        "previous_owner_franchise": "acricci",
+        "new_owner_roster_id": 4,
+        "new_owner_franchise": "ComradeCMP"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "1030027762809446400",
+    "league_season": 2023,
+    "week": 10,
+    "leg": 10,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1699940264945,
+    "created": "2023-11-14T05:37:44.945000+00:00",
+    "status_updated_timestamp": 1699940589200,
+    "status_updated": "2023-11-14T05:43:09.200000+00:00",
+    "creator_user_id": "559135658332524544",
+    "roster_ids": [
+      5,
+      9
+    ],
+    "franchises": [
+      "etmoyer",
+      "acricci"
+    ],
+    "adds": [
+      {
+        "player_id": "4039",
+        "name": "Cooper Kupp",
+        "position": "WR",
+        "team": "SEA",
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      },
+      {
+        "player_id": "8112",
+        "name": "Drake London",
+        "position": "WR",
+        "team": "ATL",
+        "roster_id": 9,
+        "franchise": "acricci"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "4039",
+        "name": "Cooper Kupp",
+        "position": "WR",
+        "team": "SEA",
+        "roster_id": 9,
+        "franchise": "acricci"
+      },
+      {
+        "player_id": "8112",
+        "name": "Drake London",
+        "position": "WR",
+        "team": "ATL",
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2026-R2-F5",
+        "season": 2026,
+        "round": 2,
+        "original_roster_id": 5,
+        "original_franchise": "etmoyer",
+        "previous_owner_roster_id": 5,
+        "previous_owner_franchise": "etmoyer",
+        "new_owner_roster_id": 9,
+        "new_owner_franchise": "acricci"
+      },
+      {
+        "pick_id": "PICK-2025-R3-F9",
+        "season": 2025,
+        "round": 3,
+        "original_roster_id": 9,
+        "original_franchise": "acricci",
+        "previous_owner_roster_id": 9,
+        "previous_owner_franchise": "acricci",
+        "new_owner_roster_id": 5,
+        "new_owner_franchise": "etmoyer"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "1031003323668742144",
+    "league_season": 2023,
+    "week": 11,
+    "leg": 11,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1700172856779,
+    "created": "2023-11-16T22:14:16.779000+00:00",
+    "status_updated_timestamp": 1700172970927,
+    "status_updated": "2023-11-16T22:16:10.927000+00:00",
+    "creator_user_id": "559133018459394048",
+    "roster_ids": [
+      3,
+      7
+    ],
+    "franchises": [
+      "PhillyBooBird",
+      "jackpotFTW"
+    ],
+    "adds": [
+      {
+        "player_id": "4981",
+        "name": "Calvin Ridley",
+        "position": "WR",
+        "team": "TEN",
+        "roster_id": 7,
+        "franchise": "jackpotFTW"
+      },
+      {
+        "player_id": "6786",
+        "name": "CeeDee Lamb",
+        "position": "WR",
+        "team": "DAL",
+        "roster_id": 3,
+        "franchise": "PhillyBooBird"
+      },
+      {
+        "player_id": "6819",
+        "name": "Michael Pittman",
+        "position": "WR",
+        "team": "PIT",
+        "roster_id": 7,
+        "franchise": "jackpotFTW"
+      },
+      {
+        "player_id": "8138",
+        "name": "James Cook",
+        "position": "RB",
+        "team": "BUF",
+        "roster_id": 7,
+        "franchise": "jackpotFTW"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "4981",
+        "name": "Calvin Ridley",
+        "position": "WR",
+        "team": "TEN",
+        "roster_id": 3,
+        "franchise": "PhillyBooBird"
+      },
+      {
+        "player_id": "6786",
+        "name": "CeeDee Lamb",
+        "position": "WR",
+        "team": "DAL",
+        "roster_id": 7,
+        "franchise": "jackpotFTW"
+      },
+      {
+        "player_id": "6819",
+        "name": "Michael Pittman",
+        "position": "WR",
+        "team": "PIT",
+        "roster_id": 3,
+        "franchise": "PhillyBooBird"
+      },
+      {
+        "player_id": "8138",
+        "name": "James Cook",
+        "position": "RB",
+        "team": "BUF",
+        "roster_id": 3,
+        "franchise": "PhillyBooBird"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2024-R1-F3",
+        "season": 2024,
+        "round": 1,
+        "original_roster_id": 3,
+        "original_franchise": "PhillyBooBird",
+        "previous_owner_roster_id": 3,
+        "previous_owner_franchise": "PhillyBooBird",
+        "new_owner_roster_id": 7,
+        "new_owner_franchise": "jackpotFTW"
+      },
+      {
+        "pick_id": "PICK-2024-R2-F7",
+        "season": 2024,
+        "round": 2,
+        "original_roster_id": 7,
+        "original_franchise": "jackpotFTW",
+        "previous_owner_roster_id": 7,
+        "previous_owner_franchise": "jackpotFTW",
+        "new_owner_roster_id": 3,
+        "new_owner_franchise": "PhillyBooBird"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "1031003928340578304",
+    "league_season": 2023,
+    "week": 11,
+    "leg": 11,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1700173000944,
+    "created": "2023-11-16T22:16:40.944000+00:00",
+    "status_updated_timestamp": 1700173028786,
+    "status_updated": "2023-11-16T22:17:08.786000+00:00",
+    "creator_user_id": "559132295743279104",
+    "roster_ids": [
+      1,
+      7
+    ],
+    "franchises": [
+      "Danthecan",
+      "jackpotFTW"
+    ],
+    "adds": [
+      {
+        "player_id": "5967",
+        "name": "Tony Pollard",
+        "position": "RB",
+        "team": "TEN",
+        "roster_id": 7,
+        "franchise": "jackpotFTW"
+      },
+      {
+        "player_id": "9502",
+        "name": "Tank Dell",
+        "position": "WR",
+        "team": "HOU",
+        "roster_id": 1,
+        "franchise": "Danthecan"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "5967",
+        "name": "Tony Pollard",
+        "position": "RB",
+        "team": "TEN",
+        "roster_id": 1,
+        "franchise": "Danthecan"
+      },
+      {
+        "player_id": "9502",
+        "name": "Tank Dell",
+        "position": "WR",
+        "team": "HOU",
+        "roster_id": 7,
+        "franchise": "jackpotFTW"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2024-R1-F3",
+        "season": 2024,
+        "round": 1,
+        "original_roster_id": 3,
+        "original_franchise": "PhillyBooBird",
+        "previous_owner_roster_id": 7,
+        "previous_owner_franchise": "jackpotFTW",
+        "new_owner_roster_id": 1,
+        "new_owner_franchise": "Danthecan"
+      },
+      {
+        "pick_id": "PICK-2024-R1-F5",
+        "season": 2024,
+        "round": 1,
+        "original_roster_id": 5,
+        "original_franchise": "etmoyer",
+        "previous_owner_roster_id": 1,
+        "previous_owner_franchise": "Danthecan",
+        "new_owner_roster_id": 7,
+        "new_owner_franchise": "jackpotFTW"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {
+      "is_counter": 1
+    }
+  },
+  {
+    "transaction_id": "1031244557796757504",
+    "league_season": 2023,
+    "week": 11,
+    "leg": 11,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1700230371477,
+    "created": "2023-11-17T14:12:51.477000+00:00",
+    "status_updated_timestamp": 1700235011867,
+    "status_updated": "2023-11-17T15:30:11.867000+00:00",
+    "creator_user_id": "559135658332524544",
+    "roster_ids": [
+      2,
+      5
+    ],
+    "franchises": [
+      "steeeeeeeeeve",
+      "etmoyer"
+    ],
+    "adds": [
+      {
+        "player_id": "3321",
+        "name": "Tyreek Hill",
+        "position": "WR",
+        "team": null,
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      },
+      {
+        "player_id": "5846",
+        "name": "DK Metcalf",
+        "position": "WR",
+        "team": "PIT",
+        "roster_id": 2,
+        "franchise": "steeeeeeeeeve"
+      },
+      {
+        "player_id": "7528",
+        "name": "Najee Harris",
+        "position": "RB",
+        "team": "NYG",
+        "roster_id": 2,
+        "franchise": "steeeeeeeeeve"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "3321",
+        "name": "Tyreek Hill",
+        "position": "WR",
+        "team": null,
+        "roster_id": 2,
+        "franchise": "steeeeeeeeeve"
+      },
+      {
+        "player_id": "5846",
+        "name": "DK Metcalf",
+        "position": "WR",
+        "team": "PIT",
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      },
+      {
+        "player_id": "7528",
+        "name": "Najee Harris",
+        "position": "RB",
+        "team": "NYG",
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      }
+    ],
+    "draft_picks": [],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "1031246903821840384",
+    "league_season": 2023,
+    "week": 11,
+    "leg": 11,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1700230930813,
+    "created": "2023-11-17T14:22:10.813000+00:00",
+    "status_updated_timestamp": 1700416367467,
+    "status_updated": "2023-11-19T17:52:47.467000+00:00",
+    "creator_user_id": "694581224353632256",
+    "roster_ids": [
+      8,
+      10
+    ],
+    "franchises": [
+      "Pnewport",
+      "Mummanator"
+    ],
+    "adds": [
+      {
+        "player_id": "6790",
+        "name": "D'Andre Swift",
+        "position": "RB",
+        "team": "CHI",
+        "roster_id": 8,
+        "franchise": "Pnewport"
+      },
+      {
+        "player_id": "8154",
+        "name": "Brian Robinson",
+        "position": "RB",
+        "team": "ATL",
+        "roster_id": 10,
+        "franchise": "Mummanator"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "6790",
+        "name": "D'Andre Swift",
+        "position": "RB",
+        "team": "CHI",
+        "roster_id": 10,
+        "franchise": "Mummanator"
+      },
+      {
+        "player_id": "8154",
+        "name": "Brian Robinson",
+        "position": "RB",
+        "team": "ATL",
+        "roster_id": 8,
+        "franchise": "Pnewport"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2024-R2-F8",
+        "season": 2024,
+        "round": 2,
+        "original_roster_id": 8,
+        "original_franchise": "Pnewport",
+        "previous_owner_roster_id": 8,
+        "previous_owner_franchise": "Pnewport",
+        "new_owner_roster_id": 10,
+        "new_owner_franchise": "Mummanator"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "1031340284568883200",
+    "league_season": 2023,
+    "week": 11,
+    "leg": 11,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1700253194518,
+    "created": "2023-11-17T20:33:14.518000+00:00",
+    "status_updated_timestamp": 1700416372170,
+    "status_updated": "2023-11-19T17:52:52.170000+00:00",
+    "creator_user_id": "559135658332524544",
+    "roster_ids": [
+      5,
+      10
+    ],
+    "franchises": [
+      "etmoyer",
+      "Mummanator"
+    ],
+    "adds": [
+      {
+        "player_id": "1166",
+        "name": "Kirk Cousins",
+        "position": "QB",
+        "team": "LV",
+        "roster_id": 10,
+        "franchise": "Mummanator"
+      },
+      {
+        "player_id": "3163",
+        "name": "Jared Goff",
+        "position": "QB",
+        "team": "DET",
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "1166",
+        "name": "Kirk Cousins",
+        "position": "QB",
+        "team": "LV",
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      },
+      {
+        "player_id": "3163",
+        "name": "Jared Goff",
+        "position": "QB",
+        "team": "DET",
+        "roster_id": 10,
+        "franchise": "Mummanator"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2025-R3-F9",
+        "season": 2025,
+        "round": 3,
+        "original_roster_id": 9,
+        "original_franchise": "acricci",
+        "previous_owner_roster_id": 5,
+        "previous_owner_franchise": "etmoyer",
+        "new_owner_roster_id": 10,
+        "new_owner_franchise": "Mummanator"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "1031342760713990144",
+    "league_season": 2023,
+    "week": 11,
+    "leg": 11,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1700253784877,
+    "created": "2023-11-17T20:43:04.877000+00:00",
+    "status_updated_timestamp": 1700253840613,
+    "status_updated": "2023-11-17T20:44:00.613000+00:00",
+    "creator_user_id": "517079980760150016",
+    "roster_ids": [
+      1,
+      7
+    ],
+    "franchises": [
+      "Danthecan",
+      "jackpotFTW"
+    ],
+    "adds": [
+      {
+        "player_id": "6813",
+        "name": "Jonathan Taylor",
+        "position": "RB",
+        "team": "IND",
+        "roster_id": 7,
+        "franchise": "jackpotFTW"
+      },
+      {
+        "player_id": "8121",
+        "name": "Romeo Doubs",
+        "position": "WR",
+        "team": "NE",
+        "roster_id": 7,
+        "franchise": "jackpotFTW"
+      },
+      {
+        "player_id": "9758",
+        "name": "C.J. Stroud",
+        "position": "QB",
+        "team": "HOU",
+        "roster_id": 1,
+        "franchise": "Danthecan"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "6813",
+        "name": "Jonathan Taylor",
+        "position": "RB",
+        "team": "IND",
+        "roster_id": 1,
+        "franchise": "Danthecan"
+      },
+      {
+        "player_id": "8121",
+        "name": "Romeo Doubs",
+        "position": "WR",
+        "team": "NE",
+        "roster_id": 1,
+        "franchise": "Danthecan"
+      },
+      {
+        "player_id": "9758",
+        "name": "C.J. Stroud",
+        "position": "QB",
+        "team": "HOU",
+        "roster_id": 7,
+        "franchise": "jackpotFTW"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2024-R1-F1",
+        "season": 2024,
+        "round": 1,
+        "original_roster_id": 1,
+        "original_franchise": "Danthecan",
+        "previous_owner_roster_id": 1,
+        "previous_owner_franchise": "Danthecan",
+        "new_owner_roster_id": 7,
+        "new_owner_franchise": "jackpotFTW"
+      },
+      {
+        "pick_id": "PICK-2024-R1-F5",
+        "season": 2024,
+        "round": 1,
+        "original_roster_id": 5,
+        "original_franchise": "etmoyer",
+        "previous_owner_roster_id": 7,
+        "previous_owner_franchise": "jackpotFTW",
+        "new_owner_roster_id": 1,
+        "new_owner_franchise": "Danthecan"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {
+      "is_counter": 1
+    }
+  },
+  {
+    "transaction_id": "1031347553939378176",
+    "league_season": 2023,
+    "week": 11,
+    "leg": 11,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1700254927671,
+    "created": "2023-11-17T21:02:07.671000+00:00",
+    "status_updated_timestamp": 1700260367164,
+    "status_updated": "2023-11-17T22:32:47.164000+00:00",
+    "creator_user_id": "559193893851738112",
+    "roster_ids": [
+      1,
+      9
+    ],
+    "franchises": [
+      "Danthecan",
+      "acricci"
+    ],
+    "adds": [
+      {
+        "player_id": "9482",
+        "name": "Michael Mayer",
+        "position": "TE",
+        "team": "LV",
+        "roster_id": 1,
+        "franchise": "Danthecan"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "9482",
+        "name": "Michael Mayer",
+        "position": "TE",
+        "team": "LV",
+        "roster_id": 9,
+        "franchise": "acricci"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2025-R2-F1",
+        "season": 2025,
+        "round": 2,
+        "original_roster_id": 1,
+        "original_franchise": "Danthecan",
+        "previous_owner_roster_id": 1,
+        "previous_owner_franchise": "Danthecan",
+        "new_owner_roster_id": 9,
+        "new_owner_franchise": "acricci"
+      },
+      {
+        "pick_id": "PICK-2024-R1-F5",
+        "season": 2024,
+        "round": 1,
+        "original_roster_id": 5,
+        "original_franchise": "etmoyer",
+        "previous_owner_roster_id": 1,
+        "previous_owner_franchise": "Danthecan",
+        "new_owner_roster_id": 9,
+        "new_owner_franchise": "acricci"
+      },
+      {
+        "pick_id": "PICK-2024-R2-F9",
+        "season": 2024,
+        "round": 2,
+        "original_roster_id": 9,
+        "original_franchise": "acricci",
+        "previous_owner_roster_id": 9,
+        "previous_owner_franchise": "acricci",
+        "new_owner_roster_id": 1,
+        "new_owner_franchise": "Danthecan"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {
+      "is_counter": 1
+    }
+  },
+  {
+    "transaction_id": "1073381346422239232",
+    "league_season": 2024,
+    "week": 1,
+    "leg": 1,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1710276564749,
+    "created": "2024-03-12T20:49:24.749000+00:00",
+    "status_updated_timestamp": 1710483033799,
+    "status_updated": "2024-03-15T06:10:33.799000+00:00",
+    "creator_user_id": "559193893851738112",
+    "roster_ids": [
+      5,
+      9
+    ],
+    "franchises": [
+      "etmoyer",
+      "acricci"
+    ],
+    "adds": [
+      {
+        "player_id": "1234",
+        "name": "Russell Wilson",
+        "position": "QB",
+        "team": null,
+        "roster_id": 9,
+        "franchise": "acricci"
+      },
+      {
+        "player_id": "8143",
+        "name": "Jerome Ford",
+        "position": "RB",
+        "team": "WAS",
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      },
+      {
+        "player_id": "9511",
+        "name": "Keaton Mitchell",
+        "position": "RB",
+        "team": "LAC",
+        "roster_id": 9,
+        "franchise": "acricci"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "1234",
+        "name": "Russell Wilson",
+        "position": "QB",
+        "team": null,
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      },
+      {
+        "player_id": "8143",
+        "name": "Jerome Ford",
+        "position": "RB",
+        "team": "WAS",
+        "roster_id": 9,
+        "franchise": "acricci"
+      },
+      {
+        "player_id": "9511",
+        "name": "Keaton Mitchell",
+        "position": "RB",
+        "team": "LAC",
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      }
+    ],
+    "draft_picks": [],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "1073757185626308608",
+    "league_season": 2024,
+    "week": 1,
+    "leg": 1,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1710366171798,
+    "created": "2024-03-13T21:42:51.798000+00:00",
+    "status_updated_timestamp": 1710569427221,
+    "status_updated": "2024-03-16T06:10:27.221000+00:00",
+    "creator_user_id": "559135658332524544",
+    "roster_ids": [
+      3,
+      5
+    ],
+    "franchises": [
+      "PhillyBooBird",
+      "etmoyer"
+    ],
+    "adds": [
+      {
+        "player_id": "9999",
+        "name": "Will Levis",
+        "position": "QB",
+        "team": null,
+        "roster_id": 3,
+        "franchise": "PhillyBooBird"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "9999",
+        "name": "Will Levis",
+        "position": "QB",
+        "team": null,
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2026-R3-F3",
+        "season": 2026,
+        "round": 3,
+        "original_roster_id": 3,
+        "original_franchise": "PhillyBooBird",
+        "previous_owner_roster_id": 3,
+        "previous_owner_franchise": "PhillyBooBird",
+        "new_owner_roster_id": 5,
+        "new_owner_franchise": "etmoyer"
+      },
+      {
+        "pick_id": "PICK-2024-R2-F5",
+        "season": 2024,
+        "round": 2,
+        "original_roster_id": 5,
+        "original_franchise": "etmoyer",
+        "previous_owner_roster_id": 5,
+        "previous_owner_franchise": "etmoyer",
+        "new_owner_roster_id": 3,
+        "new_owner_franchise": "PhillyBooBird"
+      },
+      {
+        "pick_id": "PICK-2024-R2-F7",
+        "season": 2024,
+        "round": 2,
+        "original_roster_id": 7,
+        "original_franchise": "jackpotFTW",
+        "previous_owner_roster_id": 3,
+        "previous_owner_franchise": "PhillyBooBird",
+        "new_owner_roster_id": 5,
+        "new_owner_franchise": "etmoyer"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {
+      "is_counter": 1
+    }
+  },
+  {
+    "transaction_id": "1075131665439154176",
+    "league_season": 2024,
+    "week": 1,
+    "leg": 1,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1710693873322,
+    "created": "2024-03-17T16:44:33.322000+00:00",
+    "status_updated_timestamp": 1710915048852,
+    "status_updated": "2024-03-20T06:10:48.852000+00:00",
+    "creator_user_id": "559132295743279104",
+    "roster_ids": [
+      7,
+      9
+    ],
+    "franchises": [
+      "jackpotFTW",
+      "acricci"
+    ],
+    "adds": [
+      {
+        "player_id": "6819",
+        "name": "Michael Pittman",
+        "position": "WR",
+        "team": "PIT",
+        "roster_id": 9,
+        "franchise": "acricci"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "6819",
+        "name": "Michael Pittman",
+        "position": "WR",
+        "team": "PIT",
+        "roster_id": 7,
+        "franchise": "jackpotFTW"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2024-R1-F1",
+        "season": 2024,
+        "round": 1,
+        "original_roster_id": 1,
+        "original_franchise": "Danthecan",
+        "previous_owner_roster_id": 7,
+        "previous_owner_franchise": "jackpotFTW",
+        "new_owner_roster_id": 9,
+        "new_owner_franchise": "acricci"
+      },
+      {
+        "pick_id": "PICK-2025-R2-F1",
+        "season": 2025,
+        "round": 2,
+        "original_roster_id": 1,
+        "original_franchise": "Danthecan",
+        "previous_owner_roster_id": 9,
+        "previous_owner_franchise": "acricci",
+        "new_owner_roster_id": 7,
+        "new_owner_franchise": "jackpotFTW"
+      },
+      {
+        "pick_id": "PICK-2024-R1-F9",
+        "season": 2024,
+        "round": 1,
+        "original_roster_id": 9,
+        "original_franchise": "acricci",
+        "previous_owner_roster_id": 9,
+        "previous_owner_franchise": "acricci",
+        "new_owner_roster_id": 7,
+        "new_owner_franchise": "jackpotFTW"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "1093356523570556928",
+    "league_season": 2024,
+    "week": 1,
+    "leg": 1,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1715039018102,
+    "created": "2024-05-06T23:43:38.102000+00:00",
+    "status_updated_timestamp": 1715041178885,
+    "status_updated": "2024-05-07T00:19:38.885000+00:00",
+    "creator_user_id": "560265743531290624",
+    "roster_ids": [
+      4,
+      10
+    ],
+    "franchises": [
+      "ComradeCMP",
+      "Mummanator"
+    ],
+    "adds": [
+      {
+        "player_id": "4866",
+        "name": "Saquon Barkley",
+        "position": "RB",
+        "team": "PHI",
+        "roster_id": 10,
+        "franchise": "Mummanator"
+      },
+      {
+        "player_id": "6783",
+        "name": "Jerry Jeudy",
+        "position": "WR",
+        "team": "CLE",
+        "roster_id": 10,
+        "franchise": "Mummanator"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "4866",
+        "name": "Saquon Barkley",
+        "position": "RB",
+        "team": "PHI",
+        "roster_id": 4,
+        "franchise": "ComradeCMP"
+      },
+      {
+        "player_id": "6783",
+        "name": "Jerry Jeudy",
+        "position": "WR",
+        "team": "CLE",
+        "roster_id": 4,
+        "franchise": "ComradeCMP"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2024-R2-F10",
+        "season": 2024,
+        "round": 2,
+        "original_roster_id": 10,
+        "original_franchise": "Mummanator",
+        "previous_owner_roster_id": 10,
+        "previous_owner_franchise": "Mummanator",
+        "new_owner_roster_id": 4,
+        "new_owner_franchise": "ComradeCMP"
+      },
+      {
+        "pick_id": "PICK-2025-R1-F5",
+        "season": 2025,
+        "round": 1,
+        "original_roster_id": 5,
+        "original_franchise": "etmoyer",
+        "previous_owner_roster_id": 10,
+        "previous_owner_franchise": "Mummanator",
+        "new_owner_roster_id": 4,
+        "new_owner_franchise": "ComradeCMP"
+      },
+      {
+        "pick_id": "PICK-2024-R2-F8",
+        "season": 2024,
+        "round": 2,
+        "original_roster_id": 8,
+        "original_franchise": "Pnewport",
+        "previous_owner_roster_id": 10,
+        "previous_owner_franchise": "Mummanator",
+        "new_owner_roster_id": 4,
+        "new_owner_franchise": "ComradeCMP"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "1125912498856734720",
+    "league_season": 2024,
+    "week": 1,
+    "leg": 1,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1722800967471,
+    "created": "2024-08-04T19:49:27.471000+00:00",
+    "status_updated_timestamp": 1722801068530,
+    "status_updated": "2024-08-04T19:51:08.530000+00:00",
+    "creator_user_id": "559210519766609920",
+    "roster_ids": [
+      2,
+      4
+    ],
+    "franchises": [
+      "steeeeeeeeeve",
+      "ComradeCMP"
+    ],
+    "adds": [
+      {
+        "player_id": "5892",
+        "name": "David Montgomery",
+        "position": "RB",
+        "team": "HOU",
+        "roster_id": 2,
+        "franchise": "steeeeeeeeeve"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "5892",
+        "name": "David Montgomery",
+        "position": "RB",
+        "team": "HOU",
+        "roster_id": 4,
+        "franchise": "ComradeCMP"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2024-R2-F2",
+        "season": 2024,
+        "round": 2,
+        "original_roster_id": 2,
+        "original_franchise": "steeeeeeeeeve",
+        "previous_owner_roster_id": 2,
+        "previous_owner_franchise": "steeeeeeeeeve",
+        "new_owner_roster_id": 4,
+        "new_owner_franchise": "ComradeCMP"
+      },
+      {
+        "pick_id": "PICK-2024-R3-F4",
+        "season": 2024,
+        "round": 3,
+        "original_roster_id": 4,
+        "original_franchise": "ComradeCMP",
+        "previous_owner_roster_id": 4,
+        "previous_owner_franchise": "ComradeCMP",
+        "new_owner_roster_id": 2,
+        "new_owner_franchise": "steeeeeeeeeve"
+      },
+      {
+        "pick_id": "PICK-2024-R2-F6",
+        "season": 2024,
+        "round": 2,
+        "original_roster_id": 6,
+        "original_franchise": "RJRJRJ123",
+        "previous_owner_roster_id": 2,
+        "previous_owner_franchise": "steeeeeeeeeve",
+        "new_owner_roster_id": 4,
+        "new_owner_franchise": "ComradeCMP"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "1125953808812711936",
+    "league_season": 2024,
+    "week": 1,
+    "leg": 1,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1722810816532,
+    "created": "2024-08-04T22:33:36.532000+00:00",
+    "status_updated_timestamp": 1722810931456,
+    "status_updated": "2024-08-04T22:35:31.456000+00:00",
+    "creator_user_id": "694581224353632256",
+    "roster_ids": [
+      8,
+      9
+    ],
+    "franchises": [
+      "Pnewport",
+      "acricci"
+    ],
+    "adds": [],
+    "drops": [],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2024-R1-F5",
+        "season": 2024,
+        "round": 1,
+        "original_roster_id": 5,
+        "original_franchise": "etmoyer",
+        "previous_owner_roster_id": 9,
+        "previous_owner_franchise": "acricci",
+        "new_owner_roster_id": 8,
+        "new_owner_franchise": "Pnewport"
+      },
+      {
+        "pick_id": "PICK-2025-R1-F8",
+        "season": 2025,
+        "round": 1,
+        "original_roster_id": 8,
+        "original_franchise": "Pnewport",
+        "previous_owner_roster_id": 8,
+        "previous_owner_franchise": "Pnewport",
+        "new_owner_roster_id": 9,
+        "new_owner_franchise": "acricci"
+      },
+      {
+        "pick_id": "PICK-2026-R2-F8",
+        "season": 2026,
+        "round": 2,
+        "original_roster_id": 8,
+        "original_franchise": "Pnewport",
+        "previous_owner_roster_id": 8,
+        "previous_owner_franchise": "Pnewport",
+        "new_owner_roster_id": 9,
+        "new_owner_franchise": "acricci"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "1127709751909023744",
+    "league_season": 2024,
+    "week": 1,
+    "leg": 1,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1723229465990,
+    "created": "2024-08-09T18:51:05.990000+00:00",
+    "status_updated_timestamp": 1723229739316,
+    "status_updated": "2024-08-09T18:55:39.316000+00:00",
+    "creator_user_id": "517079980760150016",
+    "roster_ids": [
+      1,
+      3
+    ],
+    "franchises": [
+      "Danthecan",
+      "PhillyBooBird"
+    ],
+    "adds": [
+      {
+        "player_id": "8155",
+        "name": "Breece Hall",
+        "position": "RB",
+        "team": "NYJ",
+        "roster_id": 3,
+        "franchise": "PhillyBooBird"
+      },
+      {
+        "player_id": "9226",
+        "name": "De'Von Achane",
+        "position": "RB",
+        "team": "MIA",
+        "roster_id": 1,
+        "franchise": "Danthecan"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "8155",
+        "name": "Breece Hall",
+        "position": "RB",
+        "team": "NYJ",
+        "roster_id": 1,
+        "franchise": "Danthecan"
+      },
+      {
+        "player_id": "9226",
+        "name": "De'Von Achane",
+        "position": "RB",
+        "team": "MIA",
+        "roster_id": 3,
+        "franchise": "PhillyBooBird"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2025-R1-F3",
+        "season": 2025,
+        "round": 1,
+        "original_roster_id": 3,
+        "original_franchise": "PhillyBooBird",
+        "previous_owner_roster_id": 3,
+        "previous_owner_franchise": "PhillyBooBird",
+        "new_owner_roster_id": 1,
+        "new_owner_franchise": "Danthecan"
+      },
+      {
+        "pick_id": "PICK-2025-R3-F3",
+        "season": 2025,
+        "round": 3,
+        "original_roster_id": 3,
+        "original_franchise": "PhillyBooBird",
+        "previous_owner_roster_id": 1,
+        "previous_owner_franchise": "Danthecan",
+        "new_owner_roster_id": 3,
+        "new_owner_franchise": "PhillyBooBird"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "1128923145064275968",
+    "league_season": 2024,
+    "week": 1,
+    "leg": 1,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1723518761462,
+    "created": "2024-08-13T03:12:41.462000+00:00",
+    "status_updated_timestamp": 1723518921052,
+    "status_updated": "2024-08-13T03:15:21.052000+00:00",
+    "creator_user_id": "517079980760150016",
+    "roster_ids": [
+      1,
+      5
+    ],
+    "franchises": [
+      "Danthecan",
+      "etmoyer"
+    ],
+    "adds": [
+      {
+        "player_id": "8139",
+        "name": "Zamir White",
+        "position": "RB",
+        "team": "NO",
+        "roster_id": 1,
+        "franchise": "Danthecan"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "8139",
+        "name": "Zamir White",
+        "position": "RB",
+        "team": "NO",
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2026-R1-F1",
+        "season": 2026,
+        "round": 1,
+        "original_roster_id": 1,
+        "original_franchise": "Danthecan",
+        "previous_owner_roster_id": 1,
+        "previous_owner_franchise": "Danthecan",
+        "new_owner_roster_id": 5,
+        "new_owner_franchise": "etmoyer"
+      },
+      {
+        "pick_id": "PICK-2026-R3-F1",
+        "season": 2026,
+        "round": 3,
+        "original_roster_id": 1,
+        "original_franchise": "Danthecan",
+        "previous_owner_roster_id": 1,
+        "previous_owner_franchise": "Danthecan",
+        "new_owner_roster_id": 5,
+        "new_owner_franchise": "etmoyer"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "1159933642823802880",
+    "league_season": 2024,
+    "week": 10,
+    "leg": 10,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1730912240275,
+    "created": "2024-11-06T16:57:20.275000+00:00",
+    "status_updated_timestamp": 1730921812877,
+    "status_updated": "2024-11-06T19:36:52.877000+00:00",
+    "creator_user_id": "559135658332524544",
+    "roster_ids": [
+      5,
+      10
+    ],
+    "franchises": [
+      "etmoyer",
+      "Mummanator"
+    ],
+    "adds": [
+      {
+        "player_id": "4098",
+        "name": "Kareem Hunt",
+        "position": "RB",
+        "team": null,
+        "roster_id": 10,
+        "franchise": "Mummanator"
+      },
+      {
+        "player_id": "5850",
+        "name": "Josh Jacobs",
+        "position": "RB",
+        "team": "GB",
+        "roster_id": 10,
+        "franchise": "Mummanator"
+      },
+      {
+        "player_id": "8154",
+        "name": "Brian Robinson",
+        "position": "RB",
+        "team": "ATL",
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "4098",
+        "name": "Kareem Hunt",
+        "position": "RB",
+        "team": null,
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      },
+      {
+        "player_id": "5850",
+        "name": "Josh Jacobs",
+        "position": "RB",
+        "team": "GB",
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      },
+      {
+        "player_id": "8154",
+        "name": "Brian Robinson",
+        "position": "RB",
+        "team": "ATL",
+        "roster_id": 10,
+        "franchise": "Mummanator"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2025-R1-F10",
+        "season": 2025,
+        "round": 1,
+        "original_roster_id": 10,
+        "original_franchise": "Mummanator",
+        "previous_owner_roster_id": 10,
+        "previous_owner_franchise": "Mummanator",
+        "new_owner_roster_id": 5,
+        "new_owner_franchise": "etmoyer"
+      },
+      {
+        "pick_id": "PICK-2025-R2-F10",
+        "season": 2025,
+        "round": 2,
+        "original_roster_id": 10,
+        "original_franchise": "Mummanator",
+        "previous_owner_roster_id": 10,
+        "previous_owner_franchise": "Mummanator",
+        "new_owner_roster_id": 5,
+        "new_owner_franchise": "etmoyer"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {
+      "is_counter": 1
+    }
+  },
+  {
+    "transaction_id": "1160271636759752704",
+    "league_season": 2024,
+    "week": 10,
+    "leg": 10,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1730992824309,
+    "created": "2024-11-07T15:20:24.309000+00:00",
+    "status_updated_timestamp": 1731004263227,
+    "status_updated": "2024-11-07T18:31:03.227000+00:00",
+    "creator_user_id": "517079980760150016",
+    "roster_ids": [
+      1,
+      5
+    ],
+    "franchises": [
+      "Danthecan",
+      "etmoyer"
+    ],
+    "adds": [
+      {
+        "player_id": "11563",
+        "name": "Bo Nix",
+        "position": "QB",
+        "team": "DEN",
+        "roster_id": 1,
+        "franchise": "Danthecan"
+      },
+      {
+        "player_id": "11575",
+        "name": "Ray Davis",
+        "position": "RB",
+        "team": "BUF",
+        "roster_id": 1,
+        "franchise": "Danthecan"
+      },
+      {
+        "player_id": "8151",
+        "name": "Kenneth Walker",
+        "position": "RB",
+        "team": "KC",
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "11563",
+        "name": "Bo Nix",
+        "position": "QB",
+        "team": "DEN",
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      },
+      {
+        "player_id": "11575",
+        "name": "Ray Davis",
+        "position": "RB",
+        "team": "BUF",
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      },
+      {
+        "player_id": "8151",
+        "name": "Kenneth Walker",
+        "position": "RB",
+        "team": "KC",
+        "roster_id": 1,
+        "franchise": "Danthecan"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2026-R2-F1",
+        "season": 2026,
+        "round": 2,
+        "original_roster_id": 1,
+        "original_franchise": "Danthecan",
+        "previous_owner_roster_id": 1,
+        "previous_owner_franchise": "Danthecan",
+        "new_owner_roster_id": 5,
+        "new_owner_franchise": "etmoyer"
+      },
+      {
+        "pick_id": "PICK-2025-R1-F10",
+        "season": 2025,
+        "round": 1,
+        "original_roster_id": 10,
+        "original_franchise": "Mummanator",
+        "previous_owner_roster_id": 5,
+        "previous_owner_franchise": "etmoyer",
+        "new_owner_roster_id": 1,
+        "new_owner_franchise": "Danthecan"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {
+      "is_counter": 1
+    }
+  },
+  {
+    "transaction_id": "1181711987870662656",
+    "league_season": 2025,
+    "week": 1,
+    "leg": 1,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1736104602356,
+    "created": "2025-01-05T19:16:42.356000+00:00",
+    "status_updated_timestamp": 1736622491820,
+    "status_updated": "2025-01-11T19:08:11.820000+00:00",
+    "creator_user_id": "517080755628453888",
+    "roster_ids": [
+      6,
+      7
+    ],
+    "franchises": [
+      "RJRJRJ123",
+      "jackpotFTW"
+    ],
+    "adds": [
+      {
+        "player_id": "11618",
+        "name": "Jalen McMillan",
+        "position": "WR",
+        "team": "TB",
+        "roster_id": 6,
+        "franchise": "RJRJRJ123"
+      },
+      {
+        "player_id": "4033",
+        "name": "David Njoku",
+        "position": "TE",
+        "team": "LAC",
+        "roster_id": 7,
+        "franchise": "jackpotFTW"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "11618",
+        "name": "Jalen McMillan",
+        "position": "WR",
+        "team": "TB",
+        "roster_id": 7,
+        "franchise": "jackpotFTW"
+      },
+      {
+        "player_id": "4033",
+        "name": "David Njoku",
+        "position": "TE",
+        "team": "LAC",
+        "roster_id": 6,
+        "franchise": "RJRJRJ123"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2025-R3-F6",
+        "season": 2025,
+        "round": 3,
+        "original_roster_id": 6,
+        "original_franchise": "RJRJRJ123",
+        "previous_owner_roster_id": 6,
+        "previous_owner_franchise": "RJRJRJ123",
+        "new_owner_roster_id": 7,
+        "new_owner_franchise": "jackpotFTW"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "1183890604080459776",
+    "league_season": 2025,
+    "week": 1,
+    "leg": 1,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1736624024937,
+    "created": "2025-01-11T19:33:44.937000+00:00",
+    "status_updated_timestamp": 1736628874846,
+    "status_updated": "2025-01-11T20:54:34.846000+00:00",
+    "creator_user_id": "559132295743279104",
+    "roster_ids": [
+      1,
+      7
+    ],
+    "franchises": [
+      "Danthecan",
+      "jackpotFTW"
+    ],
+    "adds": [
+      {
+        "player_id": "8121",
+        "name": "Romeo Doubs",
+        "position": "WR",
+        "team": "NE",
+        "roster_id": 1,
+        "franchise": "Danthecan"
+      },
+      {
+        "player_id": "8138",
+        "name": "James Cook",
+        "position": "RB",
+        "team": "BUF",
+        "roster_id": 1,
+        "franchise": "Danthecan"
+      },
+      {
+        "player_id": "8144",
+        "name": "Chris Olave",
+        "position": "WR",
+        "team": "NO",
+        "roster_id": 7,
+        "franchise": "jackpotFTW"
+      },
+      {
+        "player_id": "9758",
+        "name": "C.J. Stroud",
+        "position": "QB",
+        "team": "HOU",
+        "roster_id": 7,
+        "franchise": "jackpotFTW"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "8121",
+        "name": "Romeo Doubs",
+        "position": "WR",
+        "team": "NE",
+        "roster_id": 7,
+        "franchise": "jackpotFTW"
+      },
+      {
+        "player_id": "8138",
+        "name": "James Cook",
+        "position": "RB",
+        "team": "BUF",
+        "roster_id": 7,
+        "franchise": "jackpotFTW"
+      },
+      {
+        "player_id": "8144",
+        "name": "Chris Olave",
+        "position": "WR",
+        "team": "NO",
+        "roster_id": 1,
+        "franchise": "Danthecan"
+      },
+      {
+        "player_id": "9758",
+        "name": "C.J. Stroud",
+        "position": "QB",
+        "team": "HOU",
+        "roster_id": 1,
+        "franchise": "Danthecan"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2025-R2-F1",
+        "season": 2025,
+        "round": 2,
+        "original_roster_id": 1,
+        "original_franchise": "Danthecan",
+        "previous_owner_roster_id": 7,
+        "previous_owner_franchise": "jackpotFTW",
+        "new_owner_roster_id": 1,
+        "new_owner_franchise": "Danthecan"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "1184246411642601472",
+    "league_season": 2025,
+    "week": 1,
+    "leg": 1,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1736708856070,
+    "created": "2025-01-12T19:07:36.070000+00:00",
+    "status_updated_timestamp": 1736710924319,
+    "status_updated": "2025-01-12T19:42:04.319000+00:00",
+    "creator_user_id": "517080755628453888",
+    "roster_ids": [
+      1,
+      6
+    ],
+    "franchises": [
+      "Danthecan",
+      "RJRJRJ123"
+    ],
+    "adds": [
+      {
+        "player_id": "10236",
+        "name": "Dalton Kincaid",
+        "position": "TE",
+        "team": "BUF",
+        "roster_id": 1,
+        "franchise": "Danthecan"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "10236",
+        "name": "Dalton Kincaid",
+        "position": "TE",
+        "team": "BUF",
+        "roster_id": 6,
+        "franchise": "RJRJRJ123"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2025-R1-F10",
+        "season": 2025,
+        "round": 1,
+        "original_roster_id": 10,
+        "original_franchise": "Mummanator",
+        "previous_owner_roster_id": 1,
+        "previous_owner_franchise": "Danthecan",
+        "new_owner_roster_id": 6,
+        "new_owner_franchise": "RJRJRJ123"
+      },
+      {
+        "pick_id": "PICK-2026-R2-F6",
+        "season": 2026,
+        "round": 2,
+        "original_roster_id": 6,
+        "original_franchise": "RJRJRJ123",
+        "previous_owner_roster_id": 6,
+        "previous_owner_franchise": "RJRJRJ123",
+        "new_owner_roster_id": 1,
+        "new_owner_franchise": "Danthecan"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "1184269631372398592",
+    "league_season": 2025,
+    "week": 1,
+    "leg": 1,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1736714392085,
+    "created": "2025-01-12T20:39:52.085000+00:00",
+    "status_updated_timestamp": 1736714456256,
+    "status_updated": "2025-01-12T20:40:56.256000+00:00",
+    "creator_user_id": "559135658332524544",
+    "roster_ids": [
+      1,
+      5
+    ],
+    "franchises": [
+      "Danthecan",
+      "etmoyer"
+    ],
+    "adds": [
+      {
+        "player_id": "4039",
+        "name": "Cooper Kupp",
+        "position": "WR",
+        "team": "SEA",
+        "roster_id": 1,
+        "franchise": "Danthecan"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "4039",
+        "name": "Cooper Kupp",
+        "position": "WR",
+        "team": "SEA",
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2026-R2-F1",
+        "season": 2026,
+        "round": 2,
+        "original_roster_id": 1,
+        "original_franchise": "Danthecan",
+        "previous_owner_roster_id": 5,
+        "previous_owner_franchise": "etmoyer",
+        "new_owner_roster_id": 1,
+        "new_owner_franchise": "Danthecan"
+      },
+      {
+        "pick_id": "PICK-2025-R1-F3",
+        "season": 2025,
+        "round": 1,
+        "original_roster_id": 3,
+        "original_franchise": "PhillyBooBird",
+        "previous_owner_roster_id": 1,
+        "previous_owner_franchise": "Danthecan",
+        "new_owner_roster_id": 5,
+        "new_owner_franchise": "etmoyer"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "1184366855820095488",
+    "league_season": 2025,
+    "week": 1,
+    "leg": 1,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1736737572200,
+    "created": "2025-01-13T03:06:12.200000+00:00",
+    "status_updated_timestamp": 1736737591066,
+    "status_updated": "2025-01-13T03:06:31.066000+00:00",
+    "creator_user_id": "559193893851738112",
+    "roster_ids": [
+      1,
+      9
+    ],
+    "franchises": [
+      "Danthecan",
+      "acricci"
+    ],
+    "adds": [
+      {
+        "player_id": "4035",
+        "name": "Alvin Kamara",
+        "position": "RB",
+        "team": "NO",
+        "roster_id": 1,
+        "franchise": "Danthecan"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "4035",
+        "name": "Alvin Kamara",
+        "position": "RB",
+        "team": "NO",
+        "roster_id": 9,
+        "franchise": "acricci"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2025-R2-F1",
+        "season": 2025,
+        "round": 2,
+        "original_roster_id": 1,
+        "original_franchise": "Danthecan",
+        "previous_owner_roster_id": 1,
+        "previous_owner_franchise": "Danthecan",
+        "new_owner_roster_id": 9,
+        "new_owner_franchise": "acricci"
+      },
+      {
+        "pick_id": "PICK-2027-R3-F1",
+        "season": 2027,
+        "round": 3,
+        "original_roster_id": 1,
+        "original_franchise": "Danthecan",
+        "previous_owner_roster_id": 1,
+        "previous_owner_franchise": "Danthecan",
+        "new_owner_roster_id": 9,
+        "new_owner_franchise": "acricci"
+      },
+      {
+        "pick_id": "PICK-2026-R2-F6",
+        "season": 2026,
+        "round": 2,
+        "original_roster_id": 6,
+        "original_franchise": "RJRJRJ123",
+        "previous_owner_roster_id": 1,
+        "previous_owner_franchise": "Danthecan",
+        "new_owner_roster_id": 9,
+        "new_owner_franchise": "acricci"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "1184713529385496576",
+    "league_season": 2025,
+    "week": 1,
+    "leg": 1,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1736820225619,
+    "created": "2025-01-14T02:03:45.619000+00:00",
+    "status_updated_timestamp": 1736820291089,
+    "status_updated": "2025-01-14T02:04:51.089000+00:00",
+    "creator_user_id": "559193893851738112",
+    "roster_ids": [
+      4,
+      9
+    ],
+    "franchises": [
+      "ComradeCMP",
+      "acricci"
+    ],
+    "adds": [
+      {
+        "player_id": "11533",
+        "name": "Brandon Aubrey",
+        "position": "K",
+        "team": "DAL",
+        "roster_id": 9,
+        "franchise": "acricci"
+      },
+      {
+        "player_id": "11638",
+        "name": "Ricky Pearsall",
+        "position": "WR",
+        "team": "SF",
+        "roster_id": 9,
+        "franchise": "acricci"
+      },
+      {
+        "player_id": "4227",
+        "name": "Harrison Butker",
+        "position": "K",
+        "team": "KC",
+        "roster_id": 4,
+        "franchise": "ComradeCMP"
+      },
+      {
+        "player_id": "6806",
+        "name": "J.K. Dobbins",
+        "position": "RB",
+        "team": "DEN",
+        "roster_id": 4,
+        "franchise": "ComradeCMP"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "11533",
+        "name": "Brandon Aubrey",
+        "position": "K",
+        "team": "DAL",
+        "roster_id": 4,
+        "franchise": "ComradeCMP"
+      },
+      {
+        "player_id": "11638",
+        "name": "Ricky Pearsall",
+        "position": "WR",
+        "team": "SF",
+        "roster_id": 4,
+        "franchise": "ComradeCMP"
+      },
+      {
+        "player_id": "4227",
+        "name": "Harrison Butker",
+        "position": "K",
+        "team": "KC",
+        "roster_id": 9,
+        "franchise": "acricci"
+      },
+      {
+        "player_id": "6806",
+        "name": "J.K. Dobbins",
+        "position": "RB",
+        "team": "DEN",
+        "roster_id": 9,
+        "franchise": "acricci"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2025-R2-F9",
+        "season": 2025,
+        "round": 2,
+        "original_roster_id": 9,
+        "original_franchise": "acricci",
+        "previous_owner_roster_id": 4,
+        "previous_owner_franchise": "ComradeCMP",
+        "new_owner_roster_id": 9,
+        "new_owner_franchise": "acricci"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "1188343686848880640",
+    "league_season": 2025,
+    "week": 1,
+    "leg": 1,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1737685722603,
+    "created": "2025-01-24T02:28:42.603000+00:00",
+    "status_updated_timestamp": 1737689556332,
+    "status_updated": "2025-01-24T03:32:36.332000+00:00",
+    "creator_user_id": "559135658332524544",
+    "roster_ids": [
+      5,
+      6
+    ],
+    "franchises": [
+      "etmoyer",
+      "RJRJRJ123"
+    ],
+    "adds": [
+      {
+        "player_id": "BAL",
+        "name": "Baltimore Ravens",
+        "position": "DEF",
+        "team": "BAL",
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      },
+      {
+        "player_id": "IND",
+        "name": "Indianapolis Colts",
+        "position": "DEF",
+        "team": "IND",
+        "roster_id": 6,
+        "franchise": "RJRJRJ123"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "BAL",
+        "name": "Baltimore Ravens",
+        "position": "DEF",
+        "team": "BAL",
+        "roster_id": 6,
+        "franchise": "RJRJRJ123"
+      },
+      {
+        "player_id": "IND",
+        "name": "Indianapolis Colts",
+        "position": "DEF",
+        "team": "IND",
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      }
+    ],
+    "draft_picks": [],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "1251731991594799104",
+    "league_season": 2025,
+    "week": 1,
+    "leg": 1,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1752798672153,
+    "created": "2025-07-18T00:31:12.153000+00:00",
+    "status_updated_timestamp": 1752799185560,
+    "status_updated": "2025-07-18T00:39:45.560000+00:00",
+    "creator_user_id": "560265743531290624",
+    "roster_ids": [
+      5,
+      10
+    ],
+    "franchises": [
+      "etmoyer",
+      "Mummanator"
+    ],
+    "adds": [
+      {
+        "player_id": "2309",
+        "name": "Amari Cooper",
+        "position": "WR",
+        "team": null,
+        "roster_id": 10,
+        "franchise": "Mummanator"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "2309",
+        "name": "Amari Cooper",
+        "position": "WR",
+        "team": null,
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2025-R3-F9",
+        "season": 2025,
+        "round": 3,
+        "original_roster_id": 9,
+        "original_franchise": "acricci",
+        "previous_owner_roster_id": 10,
+        "previous_owner_franchise": "Mummanator",
+        "new_owner_roster_id": 5,
+        "new_owner_franchise": "etmoyer"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {
+      "is_counter": 1
+    }
+  },
+  {
+    "transaction_id": "1252362507977232384",
+    "league_season": 2025,
+    "week": 1,
+    "leg": 1,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1752948998973,
+    "created": "2025-07-19T18:16:38.973000+00:00",
+    "status_updated_timestamp": 1752949156836,
+    "status_updated": "2025-07-19T18:19:16.836000+00:00",
+    "creator_user_id": "559135658332524544",
+    "roster_ids": [
+      4,
+      5
+    ],
+    "franchises": [
+      "ComradeCMP",
+      "etmoyer"
+    ],
+    "adds": [
+      {
+        "player_id": "4066",
+        "name": "Evan Engram",
+        "position": "TE",
+        "team": "DEN",
+        "roster_id": 4,
+        "franchise": "ComradeCMP"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "4066",
+        "name": "Evan Engram",
+        "position": "TE",
+        "team": "DEN",
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2025-R2-F10",
+        "season": 2025,
+        "round": 2,
+        "original_roster_id": 10,
+        "original_franchise": "Mummanator",
+        "previous_owner_roster_id": 5,
+        "previous_owner_franchise": "etmoyer",
+        "new_owner_roster_id": 4,
+        "new_owner_franchise": "ComradeCMP"
+      },
+      {
+        "pick_id": "PICK-2025-R2-F4",
+        "season": 2025,
+        "round": 2,
+        "original_roster_id": 4,
+        "original_franchise": "ComradeCMP",
+        "previous_owner_roster_id": 4,
+        "previous_owner_franchise": "ComradeCMP",
+        "new_owner_roster_id": 5,
+        "new_owner_franchise": "etmoyer"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "1252394673696149504",
+    "league_season": 2025,
+    "week": 1,
+    "leg": 1,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1752956667878,
+    "created": "2025-07-19T20:24:27.878000+00:00",
+    "status_updated_timestamp": 1753020469296,
+    "status_updated": "2025-07-20T14:07:49.296000+00:00",
+    "creator_user_id": "559133018459394048",
+    "roster_ids": [
+      2,
+      3
+    ],
+    "franchises": [
+      "steeeeeeeeeve",
+      "PhillyBooBird"
+    ],
+    "adds": [
+      {
+        "player_id": "10232",
+        "name": "Michael Wilson",
+        "position": "WR",
+        "team": "ARI",
+        "roster_id": 2,
+        "franchise": "steeeeeeeeeve"
+      },
+      {
+        "player_id": "11584",
+        "name": "Bucky Irving",
+        "position": "RB",
+        "team": "TB",
+        "roster_id": 2,
+        "franchise": "steeeeeeeeeve"
+      },
+      {
+        "player_id": "11628",
+        "name": "Marvin Harrison",
+        "position": "WR",
+        "team": "ARI",
+        "roster_id": 3,
+        "franchise": "PhillyBooBird"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "10232",
+        "name": "Michael Wilson",
+        "position": "WR",
+        "team": "ARI",
+        "roster_id": 3,
+        "franchise": "PhillyBooBird"
+      },
+      {
+        "player_id": "11584",
+        "name": "Bucky Irving",
+        "position": "RB",
+        "team": "TB",
+        "roster_id": 3,
+        "franchise": "PhillyBooBird"
+      },
+      {
+        "player_id": "11628",
+        "name": "Marvin Harrison",
+        "position": "WR",
+        "team": "ARI",
+        "roster_id": 2,
+        "franchise": "steeeeeeeeeve"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2025-R3-F2",
+        "season": 2025,
+        "round": 3,
+        "original_roster_id": 2,
+        "original_franchise": "steeeeeeeeeve",
+        "previous_owner_roster_id": 2,
+        "previous_owner_franchise": "steeeeeeeeeve",
+        "new_owner_roster_id": 3,
+        "new_owner_franchise": "PhillyBooBird"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "1252738467381649410",
+    "league_season": 2025,
+    "week": 1,
+    "leg": 1,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1753038634680,
+    "created": "2025-07-20T19:10:34.680000+00:00",
+    "status_updated_timestamp": 1753038691245,
+    "status_updated": "2025-07-20T19:11:31.245000+00:00",
+    "creator_user_id": "517079980760150016",
+    "roster_ids": [
+      1,
+      5
+    ],
+    "franchises": [
+      "Danthecan",
+      "etmoyer"
+    ],
+    "adds": [
+      {
+        "player_id": "5859",
+        "name": "A.J. Brown",
+        "position": "WR",
+        "team": "NE",
+        "roster_id": 1,
+        "franchise": "Danthecan"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "5859",
+        "name": "A.J. Brown",
+        "position": "WR",
+        "team": "NE",
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2025-R1-F1",
+        "season": 2025,
+        "round": 1,
+        "original_roster_id": 1,
+        "original_franchise": "Danthecan",
+        "previous_owner_roster_id": 1,
+        "previous_owner_franchise": "Danthecan",
+        "new_owner_roster_id": 5,
+        "new_owner_franchise": "etmoyer"
+      },
+      {
+        "pick_id": "PICK-2026-R2-F1",
+        "season": 2026,
+        "round": 2,
+        "original_roster_id": 1,
+        "original_franchise": "Danthecan",
+        "previous_owner_roster_id": 1,
+        "previous_owner_franchise": "Danthecan",
+        "new_owner_roster_id": 5,
+        "new_owner_franchise": "etmoyer"
+      },
+      {
+        "pick_id": "PICK-2026-R3-F1",
+        "season": 2026,
+        "round": 3,
+        "original_roster_id": 1,
+        "original_franchise": "Danthecan",
+        "previous_owner_roster_id": 5,
+        "previous_owner_franchise": "etmoyer",
+        "new_owner_roster_id": 1,
+        "new_owner_franchise": "Danthecan"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {
+      "is_counter": 1
+    }
+  },
+  {
+    "transaction_id": "1252742588818010112",
+    "league_season": 2025,
+    "week": 1,
+    "leg": 1,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1753039617307,
+    "created": "2025-07-20T19:26:57.307000+00:00",
+    "status_updated_timestamp": 1753039709651,
+    "status_updated": "2025-07-20T19:28:29.651000+00:00",
+    "creator_user_id": "559133018459394048",
+    "roster_ids": [
+      2,
+      3
+    ],
+    "franchises": [
+      "steeeeeeeeeve",
+      "PhillyBooBird"
+    ],
+    "adds": [
+      {
+        "player_id": "5892",
+        "name": "David Montgomery",
+        "position": "RB",
+        "team": "HOU",
+        "roster_id": 3,
+        "franchise": "PhillyBooBird"
+      },
+      {
+        "player_id": "9221",
+        "name": "Jahmyr Gibbs",
+        "position": "RB",
+        "team": "DET",
+        "roster_id": 2,
+        "franchise": "steeeeeeeeeve"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "5892",
+        "name": "David Montgomery",
+        "position": "RB",
+        "team": "HOU",
+        "roster_id": 2,
+        "franchise": "steeeeeeeeeve"
+      },
+      {
+        "player_id": "9221",
+        "name": "Jahmyr Gibbs",
+        "position": "RB",
+        "team": "DET",
+        "roster_id": 3,
+        "franchise": "PhillyBooBird"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2025-R1-F2",
+        "season": 2025,
+        "round": 1,
+        "original_roster_id": 2,
+        "original_franchise": "steeeeeeeeeve",
+        "previous_owner_roster_id": 2,
+        "previous_owner_franchise": "steeeeeeeeeve",
+        "new_owner_roster_id": 3,
+        "new_owner_franchise": "PhillyBooBird"
+      },
+      {
+        "pick_id": "PICK-2026-R1-F3",
+        "season": 2026,
+        "round": 1,
+        "original_roster_id": 3,
+        "original_franchise": "PhillyBooBird",
+        "previous_owner_roster_id": 3,
+        "previous_owner_franchise": "PhillyBooBird",
+        "new_owner_roster_id": 2,
+        "new_owner_franchise": "steeeeeeeeeve"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "1253369620623011840",
+    "league_season": 2025,
+    "week": 1,
+    "leg": 1,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1753189113340,
+    "created": "2025-07-22T12:58:33.340000+00:00",
+    "status_updated_timestamp": 1753193016970,
+    "status_updated": "2025-07-22T14:03:36.970000+00:00",
+    "creator_user_id": "560265743531290624",
+    "roster_ids": [
+      9,
+      10
+    ],
+    "franchises": [
+      "acricci",
+      "Mummanator"
+    ],
+    "adds": [
+      {
+        "player_id": "10859",
+        "name": "Sam LaPorta",
+        "position": "TE",
+        "team": "DET",
+        "roster_id": 9,
+        "franchise": "acricci"
+      },
+      {
+        "player_id": "6819",
+        "name": "Michael Pittman",
+        "position": "WR",
+        "team": "PIT",
+        "roster_id": 10,
+        "franchise": "Mummanator"
+      },
+      {
+        "player_id": "8137",
+        "name": "George Pickens",
+        "position": "WR",
+        "team": "DAL",
+        "roster_id": 9,
+        "franchise": "acricci"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "10859",
+        "name": "Sam LaPorta",
+        "position": "TE",
+        "team": "DET",
+        "roster_id": 10,
+        "franchise": "Mummanator"
+      },
+      {
+        "player_id": "6819",
+        "name": "Michael Pittman",
+        "position": "WR",
+        "team": "PIT",
+        "roster_id": 9,
+        "franchise": "acricci"
+      },
+      {
+        "player_id": "8137",
+        "name": "George Pickens",
+        "position": "WR",
+        "team": "DAL",
+        "roster_id": 10,
+        "franchise": "Mummanator"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2026-R3-F10",
+        "season": 2026,
+        "round": 3,
+        "original_roster_id": 10,
+        "original_franchise": "Mummanator",
+        "previous_owner_roster_id": 10,
+        "previous_owner_franchise": "Mummanator",
+        "new_owner_roster_id": 9,
+        "new_owner_franchise": "acricci"
+      },
+      {
+        "pick_id": "PICK-2026-R1-F9",
+        "season": 2026,
+        "round": 1,
+        "original_roster_id": 9,
+        "original_franchise": "acricci",
+        "previous_owner_roster_id": 9,
+        "previous_owner_franchise": "acricci",
+        "new_owner_roster_id": 10,
+        "new_owner_franchise": "Mummanator"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "1256738912303321088",
+    "league_season": 2025,
+    "week": 1,
+    "leg": 1,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1753992415075,
+    "created": "2025-07-31T20:06:55.075000+00:00",
+    "status_updated_timestamp": 1753995119757,
+    "status_updated": "2025-07-31T20:51:59.757000+00:00",
+    "creator_user_id": "517079980760150016",
+    "roster_ids": [
+      1,
+      9
+    ],
+    "franchises": [
+      "Danthecan",
+      "acricci"
+    ],
+    "adds": [
+      {
+        "player_id": "7588",
+        "name": "Javonte Williams",
+        "position": "RB",
+        "team": "DAL",
+        "roster_id": 1,
+        "franchise": "Danthecan"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "7588",
+        "name": "Javonte Williams",
+        "position": "RB",
+        "team": "DAL",
+        "roster_id": 9,
+        "franchise": "acricci"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2027-R2-F1",
+        "season": 2027,
+        "round": 2,
+        "original_roster_id": 1,
+        "original_franchise": "Danthecan",
+        "previous_owner_roster_id": 1,
+        "previous_owner_franchise": "Danthecan",
+        "new_owner_roster_id": 9,
+        "new_owner_franchise": "acricci"
+      },
+      {
+        "pick_id": "PICK-2026-R3-F9",
+        "season": 2026,
+        "round": 3,
+        "original_roster_id": 9,
+        "original_franchise": "acricci",
+        "previous_owner_roster_id": 9,
+        "previous_owner_franchise": "acricci",
+        "new_owner_roster_id": 1,
+        "new_owner_franchise": "Danthecan"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "1256749864276987904",
+    "league_season": 2025,
+    "week": 1,
+    "leg": 1,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1753995026228,
+    "created": "2025-07-31T20:50:26.228000+00:00",
+    "status_updated_timestamp": 1753995113904,
+    "status_updated": "2025-07-31T20:51:53.904000+00:00",
+    "creator_user_id": "517079980760150016",
+    "roster_ids": [
+      1,
+      9
+    ],
+    "franchises": [
+      "Danthecan",
+      "acricci"
+    ],
+    "adds": [
+      {
+        "player_id": "11637",
+        "name": "Keon Coleman",
+        "position": "WR",
+        "team": "BUF",
+        "roster_id": 9,
+        "franchise": "acricci"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "11637",
+        "name": "Keon Coleman",
+        "position": "WR",
+        "team": "BUF",
+        "roster_id": 1,
+        "franchise": "Danthecan"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2026-R3-F10",
+        "season": 2026,
+        "round": 3,
+        "original_roster_id": 10,
+        "original_franchise": "Mummanator",
+        "previous_owner_roster_id": 9,
+        "previous_owner_franchise": "acricci",
+        "new_owner_roster_id": 1,
+        "new_owner_franchise": "Danthecan"
+      },
+      {
+        "pick_id": "PICK-2026-R2-F5",
+        "season": 2026,
+        "round": 2,
+        "original_roster_id": 5,
+        "original_franchise": "etmoyer",
+        "previous_owner_roster_id": 9,
+        "previous_owner_franchise": "acricci",
+        "new_owner_roster_id": 1,
+        "new_owner_franchise": "Danthecan"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {
+      "is_counter": 1
+    }
+  },
+  {
+    "transaction_id": "1273406579516911616",
+    "league_season": 2025,
+    "week": 2,
+    "leg": 2,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1757966296608,
+    "created": "2025-09-15T19:58:16.608000+00:00",
+    "status_updated_timestamp": 1757974412400,
+    "status_updated": "2025-09-15T22:13:32.400000+00:00",
+    "creator_user_id": "559135658332524544",
+    "roster_ids": [
+      5,
+      10
+    ],
+    "franchises": [
+      "etmoyer",
+      "Mummanator"
+    ],
+    "adds": [
+      {
+        "player_id": "4034",
+        "name": "Christian McCaffrey",
+        "position": "RB",
+        "team": "SF",
+        "roster_id": 10,
+        "franchise": "Mummanator"
+      },
+      {
+        "player_id": "4217",
+        "name": "George Kittle",
+        "position": "TE",
+        "team": "SF",
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      },
+      {
+        "player_id": "5850",
+        "name": "Josh Jacobs",
+        "position": "RB",
+        "team": "GB",
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      },
+      {
+        "player_id": "9484",
+        "name": "Tucker Kraft",
+        "position": "TE",
+        "team": "GB",
+        "roster_id": 10,
+        "franchise": "Mummanator"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "4034",
+        "name": "Christian McCaffrey",
+        "position": "RB",
+        "team": "SF",
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      },
+      {
+        "player_id": "4217",
+        "name": "George Kittle",
+        "position": "TE",
+        "team": "SF",
+        "roster_id": 10,
+        "franchise": "Mummanator"
+      },
+      {
+        "player_id": "5850",
+        "name": "Josh Jacobs",
+        "position": "RB",
+        "team": "GB",
+        "roster_id": 10,
+        "franchise": "Mummanator"
+      },
+      {
+        "player_id": "9484",
+        "name": "Tucker Kraft",
+        "position": "TE",
+        "team": "GB",
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2026-R2-F1",
+        "season": 2026,
+        "round": 2,
+        "original_roster_id": 1,
+        "original_franchise": "Danthecan",
+        "previous_owner_roster_id": 5,
+        "previous_owner_franchise": "etmoyer",
+        "new_owner_roster_id": 10,
+        "new_owner_franchise": "Mummanator"
+      },
+      {
+        "pick_id": "PICK-2026-R3-F3",
+        "season": 2026,
+        "round": 3,
+        "original_roster_id": 3,
+        "original_franchise": "PhillyBooBird",
+        "previous_owner_roster_id": 5,
+        "previous_owner_franchise": "etmoyer",
+        "new_owner_roster_id": 10,
+        "new_owner_franchise": "Mummanator"
+      },
+      {
+        "pick_id": "PICK-2026-R3-F5",
+        "season": 2026,
+        "round": 3,
+        "original_roster_id": 5,
+        "original_franchise": "etmoyer",
+        "previous_owner_roster_id": 5,
+        "previous_owner_franchise": "etmoyer",
+        "new_owner_roster_id": 10,
+        "new_owner_franchise": "Mummanator"
+      },
+      {
+        "pick_id": "PICK-2026-R1-F9",
+        "season": 2026,
+        "round": 1,
+        "original_roster_id": 9,
+        "original_franchise": "acricci",
+        "previous_owner_roster_id": 10,
+        "previous_owner_franchise": "Mummanator",
+        "new_owner_roster_id": 5,
+        "new_owner_franchise": "etmoyer"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "1275161541448073216",
+    "league_season": 2025,
+    "week": 3,
+    "leg": 3,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1758384712138,
+    "created": "2025-09-20T16:11:52.138000+00:00",
+    "status_updated_timestamp": 1758386138542,
+    "status_updated": "2025-09-20T16:35:38.542000+00:00",
+    "creator_user_id": "559193893851738112",
+    "roster_ids": [
+      6,
+      9
+    ],
+    "franchises": [
+      "RJRJRJ123",
+      "acricci"
+    ],
+    "adds": [
+      {
+        "player_id": "8228",
+        "name": "Jaylen Warren",
+        "position": "RB",
+        "team": "PIT",
+        "roster_id": 9,
+        "franchise": "acricci"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "8228",
+        "name": "Jaylen Warren",
+        "position": "RB",
+        "team": "PIT",
+        "roster_id": 6,
+        "franchise": "RJRJRJ123"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2026-R2-F6",
+        "season": 2026,
+        "round": 2,
+        "original_roster_id": 6,
+        "original_franchise": "RJRJRJ123",
+        "previous_owner_roster_id": 9,
+        "previous_owner_franchise": "acricci",
+        "new_owner_roster_id": 6,
+        "new_owner_franchise": "RJRJRJ123"
+      },
+      {
+        "pick_id": "PICK-2027-R3-F9",
+        "season": 2027,
+        "round": 3,
+        "original_roster_id": 9,
+        "original_franchise": "acricci",
+        "previous_owner_roster_id": 9,
+        "previous_owner_franchise": "acricci",
+        "new_owner_roster_id": 6,
+        "new_owner_franchise": "RJRJRJ123"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "1276720558767108096",
+    "league_season": 2025,
+    "week": 4,
+    "leg": 4,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1758756410832,
+    "created": "2025-09-24T23:26:50.832000+00:00",
+    "status_updated_timestamp": 1758759355000,
+    "status_updated": "2025-09-25T00:15:55+00:00",
+    "creator_user_id": "1002342256092762112",
+    "roster_ids": [
+      2,
+      6
+    ],
+    "franchises": [
+      "steeeeeeeeeve",
+      "RJRJRJ123"
+    ],
+    "adds": [
+      {
+        "player_id": "4983",
+        "name": "DJ Moore",
+        "position": "WR",
+        "team": "BUF",
+        "roster_id": 2,
+        "franchise": "steeeeeeeeeve"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "4983",
+        "name": "DJ Moore",
+        "position": "WR",
+        "team": "BUF",
+        "roster_id": 6,
+        "franchise": "RJRJRJ123"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2027-R2-F2",
+        "season": 2027,
+        "round": 2,
+        "original_roster_id": 2,
+        "original_franchise": "steeeeeeeeeve",
+        "previous_owner_roster_id": 2,
+        "previous_owner_franchise": "steeeeeeeeeve",
+        "new_owner_roster_id": 6,
+        "new_owner_franchise": "RJRJRJ123"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "1280733237416566784",
+    "league_season": 2025,
+    "week": 5,
+    "leg": 5,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1759713107975,
+    "created": "2025-10-06T01:11:47.975000+00:00",
+    "status_updated_timestamp": 1759750691614,
+    "status_updated": "2025-10-06T11:38:11.614000+00:00",
+    "creator_user_id": "517080755628453888",
+    "roster_ids": [
+      6,
+      10
+    ],
+    "franchises": [
+      "RJRJRJ123",
+      "Mummanator"
+    ],
+    "adds": [
+      {
+        "player_id": "1479",
+        "name": "Keenan Allen",
+        "position": "WR",
+        "team": "IND",
+        "roster_id": 6,
+        "franchise": "RJRJRJ123"
+      },
+      {
+        "player_id": "2133",
+        "name": "Davante Adams",
+        "position": "WR",
+        "team": "LAR",
+        "roster_id": 10,
+        "franchise": "Mummanator"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "1479",
+        "name": "Keenan Allen",
+        "position": "WR",
+        "team": "IND",
+        "roster_id": 10,
+        "franchise": "Mummanator"
+      },
+      {
+        "player_id": "2133",
+        "name": "Davante Adams",
+        "position": "WR",
+        "team": "LAR",
+        "roster_id": 6,
+        "franchise": "RJRJRJ123"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2026-R2-F1",
+        "season": 2026,
+        "round": 2,
+        "original_roster_id": 1,
+        "original_franchise": "Danthecan",
+        "previous_owner_roster_id": 10,
+        "previous_owner_franchise": "Mummanator",
+        "new_owner_roster_id": 6,
+        "new_owner_franchise": "RJRJRJ123"
+      },
+      {
+        "pick_id": "PICK-2026-R2-F10",
+        "season": 2026,
+        "round": 2,
+        "original_roster_id": 10,
+        "original_franchise": "Mummanator",
+        "previous_owner_roster_id": 10,
+        "previous_owner_franchise": "Mummanator",
+        "new_owner_roster_id": 6,
+        "new_owner_franchise": "RJRJRJ123"
+      },
+      {
+        "pick_id": "PICK-2026-R3-F3",
+        "season": 2026,
+        "round": 3,
+        "original_roster_id": 3,
+        "original_franchise": "PhillyBooBird",
+        "previous_owner_roster_id": 10,
+        "previous_owner_franchise": "Mummanator",
+        "new_owner_roster_id": 6,
+        "new_owner_franchise": "RJRJRJ123"
+      },
+      {
+        "pick_id": "PICK-2026-R3-F5",
+        "season": 2026,
+        "round": 3,
+        "original_roster_id": 5,
+        "original_franchise": "etmoyer",
+        "previous_owner_roster_id": 10,
+        "previous_owner_franchise": "Mummanator",
+        "new_owner_roster_id": 6,
+        "new_owner_franchise": "RJRJRJ123"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "1288531818676486144",
+    "league_season": 2025,
+    "week": 8,
+    "leg": 8,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1761572434638,
+    "created": "2025-10-27T13:40:34.638000+00:00",
+    "status_updated_timestamp": 1761572687625,
+    "status_updated": "2025-10-27T13:44:47.625000+00:00",
+    "creator_user_id": "559132295743279104",
+    "roster_ids": [
+      5,
+      7
+    ],
+    "franchises": [
+      "etmoyer",
+      "jackpotFTW"
+    ],
+    "adds": [
+      {
+        "player_id": "5850",
+        "name": "Josh Jacobs",
+        "position": "RB",
+        "team": "GB",
+        "roster_id": 7,
+        "franchise": "jackpotFTW"
+      },
+      {
+        "player_id": "8146",
+        "name": "Garrett Wilson",
+        "position": "WR",
+        "team": "NYJ",
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "5850",
+        "name": "Josh Jacobs",
+        "position": "RB",
+        "team": "GB",
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      },
+      {
+        "player_id": "8146",
+        "name": "Garrett Wilson",
+        "position": "WR",
+        "team": "NYJ",
+        "roster_id": 7,
+        "franchise": "jackpotFTW"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2027-R1-F7",
+        "season": 2027,
+        "round": 1,
+        "original_roster_id": 7,
+        "original_franchise": "jackpotFTW",
+        "previous_owner_roster_id": 7,
+        "previous_owner_franchise": "jackpotFTW",
+        "new_owner_roster_id": 5,
+        "new_owner_franchise": "etmoyer"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "1288557896728072192",
+    "league_season": 2025,
+    "week": 8,
+    "leg": 8,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1761578652129,
+    "created": "2025-10-27T15:24:12.129000+00:00",
+    "status_updated_timestamp": 1761578942566,
+    "status_updated": "2025-10-27T15:29:02.566000+00:00",
+    "creator_user_id": "517080755628453888",
+    "roster_ids": [
+      6,
+      7
+    ],
+    "franchises": [
+      "RJRJRJ123",
+      "jackpotFTW"
+    ],
+    "adds": [
+      {
+        "player_id": "1479",
+        "name": "Keenan Allen",
+        "position": "WR",
+        "team": "IND",
+        "roster_id": 7,
+        "franchise": "jackpotFTW"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "1479",
+        "name": "Keenan Allen",
+        "position": "WR",
+        "team": "IND",
+        "roster_id": 6,
+        "franchise": "RJRJRJ123"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2026-R2-F10",
+        "season": 2026,
+        "round": 2,
+        "original_roster_id": 10,
+        "original_franchise": "Mummanator",
+        "previous_owner_roster_id": 6,
+        "previous_owner_franchise": "RJRJRJ123",
+        "new_owner_roster_id": 7,
+        "new_owner_franchise": "jackpotFTW"
+      },
+      {
+        "pick_id": "PICK-2026-R3-F3",
+        "season": 2026,
+        "round": 3,
+        "original_roster_id": 3,
+        "original_franchise": "PhillyBooBird",
+        "previous_owner_roster_id": 6,
+        "previous_owner_franchise": "RJRJRJ123",
+        "new_owner_roster_id": 7,
+        "new_owner_franchise": "jackpotFTW"
+      },
+      {
+        "pick_id": "PICK-2026-R1-F7",
+        "season": 2026,
+        "round": 1,
+        "original_roster_id": 7,
+        "original_franchise": "jackpotFTW",
+        "previous_owner_roster_id": 7,
+        "previous_owner_franchise": "jackpotFTW",
+        "new_owner_roster_id": 6,
+        "new_owner_franchise": "RJRJRJ123"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "1289771432099717120",
+    "league_season": 2025,
+    "week": 9,
+    "leg": 9,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1761867981509,
+    "created": "2025-10-30T23:46:21.509000+00:00",
+    "status_updated_timestamp": 1761868891328,
+    "status_updated": "2025-10-31T00:01:31.328000+00:00",
+    "creator_user_id": "559135658332524544",
+    "roster_ids": [
+      1,
+      5
+    ],
+    "franchises": [
+      "Danthecan",
+      "etmoyer"
+    ],
+    "adds": [
+      {
+        "player_id": "10236",
+        "name": "Dalton Kincaid",
+        "position": "TE",
+        "team": "BUF",
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      },
+      {
+        "player_id": "11647",
+        "name": "Kimani Vidal",
+        "position": "RB",
+        "team": "LAC",
+        "roster_id": 1,
+        "franchise": "Danthecan"
+      },
+      {
+        "player_id": "12524",
+        "name": "Shedeur Sanders",
+        "position": "QB",
+        "team": "CLE",
+        "roster_id": 1,
+        "franchise": "Danthecan"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "10236",
+        "name": "Dalton Kincaid",
+        "position": "TE",
+        "team": "BUF",
+        "roster_id": 1,
+        "franchise": "Danthecan"
+      },
+      {
+        "player_id": "11647",
+        "name": "Kimani Vidal",
+        "position": "RB",
+        "team": "LAC",
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      },
+      {
+        "player_id": "12524",
+        "name": "Shedeur Sanders",
+        "position": "QB",
+        "team": "CLE",
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      }
+    ],
+    "draft_picks": [],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "1291839970754953216",
+    "league_season": 2025,
+    "week": 10,
+    "leg": 10,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1762361159555,
+    "created": "2025-11-05T16:45:59.555000+00:00",
+    "status_updated_timestamp": 1762361842107,
+    "status_updated": "2025-11-05T16:57:22.107000+00:00",
+    "creator_user_id": "559135658332524544",
+    "roster_ids": [
+      5,
+      8
+    ],
+    "franchises": [
+      "etmoyer",
+      "Pnewport"
+    ],
+    "adds": [
+      {
+        "player_id": "1466",
+        "name": "Travis Kelce",
+        "position": "TE",
+        "team": "KC",
+        "roster_id": 8,
+        "franchise": "Pnewport"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "1466",
+        "name": "Travis Kelce",
+        "position": "TE",
+        "team": "KC",
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2027-R2-F5",
+        "season": 2027,
+        "round": 2,
+        "original_roster_id": 5,
+        "original_franchise": "etmoyer",
+        "previous_owner_roster_id": 5,
+        "previous_owner_franchise": "etmoyer",
+        "new_owner_roster_id": 8,
+        "new_owner_franchise": "Pnewport"
+      },
+      {
+        "pick_id": "PICK-2027-R1-F8",
+        "season": 2027,
+        "round": 1,
+        "original_roster_id": 8,
+        "original_franchise": "Pnewport",
+        "previous_owner_roster_id": 8,
+        "previous_owner_franchise": "Pnewport",
+        "new_owner_roster_id": 5,
+        "new_owner_franchise": "etmoyer"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "1297656186622980096",
+    "league_season": 2025,
+    "week": 12,
+    "leg": 12,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1763747853479,
+    "created": "2025-11-21T17:57:33.479000+00:00",
+    "status_updated_timestamp": 1763931366404,
+    "status_updated": "2025-11-23T20:56:06.404000+00:00",
+    "creator_user_id": "559135658332524544",
+    "roster_ids": [
+      5,
+      10
+    ],
+    "franchises": [
+      "etmoyer",
+      "Mummanator"
+    ],
+    "adds": [
+      {
+        "player_id": "11632",
+        "name": "Malik Nabers",
+        "position": "WR",
+        "team": "NYG",
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      },
+      {
+        "player_id": "4217",
+        "name": "George Kittle",
+        "position": "TE",
+        "team": "SF",
+        "roster_id": 10,
+        "franchise": "Mummanator"
+      },
+      {
+        "player_id": "8151",
+        "name": "Kenneth Walker",
+        "position": "RB",
+        "team": "KC",
+        "roster_id": 10,
+        "franchise": "Mummanator"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "11632",
+        "name": "Malik Nabers",
+        "position": "WR",
+        "team": "NYG",
+        "roster_id": 10,
+        "franchise": "Mummanator"
+      },
+      {
+        "player_id": "4217",
+        "name": "George Kittle",
+        "position": "TE",
+        "team": "SF",
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      },
+      {
+        "player_id": "8151",
+        "name": "Kenneth Walker",
+        "position": "RB",
+        "team": "KC",
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2026-R1-F1",
+        "season": 2026,
+        "round": 1,
+        "original_roster_id": 1,
+        "original_franchise": "Danthecan",
+        "previous_owner_roster_id": 5,
+        "previous_owner_franchise": "etmoyer",
+        "new_owner_roster_id": 10,
+        "new_owner_franchise": "Mummanator"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "1377164131047608320",
+    "league_season": 2026,
+    "week": 1,
+    "leg": 1,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1782704024615,
+    "created": "2026-06-29T03:33:44.615000+00:00",
+    "status_updated_timestamp": 1782736793167,
+    "status_updated": "2026-06-29T12:39:53.167000+00:00",
+    "creator_user_id": "517079980760150016",
+    "roster_ids": [
+      1,
+      6
+    ],
+    "franchises": [
+      "Danthecan",
+      "RJRJRJ123"
+    ],
+    "adds": [
+      {
+        "player_id": "11563",
+        "name": "Bo Nix",
+        "position": "QB",
+        "team": "DEN",
+        "roster_id": 6,
+        "franchise": "RJRJRJ123"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "11563",
+        "name": "Bo Nix",
+        "position": "QB",
+        "team": "DEN",
+        "roster_id": 1,
+        "franchise": "Danthecan"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2026-R2-F6",
+        "season": 2026,
+        "round": 2,
+        "original_roster_id": 6,
+        "original_franchise": "RJRJRJ123",
+        "previous_owner_roster_id": 6,
+        "previous_owner_franchise": "RJRJRJ123",
+        "new_owner_roster_id": 1,
+        "new_owner_franchise": "Danthecan"
+      },
+      {
+        "pick_id": "PICK-2026-R1-F7",
+        "season": 2026,
+        "round": 1,
+        "original_roster_id": 7,
+        "original_franchise": "jackpotFTW",
+        "previous_owner_roster_id": 6,
+        "previous_owner_franchise": "RJRJRJ123",
+        "new_owner_roster_id": 1,
+        "new_owner_franchise": "Danthecan"
+      },
+      {
+        "pick_id": "PICK-2026-R3-F9",
+        "season": 2026,
+        "round": 3,
+        "original_roster_id": 9,
+        "original_franchise": "acricci",
+        "previous_owner_roster_id": 1,
+        "previous_owner_franchise": "Danthecan",
+        "new_owner_roster_id": 6,
+        "new_owner_franchise": "RJRJRJ123"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "1377385076832079872",
+    "league_season": 2026,
+    "week": 1,
+    "leg": 1,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1782756702196,
+    "created": "2026-06-29T18:11:42.196000+00:00",
+    "status_updated_timestamp": 1782763935885,
+    "status_updated": "2026-06-29T20:12:15.885000+00:00",
+    "creator_user_id": "517080755628453888",
+    "roster_ids": [
+      3,
+      6
+    ],
+    "franchises": [
+      "PhillyBooBird",
+      "RJRJRJ123"
+    ],
+    "adds": [
+      {
+        "player_id": "11646",
+        "name": "Jalen Coker",
+        "position": "WR",
+        "team": "CAR",
+        "roster_id": 6,
+        "franchise": "RJRJRJ123"
+      },
+      {
+        "player_id": "8136",
+        "name": "Rachaad White",
+        "position": "RB",
+        "team": "WAS",
+        "roster_id": 3,
+        "franchise": "PhillyBooBird"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "11646",
+        "name": "Jalen Coker",
+        "position": "WR",
+        "team": "CAR",
+        "roster_id": 3,
+        "franchise": "PhillyBooBird"
+      },
+      {
+        "player_id": "8136",
+        "name": "Rachaad White",
+        "position": "RB",
+        "team": "WAS",
+        "roster_id": 6,
+        "franchise": "RJRJRJ123"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2026-R2-F1",
+        "season": 2026,
+        "round": 2,
+        "original_roster_id": 1,
+        "original_franchise": "Danthecan",
+        "previous_owner_roster_id": 6,
+        "previous_owner_franchise": "RJRJRJ123",
+        "new_owner_roster_id": 3,
+        "new_owner_franchise": "PhillyBooBird"
+      },
+      {
+        "pick_id": "PICK-2026-R3-F9",
+        "season": 2026,
+        "round": 3,
+        "original_roster_id": 9,
+        "original_franchise": "acricci",
+        "previous_owner_roster_id": 6,
+        "previous_owner_franchise": "RJRJRJ123",
+        "new_owner_roster_id": 3,
+        "new_owner_franchise": "PhillyBooBird"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "1385071038798254081",
+    "league_season": 2026,
+    "week": 1,
+    "leg": 1,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1784589178327,
+    "created": "2026-07-20T23:12:58.327000+00:00",
+    "status_updated_timestamp": 1784787079274,
+    "status_updated": "2026-07-23T06:11:19.274000+00:00",
+    "creator_user_id": "517079980760150016",
+    "roster_ids": [
+      1,
+      9
+    ],
+    "franchises": [
+      "Danthecan",
+      "acricci"
+    ],
+    "adds": [
+      {
+        "player_id": "11638",
+        "name": "Ricky Pearsall",
+        "position": "WR",
+        "team": "SF",
+        "roster_id": 1,
+        "franchise": "Danthecan"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "11638",
+        "name": "Ricky Pearsall",
+        "position": "WR",
+        "team": "SF",
+        "roster_id": 9,
+        "franchise": "acricci"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2026-R2-F5",
+        "season": 2026,
+        "round": 2,
+        "original_roster_id": 5,
+        "original_franchise": "etmoyer",
+        "previous_owner_roster_id": 1,
+        "previous_owner_franchise": "Danthecan",
+        "new_owner_roster_id": 9,
+        "new_owner_franchise": "acricci"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "1391270526839697408",
+    "league_season": 2026,
+    "week": 1,
+    "leg": 1,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1786067251457,
+    "created": "2026-08-07T01:47:31.457000+00:00",
+    "status_updated_timestamp": 1786122803487,
+    "status_updated": "2026-08-07T17:13:23.487000+00:00",
+    "creator_user_id": "559193893851738112",
+    "roster_ids": [
+      3,
+      9
+    ],
+    "franchises": [
+      "PhillyBooBird",
+      "acricci"
+    ],
+    "adds": [],
+    "drops": [],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2027-R2-F3",
+        "season": 2027,
+        "round": 2,
+        "original_roster_id": 3,
+        "original_franchise": "PhillyBooBird",
+        "previous_owner_roster_id": 3,
+        "previous_owner_franchise": "PhillyBooBird",
+        "new_owner_roster_id": 9,
+        "new_owner_franchise": "acricci"
+      },
+      {
+        "pick_id": "PICK-2028-R2-F3",
+        "season": 2028,
+        "round": 2,
+        "original_roster_id": 3,
+        "original_franchise": "PhillyBooBird",
+        "previous_owner_roster_id": 3,
+        "previous_owner_franchise": "PhillyBooBird",
+        "new_owner_roster_id": 9,
+        "new_owner_franchise": "acricci"
+      },
+      {
+        "pick_id": "PICK-2028-R3-F3",
+        "season": 2028,
+        "round": 3,
+        "original_roster_id": 3,
+        "original_franchise": "PhillyBooBird",
+        "previous_owner_roster_id": 3,
+        "previous_owner_franchise": "PhillyBooBird",
+        "new_owner_roster_id": 9,
+        "new_owner_franchise": "acricci"
+      },
+      {
+        "pick_id": "PICK-2026-R2-F5",
+        "season": 2026,
+        "round": 2,
+        "original_roster_id": 5,
+        "original_franchise": "etmoyer",
+        "previous_owner_roster_id": 9,
+        "previous_owner_franchise": "acricci",
+        "new_owner_roster_id": 3,
+        "new_owner_franchise": "PhillyBooBird"
+      },
+      {
+        "pick_id": "PICK-2026-R2-F9",
+        "season": 2026,
+        "round": 2,
+        "original_roster_id": 9,
+        "original_franchise": "acricci",
+        "previous_owner_roster_id": 9,
+        "previous_owner_franchise": "acricci",
+        "new_owner_roster_id": 3,
+        "new_owner_franchise": "PhillyBooBird"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {
+      "is_counter": 1
+    }
+  },
+  {
+    "transaction_id": "1391599974181003264",
+    "league_season": 2026,
+    "week": 1,
+    "leg": 1,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1786145797824,
+    "created": "2026-08-07T23:36:37.824000+00:00",
+    "status_updated_timestamp": 1786146068549,
+    "status_updated": "2026-08-07T23:41:08.549000+00:00",
+    "creator_user_id": "559193893851738112",
+    "roster_ids": [
+      3,
+      9
+    ],
+    "franchises": [
+      "PhillyBooBird",
+      "acricci"
+    ],
+    "adds": [
+      {
+        "player_id": "4037",
+        "name": "Chris Godwin",
+        "position": "WR",
+        "team": "TB",
+        "roster_id": 3,
+        "franchise": "PhillyBooBird"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "4037",
+        "name": "Chris Godwin",
+        "position": "WR",
+        "team": "TB",
+        "roster_id": 9,
+        "franchise": "acricci"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2026-R2-F3",
+        "season": 2026,
+        "round": 2,
+        "original_roster_id": 3,
+        "original_franchise": "PhillyBooBird",
+        "previous_owner_roster_id": 3,
+        "previous_owner_franchise": "PhillyBooBird",
+        "new_owner_roster_id": 9,
+        "new_owner_franchise": "acricci"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {
+      "is_counter": 1
+    }
+  },
+  {
+    "transaction_id": "1391624440256671744",
+    "league_season": 2026,
+    "week": 1,
+    "leg": 1,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1786151630991,
+    "created": "2026-08-08T01:13:50.991000+00:00",
+    "status_updated_timestamp": 1786151741000,
+    "status_updated": "2026-08-08T01:15:41+00:00",
+    "creator_user_id": "559135658332524544",
+    "roster_ids": [
+      3,
+      5
+    ],
+    "franchises": [
+      "PhillyBooBird",
+      "etmoyer"
+    ],
+    "adds": [
+      {
+        "player_id": "12489",
+        "name": "RJ Harvey",
+        "position": "RB",
+        "team": "DEN",
+        "roster_id": 3,
+        "franchise": "PhillyBooBird"
+      },
+      {
+        "player_id": "5892",
+        "name": "David Montgomery",
+        "position": "RB",
+        "team": "HOU",
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "12489",
+        "name": "RJ Harvey",
+        "position": "RB",
+        "team": "DEN",
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      },
+      {
+        "player_id": "5892",
+        "name": "David Montgomery",
+        "position": "RB",
+        "team": "HOU",
+        "roster_id": 3,
+        "franchise": "PhillyBooBird"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2027-R3-F3",
+        "season": 2027,
+        "round": 3,
+        "original_roster_id": 3,
+        "original_franchise": "PhillyBooBird",
+        "previous_owner_roster_id": 3,
+        "previous_owner_franchise": "PhillyBooBird",
+        "new_owner_roster_id": 5,
+        "new_owner_franchise": "etmoyer"
+      },
+      {
+        "pick_id": "PICK-2028-R3-F5",
+        "season": 2028,
+        "round": 3,
+        "original_roster_id": 5,
+        "original_franchise": "etmoyer",
+        "previous_owner_roster_id": 5,
+        "previous_owner_franchise": "etmoyer",
+        "new_owner_roster_id": 3,
+        "new_owner_franchise": "PhillyBooBird"
+      },
+      {
+        "pick_id": "PICK-2026-R2-F9",
+        "season": 2026,
+        "round": 2,
+        "original_roster_id": 9,
+        "original_franchise": "acricci",
+        "previous_owner_roster_id": 3,
+        "previous_owner_franchise": "PhillyBooBird",
+        "new_owner_roster_id": 5,
+        "new_owner_franchise": "etmoyer"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "1391689870660886528",
+    "league_season": 2026,
+    "week": 1,
+    "leg": 1,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1786167230815,
+    "created": "2026-08-08T05:33:50.815000+00:00",
+    "status_updated_timestamp": 1786167411208,
+    "status_updated": "2026-08-08T05:36:51.208000+00:00",
+    "creator_user_id": "559133018459394048",
+    "roster_ids": [
+      2,
+      3
+    ],
+    "franchises": [
+      "steeeeeeeeeve",
+      "PhillyBooBird"
+    ],
+    "adds": [
+      {
+        "player_id": "12485",
+        "name": "Tez Johnson",
+        "position": "WR",
+        "team": "TB",
+        "roster_id": 2,
+        "franchise": "steeeeeeeeeve"
+      },
+      {
+        "player_id": "5022",
+        "name": "Dallas Goedert",
+        "position": "TE",
+        "team": "PHI",
+        "roster_id": 3,
+        "franchise": "PhillyBooBird"
+      },
+      {
+        "player_id": "8110",
+        "name": "Jake Ferguson",
+        "position": "TE",
+        "team": "DAL",
+        "roster_id": 2,
+        "franchise": "steeeeeeeeeve"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "12485",
+        "name": "Tez Johnson",
+        "position": "WR",
+        "team": "TB",
+        "roster_id": 3,
+        "franchise": "PhillyBooBird"
+      },
+      {
+        "player_id": "5022",
+        "name": "Dallas Goedert",
+        "position": "TE",
+        "team": "PHI",
+        "roster_id": 2,
+        "franchise": "steeeeeeeeeve"
+      },
+      {
+        "player_id": "8110",
+        "name": "Jake Ferguson",
+        "position": "TE",
+        "team": "DAL",
+        "roster_id": 3,
+        "franchise": "PhillyBooBird"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2026-R2-F2",
+        "season": 2026,
+        "round": 2,
+        "original_roster_id": 2,
+        "original_franchise": "steeeeeeeeeve",
+        "previous_owner_roster_id": 2,
+        "previous_owner_franchise": "steeeeeeeeeve",
+        "new_owner_roster_id": 3,
+        "new_owner_franchise": "PhillyBooBird"
+      },
+      {
+        "pick_id": "PICK-2027-R3-F2",
+        "season": 2027,
+        "round": 3,
+        "original_roster_id": 2,
+        "original_franchise": "steeeeeeeeeve",
+        "previous_owner_roster_id": 2,
+        "previous_owner_franchise": "steeeeeeeeeve",
+        "new_owner_roster_id": 3,
+        "new_owner_franchise": "PhillyBooBird"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "1391868573743316992",
+    "league_season": 2026,
+    "week": 1,
+    "leg": 1,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1786209836950,
+    "created": "2026-08-08T17:23:56.950000+00:00",
+    "status_updated_timestamp": 1786210021049,
+    "status_updated": "2026-08-08T17:27:01.049000+00:00",
+    "creator_user_id": "559135658332524544",
+    "roster_ids": [
+      2,
+      5
+    ],
+    "franchises": [
+      "steeeeeeeeeve",
+      "etmoyer"
+    ],
+    "adds": [],
+    "drops": [],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2026-R1-F2",
+        "season": 2026,
+        "round": 1,
+        "original_roster_id": 2,
+        "original_franchise": "steeeeeeeeeve",
+        "previous_owner_roster_id": 2,
+        "previous_owner_franchise": "steeeeeeeeeve",
+        "new_owner_roster_id": 5,
+        "new_owner_franchise": "etmoyer"
+      },
+      {
+        "pick_id": "PICK-2028-R1-F2",
+        "season": 2028,
+        "round": 1,
+        "original_roster_id": 2,
+        "original_franchise": "steeeeeeeeeve",
+        "previous_owner_roster_id": 2,
+        "previous_owner_franchise": "steeeeeeeeeve",
+        "new_owner_roster_id": 5,
+        "new_owner_franchise": "etmoyer"
+      },
+      {
+        "pick_id": "PICK-2026-R1-F5",
+        "season": 2026,
+        "round": 1,
+        "original_roster_id": 5,
+        "original_franchise": "etmoyer",
+        "previous_owner_roster_id": 5,
+        "previous_owner_franchise": "etmoyer",
+        "new_owner_roster_id": 2,
+        "new_owner_franchise": "steeeeeeeeeve"
+      },
+      {
+        "pick_id": "PICK-2027-R3-F5",
+        "season": 2027,
+        "round": 3,
+        "original_roster_id": 5,
+        "original_franchise": "etmoyer",
+        "previous_owner_roster_id": 5,
+        "previous_owner_franchise": "etmoyer",
+        "new_owner_roster_id": 2,
+        "new_owner_franchise": "steeeeeeeeeve"
+      },
+      {
+        "pick_id": "PICK-2026-R2-F9",
+        "season": 2026,
+        "round": 2,
+        "original_roster_id": 9,
+        "original_franchise": "acricci",
+        "previous_owner_roster_id": 5,
+        "previous_owner_franchise": "etmoyer",
+        "new_owner_roster_id": 2,
+        "new_owner_franchise": "steeeeeeeeeve"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "1392031032802291712",
+    "league_season": 2026,
+    "week": 1,
+    "leg": 1,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1786248570208,
+    "created": "2026-08-09T04:09:30.208000+00:00",
+    "status_updated_timestamp": 1786248743741,
+    "status_updated": "2026-08-09T04:12:23.741000+00:00",
+    "creator_user_id": "559133018459394048",
+    "roster_ids": [
+      2,
+      3
+    ],
+    "franchises": [
+      "steeeeeeeeeve",
+      "PhillyBooBird"
+    ],
+    "adds": [
+      {
+        "player_id": "9500",
+        "name": "Josh Downs",
+        "position": "WR",
+        "team": "IND",
+        "roster_id": 2,
+        "franchise": "steeeeeeeeeve"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "9500",
+        "name": "Josh Downs",
+        "position": "WR",
+        "team": "IND",
+        "roster_id": 3,
+        "franchise": "PhillyBooBird"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2026-R1-F5",
+        "season": 2026,
+        "round": 1,
+        "original_roster_id": 5,
+        "original_franchise": "etmoyer",
+        "previous_owner_roster_id": 2,
+        "previous_owner_franchise": "steeeeeeeeeve",
+        "new_owner_roster_id": 3,
+        "new_owner_franchise": "PhillyBooBird"
+      },
+      {
+        "pick_id": "PICK-2026-R2-F5",
+        "season": 2026,
+        "round": 2,
+        "original_roster_id": 5,
+        "original_franchise": "etmoyer",
+        "previous_owner_roster_id": 3,
+        "previous_owner_franchise": "PhillyBooBird",
+        "new_owner_roster_id": 2,
+        "new_owner_franchise": "steeeeeeeeeve"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "1392316220266545152",
+    "league_season": 2026,
+    "week": 1,
+    "leg": 1,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1786316564198,
+    "created": "2026-08-09T23:02:44.198000+00:00",
+    "status_updated_timestamp": 1786322865196,
+    "status_updated": "2026-08-10T00:47:45.196000+00:00",
+    "creator_user_id": "517079980760150016",
+    "roster_ids": [
+      1,
+      10
+    ],
+    "franchises": [
+      "Danthecan",
+      "Mummanator"
+    ],
+    "adds": [
+      {
+        "player_id": "4866",
+        "name": "Saquon Barkley",
+        "position": "RB",
+        "team": "PHI",
+        "roster_id": 1,
+        "franchise": "Danthecan"
+      },
+      {
+        "player_id": "5859",
+        "name": "A.J. Brown",
+        "position": "WR",
+        "team": "NE",
+        "roster_id": 10,
+        "franchise": "Mummanator"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "4866",
+        "name": "Saquon Barkley",
+        "position": "RB",
+        "team": "PHI",
+        "roster_id": 10,
+        "franchise": "Mummanator"
+      },
+      {
+        "player_id": "5859",
+        "name": "A.J. Brown",
+        "position": "WR",
+        "team": "NE",
+        "roster_id": 1,
+        "franchise": "Danthecan"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2028-R1-F1",
+        "season": 2028,
+        "round": 1,
+        "original_roster_id": 1,
+        "original_franchise": "Danthecan",
+        "previous_owner_roster_id": 1,
+        "previous_owner_franchise": "Danthecan",
+        "new_owner_roster_id": 10,
+        "new_owner_franchise": "Mummanator"
+      },
+      {
+        "pick_id": "PICK-2026-R1-F7",
+        "season": 2026,
+        "round": 1,
+        "original_roster_id": 7,
+        "original_franchise": "jackpotFTW",
+        "previous_owner_roster_id": 1,
+        "previous_owner_franchise": "Danthecan",
+        "new_owner_roster_id": 10,
+        "new_owner_franchise": "Mummanator"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "1392341399835283456",
+    "league_season": 2026,
+    "week": 1,
+    "leg": 1,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1786322567475,
+    "created": "2026-08-10T00:42:47.475000+00:00",
+    "status_updated_timestamp": 1786322626323,
+    "status_updated": "2026-08-10T00:43:46.323000+00:00",
+    "creator_user_id": "694581224353632256",
+    "roster_ids": [
+      8,
+      10
+    ],
+    "franchises": [
+      "Pnewport",
+      "Mummanator"
+    ],
+    "adds": [
+      {
+        "player_id": "8151",
+        "name": "Kenneth Walker",
+        "position": "RB",
+        "team": "KC",
+        "roster_id": 8,
+        "franchise": "Pnewport"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "8151",
+        "name": "Kenneth Walker",
+        "position": "RB",
+        "team": "KC",
+        "roster_id": 10,
+        "franchise": "Mummanator"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2026-R1-F8",
+        "season": 2026,
+        "round": 1,
+        "original_roster_id": 8,
+        "original_franchise": "Pnewport",
+        "previous_owner_roster_id": 8,
+        "previous_owner_franchise": "Pnewport",
+        "new_owner_roster_id": 10,
+        "new_owner_franchise": "Mummanator"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "1392360473353023488",
+    "league_season": 2026,
+    "week": 1,
+    "leg": 1,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1786327114955,
+    "created": "2026-08-10T01:58:34.955000+00:00",
+    "status_updated_timestamp": 1786327251864,
+    "status_updated": "2026-08-10T02:00:51.864000+00:00",
+    "creator_user_id": "694581224353632256",
+    "roster_ids": [
+      2,
+      8
+    ],
+    "franchises": [
+      "steeeeeeeeeve",
+      "Pnewport"
+    ],
+    "adds": [
+      {
+        "player_id": "12522",
+        "name": "Cam Ward",
+        "position": "QB",
+        "team": "TEN",
+        "roster_id": 8,
+        "franchise": "Pnewport"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "12522",
+        "name": "Cam Ward",
+        "position": "QB",
+        "team": "TEN",
+        "roster_id": 2,
+        "franchise": "steeeeeeeeeve"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2027-R2-F5",
+        "season": 2027,
+        "round": 2,
+        "original_roster_id": 5,
+        "original_franchise": "etmoyer",
+        "previous_owner_roster_id": 8,
+        "previous_owner_franchise": "Pnewport",
+        "new_owner_roster_id": 2,
+        "new_owner_franchise": "steeeeeeeeeve"
+      },
+      {
+        "pick_id": "PICK-2027-R2-F8",
+        "season": 2027,
+        "round": 2,
+        "original_roster_id": 8,
+        "original_franchise": "Pnewport",
+        "previous_owner_roster_id": 8,
+        "previous_owner_franchise": "Pnewport",
+        "new_owner_roster_id": 2,
+        "new_owner_franchise": "steeeeeeeeeve"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "1392397308250828800",
+    "league_season": 2026,
+    "week": 1,
+    "leg": 1,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1786335897080,
+    "created": "2026-08-10T04:24:57.080000+00:00",
+    "status_updated_timestamp": 1786336036653,
+    "status_updated": "2026-08-10T04:27:16.653000+00:00",
+    "creator_user_id": "517079980760150016",
+    "roster_ids": [
+      1,
+      4
+    ],
+    "franchises": [
+      "Danthecan",
+      "ComradeCMP"
+    ],
+    "adds": [
+      {
+        "player_id": "8121",
+        "name": "Romeo Doubs",
+        "position": "WR",
+        "team": "NE",
+        "roster_id": 4,
+        "franchise": "ComradeCMP"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "8121",
+        "name": "Romeo Doubs",
+        "position": "WR",
+        "team": "NE",
+        "roster_id": 1,
+        "franchise": "Danthecan"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2026-R3-F10",
+        "season": 2026,
+        "round": 3,
+        "original_roster_id": 10,
+        "original_franchise": "Mummanator",
+        "previous_owner_roster_id": 1,
+        "previous_owner_franchise": "Danthecan",
+        "new_owner_roster_id": 4,
+        "new_owner_franchise": "ComradeCMP"
+      },
+      {
+        "pick_id": "PICK-2026-R2-F4",
+        "season": 2026,
+        "round": 2,
+        "original_roster_id": 4,
+        "original_franchise": "ComradeCMP",
+        "previous_owner_roster_id": 4,
+        "previous_owner_franchise": "ComradeCMP",
+        "new_owner_roster_id": 1,
+        "new_owner_franchise": "Danthecan"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "1392522394903515136",
+    "league_season": 2026,
+    "week": 1,
+    "leg": 1,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1786365720061,
+    "created": "2026-08-10T12:42:00.061000+00:00",
+    "status_updated_timestamp": 1786366045231,
+    "status_updated": "2026-08-10T12:47:25.231000+00:00",
+    "creator_user_id": "559135658332524544",
+    "roster_ids": [
+      5,
+      10
+    ],
+    "franchises": [
+      "etmoyer",
+      "Mummanator"
+    ],
+    "adds": [
+      {
+        "player_id": "12526",
+        "name": "Tetairoa McMillan",
+        "position": "WR",
+        "team": "CAR",
+        "roster_id": 10,
+        "franchise": "Mummanator"
+      },
+      {
+        "player_id": "4034",
+        "name": "Christian McCaffrey",
+        "position": "RB",
+        "team": "SF",
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "12526",
+        "name": "Tetairoa McMillan",
+        "position": "WR",
+        "team": "CAR",
+        "roster_id": 5,
+        "franchise": "etmoyer"
+      },
+      {
+        "player_id": "4034",
+        "name": "Christian McCaffrey",
+        "position": "RB",
+        "team": "SF",
+        "roster_id": 10,
+        "franchise": "Mummanator"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2028-R1-F1",
+        "season": 2028,
+        "round": 1,
+        "original_roster_id": 1,
+        "original_franchise": "Danthecan",
+        "previous_owner_roster_id": 10,
+        "previous_owner_franchise": "Mummanator",
+        "new_owner_roster_id": 5,
+        "new_owner_franchise": "etmoyer"
+      },
+      {
+        "pick_id": "PICK-2027-R1-F10",
+        "season": 2027,
+        "round": 1,
+        "original_roster_id": 10,
+        "original_franchise": "Mummanator",
+        "previous_owner_roster_id": 10,
+        "previous_owner_franchise": "Mummanator",
+        "new_owner_roster_id": 5,
+        "new_owner_franchise": "etmoyer"
+      },
+      {
+        "pick_id": "PICK-2027-R3-F3",
+        "season": 2027,
+        "round": 3,
+        "original_roster_id": 3,
+        "original_franchise": "PhillyBooBird",
+        "previous_owner_roster_id": 5,
+        "previous_owner_franchise": "etmoyer",
+        "new_owner_roster_id": 10,
+        "new_owner_franchise": "Mummanator"
+      },
+      {
+        "pick_id": "PICK-2028-R2-F5",
+        "season": 2028,
+        "round": 2,
+        "original_roster_id": 5,
+        "original_franchise": "etmoyer",
+        "previous_owner_roster_id": 5,
+        "previous_owner_franchise": "etmoyer",
+        "new_owner_roster_id": 10,
+        "new_owner_franchise": "Mummanator"
+      },
+      {
+        "pick_id": "PICK-2026-R1-F8",
+        "season": 2026,
+        "round": 1,
+        "original_roster_id": 8,
+        "original_franchise": "Pnewport",
+        "previous_owner_roster_id": 10,
+        "previous_owner_franchise": "Mummanator",
+        "new_owner_roster_id": 5,
+        "new_owner_franchise": "etmoyer"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "1392583914064723968",
+    "league_season": 2026,
+    "week": 1,
+    "leg": 1,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1786380387373,
+    "created": "2026-08-10T16:46:27.373000+00:00",
+    "status_updated_timestamp": 1786380489780,
+    "status_updated": "2026-08-10T16:48:09.780000+00:00",
+    "creator_user_id": "517080755628453888",
+    "roster_ids": [
+      2,
+      6
+    ],
+    "franchises": [
+      "steeeeeeeeeve",
+      "RJRJRJ123"
+    ],
+    "adds": [],
+    "drops": [],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2027-R2-F2",
+        "season": 2027,
+        "round": 2,
+        "original_roster_id": 2,
+        "original_franchise": "steeeeeeeeeve",
+        "previous_owner_roster_id": 6,
+        "previous_owner_franchise": "RJRJRJ123",
+        "new_owner_roster_id": 2,
+        "new_owner_franchise": "steeeeeeeeeve"
+      },
+      {
+        "pick_id": "PICK-2026-R3-F5",
+        "season": 2026,
+        "round": 3,
+        "original_roster_id": 5,
+        "original_franchise": "etmoyer",
+        "previous_owner_roster_id": 6,
+        "previous_owner_franchise": "RJRJRJ123",
+        "new_owner_roster_id": 2,
+        "new_owner_franchise": "steeeeeeeeeve"
+      },
+      {
+        "pick_id": "PICK-2026-R2-F9",
+        "season": 2026,
+        "round": 2,
+        "original_roster_id": 9,
+        "original_franchise": "acricci",
+        "previous_owner_roster_id": 2,
+        "previous_owner_franchise": "steeeeeeeeeve",
+        "new_owner_roster_id": 6,
+        "new_owner_franchise": "RJRJRJ123"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "1392584191891230720",
+    "league_season": 2026,
+    "week": 1,
+    "leg": 1,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1786380453611,
+    "created": "2026-08-10T16:47:33.611000+00:00",
+    "status_updated_timestamp": 1786381242440,
+    "status_updated": "2026-08-10T17:00:42.440000+00:00",
+    "creator_user_id": "559133018459394048",
+    "roster_ids": [
+      3,
+      10
+    ],
+    "franchises": [
+      "PhillyBooBird",
+      "Mummanator"
+    ],
+    "adds": [
+      {
+        "player_id": "6819",
+        "name": "Michael Pittman",
+        "position": "WR",
+        "team": "PIT",
+        "roster_id": 3,
+        "franchise": "PhillyBooBird"
+      },
+      {
+        "player_id": "8136",
+        "name": "Rachaad White",
+        "position": "RB",
+        "team": "WAS",
+        "roster_id": 10,
+        "franchise": "Mummanator"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "6819",
+        "name": "Michael Pittman",
+        "position": "WR",
+        "team": "PIT",
+        "roster_id": 10,
+        "franchise": "Mummanator"
+      },
+      {
+        "player_id": "8136",
+        "name": "Rachaad White",
+        "position": "RB",
+        "team": "WAS",
+        "roster_id": 3,
+        "franchise": "PhillyBooBird"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2026-R2-F1",
+        "season": 2026,
+        "round": 2,
+        "original_roster_id": 1,
+        "original_franchise": "Danthecan",
+        "previous_owner_roster_id": 3,
+        "previous_owner_franchise": "PhillyBooBird",
+        "new_owner_roster_id": 10,
+        "new_owner_franchise": "Mummanator"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {}
+  },
+  {
+    "transaction_id": "1396030886964629504",
+    "league_season": 2026,
+    "week": 1,
+    "leg": 1,
+    "type": "trade",
+    "status": "complete",
+    "created_timestamp": 1787202209753,
+    "created": "2026-08-20T05:03:29.753000+00:00",
+    "status_updated_timestamp": 1787226820162,
+    "status_updated": "2026-08-20T11:53:40.162000+00:00",
+    "creator_user_id": "559133018459394048",
+    "roster_ids": [
+      3,
+      7
+    ],
+    "franchises": [
+      "PhillyBooBird",
+      "jackpotFTW"
+    ],
+    "adds": [
+      {
+        "player_id": "12484",
+        "name": "Jayden Higgins",
+        "position": "WR",
+        "team": "HOU",
+        "roster_id": 7,
+        "franchise": "jackpotFTW"
+      },
+      {
+        "player_id": "13405",
+        "name": "Kaytron Allen",
+        "position": "RB",
+        "team": "WAS",
+        "roster_id": 3,
+        "franchise": "PhillyBooBird"
+      }
+    ],
+    "drops": [
+      {
+        "player_id": "12484",
+        "name": "Jayden Higgins",
+        "position": "WR",
+        "team": "HOU",
+        "roster_id": 3,
+        "franchise": "PhillyBooBird"
+      },
+      {
+        "player_id": "13405",
+        "name": "Kaytron Allen",
+        "position": "RB",
+        "team": "WAS",
+        "roster_id": 7,
+        "franchise": "jackpotFTW"
+      }
+    ],
+    "draft_picks": [
+      {
+        "pick_id": "PICK-2027-R3-F7",
+        "season": 2027,
+        "round": 3,
+        "original_roster_id": 7,
+        "original_franchise": "jackpotFTW",
+        "previous_owner_roster_id": 7,
+        "previous_owner_franchise": "jackpotFTW",
+        "new_owner_roster_id": 3,
+        "new_owner_franchise": "PhillyBooBird"
+      }
+    ],
+    "waiver_budget": [],
+    "settings": {
+      "is_counter": 1
+    }
+  }
+]

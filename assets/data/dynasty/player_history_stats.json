@@ -1,0 +1,387 @@
+{
+  "player_count": 608,
+  "players_with_history": 608,
+  "players_ever_traded": 110,
+  "draft_events_added": 330,
+  "most_traded_players": [
+    {
+      "player_id": "5850",
+      "name": "Josh Jacobs",
+      "trade_count": 4,
+      "transaction_count": 4,
+      "franchises_owned_by": [
+        "ComradeCMP",
+        "etmoyer",
+        "Mummanator",
+        "jackpotFTW"
+      ]
+    },
+    {
+      "player_id": "8151",
+      "name": "Kenneth Walker",
+      "trade_count": 4,
+      "transaction_count": 4,
+      "franchises_owned_by": [
+        "jackpotFTW",
+        "Danthecan",
+        "etmoyer",
+        "Mummanator",
+        "Pnewport"
+      ]
+    },
+    {
+      "player_id": "6819",
+      "name": "Michael Pittman",
+      "trade_count": 4,
+      "transaction_count": 4,
+      "franchises_owned_by": [
+        "PhillyBooBird",
+        "jackpotFTW",
+        "acricci",
+        "Mummanator"
+      ]
+    },
+    {
+      "player_id": "8121",
+      "name": "Romeo Doubs",
+      "trade_count": 4,
+      "transaction_count": 4,
+      "franchises_owned_by": [
+        "PhillyBooBird",
+        "Danthecan",
+        "jackpotFTW",
+        "ComradeCMP"
+      ]
+    },
+    {
+      "player_id": "6783",
+      "name": "Jerry Jeudy",
+      "trade_count": 3,
+      "transaction_count": 9,
+      "franchises_owned_by": [
+        "jackpotFTW",
+        "etmoyer",
+        "ComradeCMP",
+        "Mummanator",
+        "Danthecan"
+      ]
+    },
+    {
+      "player_id": "1479",
+      "name": "Keenan Allen",
+      "trade_count": 3,
+      "transaction_count": 4,
+      "franchises_owned_by": [
+        "jackpotFTW",
+        "Mummanator",
+        "RJRJRJ123"
+      ]
+    },
+    {
+      "player_id": "5859",
+      "name": "A.J. Brown",
+      "trade_count": 3,
+      "transaction_count": 3,
+      "franchises_owned_by": [
+        "Danthecan",
+        "etmoyer",
+        "Mummanator"
+      ]
+    },
+    {
+      "player_id": "4039",
+      "name": "Cooper Kupp",
+      "trade_count": 3,
+      "transaction_count": 3,
+      "franchises_owned_by": [
+        "ComradeCMP",
+        "acricci",
+        "etmoyer",
+        "Danthecan"
+      ]
+    },
+    {
+      "player_id": "5892",
+      "name": "David Montgomery",
+      "trade_count": 3,
+      "transaction_count": 3,
+      "franchises_owned_by": [
+        "ComradeCMP",
+        "steeeeeeeeeve",
+        "PhillyBooBird",
+        "etmoyer"
+      ]
+    },
+    {
+      "player_id": "8146",
+      "name": "Garrett Wilson",
+      "trade_count": 3,
+      "transaction_count": 3,
+      "franchises_owned_by": [
+        "jackpotFTW",
+        "Danthecan",
+        "etmoyer"
+      ]
+    },
+    {
+      "player_id": "4217",
+      "name": "George Kittle",
+      "trade_count": 3,
+      "transaction_count": 3,
+      "franchises_owned_by": [
+        "jackpotFTW",
+        "Mummanator",
+        "etmoyer"
+      ]
+    },
+    {
+      "player_id": "8137",
+      "name": "George Pickens",
+      "trade_count": 3,
+      "transaction_count": 3,
+      "franchises_owned_by": [
+        "PhillyBooBird",
+        "etmoyer",
+        "Mummanator",
+        "acricci"
+      ]
+    },
+    {
+      "player_id": "2216",
+      "name": "Mike Evans",
+      "trade_count": 3,
+      "transaction_count": 3,
+      "franchises_owned_by": [
+        "Mummanator",
+        "jackpotFTW",
+        "etmoyer",
+        "PhillyBooBird"
+      ]
+    },
+    {
+      "player_id": "4098",
+      "name": "Kareem Hunt",
+      "trade_count": 2,
+      "transaction_count": 11,
+      "franchises_owned_by": [
+        "acricci",
+        "PhillyBooBird",
+        "Mummanator",
+        "etmoyer",
+        "Danthecan",
+        "steeeeeeeeeve"
+      ]
+    },
+    {
+      "player_id": "1166",
+      "name": "Kirk Cousins",
+      "trade_count": 2,
+      "transaction_count": 7,
+      "franchises_owned_by": [
+        "ComradeCMP",
+        "etmoyer",
+        "Mummanator"
+      ]
+    },
+    {
+      "player_id": "8154",
+      "name": "Brian Robinson",
+      "trade_count": 2,
+      "transaction_count": 5,
+      "franchises_owned_by": [
+        "Pnewport",
+        "Mummanator",
+        "etmoyer",
+        "jackpotFTW"
+      ]
+    },
+    {
+      "player_id": "6943",
+      "name": "Gabe Davis",
+      "trade_count": 2,
+      "transaction_count": 5,
+      "franchises_owned_by": [
+        "steeeeeeeeeve",
+        "Danthecan",
+        "jackpotFTW",
+        "acricci"
+      ]
+    },
+    {
+      "player_id": "8138",
+      "name": "James Cook",
+      "trade_count": 2,
+      "transaction_count": 4,
+      "franchises_owned_by": [
+        "Danthecan",
+        "PhillyBooBird",
+        "jackpotFTW"
+      ]
+    },
+    {
+      "player_id": "8136",
+      "name": "Rachaad White",
+      "trade_count": 2,
+      "transaction_count": 4,
+      "franchises_owned_by": [
+        "steeeeeeeeeve",
+        "RJRJRJ123",
+        "PhillyBooBird",
+        "Mummanator"
+      ]
+    },
+    {
+      "player_id": "11563",
+      "name": "Bo Nix",
+      "trade_count": 2,
+      "transaction_count": 3,
+      "franchises_owned_by": [
+        "etmoyer",
+        "Danthecan",
+        "RJRJRJ123"
+      ]
+    }
+  ],
+  "most_active_player_histories": [
+    {
+      "player_id": "8259",
+      "name": "Cameron Dicker",
+      "event_count": 19,
+      "transaction_count": 19,
+      "trade_count": 0
+    },
+    {
+      "player_id": "2028",
+      "name": "Derek Carr",
+      "event_count": 18,
+      "transaction_count": 17,
+      "trade_count": 0
+    },
+    {
+      "player_id": "GB",
+      "name": "Green Bay Packers",
+      "event_count": 14,
+      "transaction_count": 14,
+      "trade_count": 0
+    },
+    {
+      "player_id": "4195",
+      "name": "Jake Elliott",
+      "event_count": 14,
+      "transaction_count": 14,
+      "trade_count": 0
+    },
+    {
+      "player_id": "96",
+      "name": "Aaron Rodgers",
+      "event_count": 14,
+      "transaction_count": 13,
+      "trade_count": 0
+    },
+    {
+      "player_id": "DET",
+      "name": "Detroit Lions",
+      "event_count": 13,
+      "transaction_count": 13,
+      "trade_count": 0
+    },
+    {
+      "player_id": "HOU",
+      "name": "Houston Texans",
+      "event_count": 13,
+      "transaction_count": 13,
+      "trade_count": 0
+    },
+    {
+      "player_id": "TB",
+      "name": "Tampa Bay Buccaneers",
+      "event_count": 13,
+      "transaction_count": 13,
+      "trade_count": 0
+    },
+    {
+      "player_id": "1234",
+      "name": "Russell Wilson",
+      "event_count": 13,
+      "transaction_count": 12,
+      "trade_count": 1
+    },
+    {
+      "player_id": "1373",
+      "name": "Geno Smith",
+      "event_count": 12,
+      "transaction_count": 12,
+      "trade_count": 0
+    },
+    {
+      "player_id": "5001",
+      "name": "Dalton Schultz",
+      "event_count": 12,
+      "transaction_count": 11,
+      "trade_count": 1
+    },
+    {
+      "player_id": "3214",
+      "name": "Hunter Henry",
+      "event_count": 12,
+      "transaction_count": 11,
+      "trade_count": 1
+    },
+    {
+      "player_id": "4098",
+      "name": "Kareem Hunt",
+      "event_count": 12,
+      "transaction_count": 11,
+      "trade_count": 2
+    },
+    {
+      "player_id": "6083",
+      "name": "Matt Gay",
+      "event_count": 12,
+      "transaction_count": 11,
+      "trade_count": 0
+    },
+    {
+      "player_id": "2747",
+      "name": "Jason Myers",
+      "event_count": 11,
+      "transaction_count": 11,
+      "trade_count": 0
+    },
+    {
+      "player_id": "3451",
+      "name": "Ka'imi Fairbairn",
+      "event_count": 11,
+      "transaction_count": 11,
+      "trade_count": 0
+    },
+    {
+      "player_id": "NE",
+      "name": "New England Patriots",
+      "event_count": 11,
+      "transaction_count": 11,
+      "trade_count": 0
+    },
+    {
+      "player_id": "6768",
+      "name": "Tua Tagovailoa",
+      "event_count": 11,
+      "transaction_count": 10,
+      "trade_count": 1
+    },
+    {
+      "player_id": "ATL",
+      "name": "Atlanta Falcons",
+      "event_count": 10,
+      "transaction_count": 10,
+      "trade_count": 0
+    },
+    {
+      "player_id": "5248",
+      "name": "Gus Edwards",
+      "event_count": 10,
+      "transaction_count": 10,
+      "trade_count": 0
+    }
+  ]
+}

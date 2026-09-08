@@ -1,0 +1,113 @@
+[
+  {
+    "created": 1786406217841,
+    "creators": [
+      "517079980760150016",
+      "559135658332524544"
+    ],
+    "draft_id": "1392692254979665920",
+    "draft_order": {
+      "1002342256092762112": 8,
+      "517079980760150016": 6,
+      "517080755628453888": 7,
+      "559132295743279104": 4,
+      "559133018459394048": 9,
+      "559135658332524544": 1,
+      "559193893851738112": 5,
+      "559210519766609920": 2,
+      "560265743531290624": 3,
+      "694581224353632256": 10
+    },
+    "last_message_id": "1392692728940199936",
+    "last_message_time": 1786406330861,
+    "last_picked": 1786406325708,
+    "league_id": "1312085809582579712",
+    "metadata": {
+      "description": "",
+      "league_type": "2",
+      "name": "Diamond Dynasty",
+      "scoring_type": "dynasty_2qb"
+    },
+    "season": "2026",
+    "season_type": "regular",
+    "settings": {
+      "autostart": 0,
+      "cpu_autopick": 1,
+      "rounds": 3,
+      "slots_bn": 8,
+      "slots_def": 1,
+      "slots_flex": 2,
+      "slots_k": 1,
+      "slots_qb": 1,
+      "slots_rb": 2,
+      "slots_super_flex": 1,
+      "slots_te": 1,
+      "slots_wr": 2,
+      "teams": 10
+    },
+    "sport": "nfl",
+    "start_time": 1786406325708,
+    "status": "complete",
+    "type": "linear"
+  },
+  {
+    "created": 1767188143682,
+    "creators": [
+      "517079980760150016",
+      "559135658332524544"
+    ],
+    "draft_id": "1312085809586765824",
+    "draft_order": {
+      "1002342256092762112": 4,
+      "517079980760150016": 9,
+      "517080755628453888": 2,
+      "559132295743279104": 10,
+      "559133018459394048": 7,
+      "559135658332524544": 3,
+      "559193893851738112": 6,
+      "559210519766609920": 1,
+      "560265743531290624": 8,
+      "694581224353632256": 5
+    },
+    "last_message_id": "1392672103601299456",
+    "last_message_time": 1786401413397,
+    "last_picked": 1786401412804,
+    "league_id": "1312085809582579712",
+    "metadata": {
+      "description": "",
+      "name": "Glizzy Gobblers",
+      "scoring_type": "dynasty_2qb",
+      "show_team_names": "0"
+    },
+    "season": "2026",
+    "season_type": "regular",
+    "settings": {
+      "alpha_sort": 0,
+      "autopause_enabled": 0,
+      "autopause_end_time": 840,
+      "autopause_start_time": 120,
+      "autostart": 0,
+      "cpu_autopick": 1,
+      "enforce_position_limits": 1,
+      "nomination_timer": 60,
+      "pick_timer": 0,
+      "player_type": 1,
+      "reversal_round": 0,
+      "rounds": 3,
+      "slots_bn": 8,
+      "slots_def": 1,
+      "slots_flex": 2,
+      "slots_k": 1,
+      "slots_qb": 1,
+      "slots_rb": 2,
+      "slots_super_flex": 1,
+      "slots_te": 1,
+      "slots_wr": 2,
+      "teams": 10
+    },
+    "sport": "nfl",
+    "start_time": 1786369889095,
+    "status": "complete",
+    "type": "linear"
+  }
+]

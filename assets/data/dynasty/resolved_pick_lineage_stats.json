@@ -1,0 +1,29 @@
+{
+  "total_lineages": 82,
+  "resolved": 62,
+  "unresolved": 20,
+  "resolved_traded_picks": 58,
+  "validation_problems": 0,
+  "unresolved_pick_ids": [
+    "PICK-2027-R1-F7",
+    "PICK-2027-R1-F8",
+    "PICK-2027-R1-F10",
+    "PICK-2027-R2-F1",
+    "PICK-2027-R2-F2",
+    "PICK-2027-R2-F3",
+    "PICK-2027-R2-F5",
+    "PICK-2027-R2-F8",
+    "PICK-2027-R3-F1",
+    "PICK-2027-R3-F2",
+    "PICK-2027-R3-F3",
+    "PICK-2027-R3-F5",
+    "PICK-2027-R3-F7",
+    "PICK-2027-R3-F9",
+    "PICK-2028-R1-F1",
+    "PICK-2028-R1-F2",
+    "PICK-2028-R2-F3",
+    "PICK-2028-R2-F5",
+    "PICK-2028-R3-F3",
+    "PICK-2028-R3-F5"
+  ]
+}

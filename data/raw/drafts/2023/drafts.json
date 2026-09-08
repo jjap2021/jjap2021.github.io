@@ -1,0 +1,58 @@
+[
+  {
+    "created": 1672848620972,
+    "creators": [
+      "517079980760150016"
+    ],
+    "draft_id": "916397172126535681",
+    "draft_order": {
+      "517079980760150016": 2,
+      "559132295743279104": 3,
+      "559133018459394048": 1,
+      "559134002064789504": 10,
+      "559135658332524544": 7,
+      "559193893851738112": 9,
+      "559210519766609920": 5,
+      "560265743531290624": 6,
+      "626798676303499264": 8,
+      "694581224353632256": 4
+    },
+    "last_message_id": "991162759746154496",
+    "last_message_time": 1690674126138,
+    "last_picked": 1690674125596,
+    "league_id": "916397172126535680",
+    "metadata": {
+      "description": "",
+      "name": "Glizzy Gobblers",
+      "scoring_type": "dynasty_ppr"
+    },
+    "season": "2023",
+    "season_type": "regular",
+    "settings": {
+      "alpha_sort": 0,
+      "autopause_enabled": 0,
+      "autopause_end_time": 840,
+      "autopause_start_time": 120,
+      "autostart": 0,
+      "cpu_autopick": 1,
+      "enforce_position_limits": 1,
+      "nomination_timer": 60,
+      "pick_timer": 120,
+      "player_type": 1,
+      "reversal_round": 0,
+      "rounds": 3,
+      "slots_bn": 9,
+      "slots_flex": 2,
+      "slots_k": 1,
+      "slots_qb": 1,
+      "slots_rb": 2,
+      "slots_te": 1,
+      "slots_wr": 2,
+      "teams": 10
+    },
+    "sport": "nfl",
+    "start_time": 1690672571665,
+    "status": "complete",
+    "type": "linear"
+  }
+]

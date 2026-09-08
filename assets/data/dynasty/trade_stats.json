@@ -1,0 +1,1274 @@
+{
+  "summary": {
+    "total_trades": 85,
+    "multi_team_trades": 0,
+    "two_team_trades": 85,
+    "seasons": [
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ]
+  },
+  "by_franchise": [
+    {
+      "franchise": "etmoyer",
+      "trades": 32,
+      "players_acquired": 27,
+      "players_traded_away": 43,
+      "picks_acquired": 25,
+      "picks_traded_away": 27,
+      "faab_acquired": 0,
+      "faab_traded_away": 0,
+      "multi_team_trades": 0
+    },
+    {
+      "franchise": "Danthecan",
+      "trades": 28,
+      "players_acquired": 29,
+      "players_traded_away": 22,
+      "picks_acquired": 21,
+      "picks_traded_away": 27,
+      "faab_acquired": 0,
+      "faab_traded_away": 0,
+      "multi_team_trades": 0
+    },
+    {
+      "franchise": "PhillyBooBird",
+      "trades": 18,
+      "players_acquired": 16,
+      "players_traded_away": 19,
+      "picks_acquired": 18,
+      "picks_traded_away": 16,
+      "faab_acquired": 0,
+      "faab_traded_away": 0,
+      "multi_team_trades": 0
+    },
+    {
+      "franchise": "acricci",
+      "trades": 17,
+      "players_acquired": 13,
+      "players_traded_away": 12,
+      "picks_acquired": 19,
+      "picks_traded_away": 16,
+      "faab_acquired": 0,
+      "faab_traded_away": 0,
+      "multi_team_trades": 0
+    },
+    {
+      "franchise": "Mummanator",
+      "trades": 17,
+      "players_acquired": 22,
+      "players_traded_away": 18,
+      "picks_acquired": 17,
+      "picks_traded_away": 16,
+      "faab_acquired": 0,
+      "faab_traded_away": 0,
+      "multi_team_trades": 0
+    },
+    {
+      "franchise": "jackpotFTW",
+      "trades": 16,
+      "players_acquired": 20,
+      "players_traded_away": 17,
+      "picks_acquired": 13,
+      "picks_traded_away": 14,
+      "faab_acquired": 0,
+      "faab_traded_away": 0,
+      "multi_team_trades": 0
+    },
+    {
+      "franchise": "steeeeeeeeeve",
+      "trades": 15,
+      "players_acquired": 15,
+      "players_traded_away": 10,
+      "picks_acquired": 13,
+      "picks_traded_away": 12,
+      "faab_acquired": 0,
+      "faab_traded_away": 0,
+      "multi_team_trades": 0
+    },
+    {
+      "franchise": "RJRJRJ123",
+      "trades": 11,
+      "players_acquired": 6,
+      "players_traded_away": 8,
+      "picks_acquired": 11,
+      "picks_traded_away": 11,
+      "faab_acquired": 0,
+      "faab_traded_away": 0,
+      "multi_team_trades": 0
+    },
+    {
+      "franchise": "ComradeCMP",
+      "trades": 8,
+      "players_acquired": 8,
+      "players_traded_away": 9,
+      "picks_acquired": 10,
+      "picks_traded_away": 4,
+      "faab_acquired": 0,
+      "faab_traded_away": 0,
+      "multi_team_trades": 0
+    },
+    {
+      "franchise": "Pnewport",
+      "trades": 8,
+      "players_acquired": 6,
+      "players_traded_away": 4,
+      "picks_acquired": 4,
+      "picks_traded_away": 8,
+      "faab_acquired": 0,
+      "faab_traded_away": 0,
+      "multi_team_trades": 0
+    }
+  ],
+  "by_season": [
+    {
+      "season": 2022,
+      "trades": 11
+    },
+    {
+      "season": 2023,
+      "trades": 23
+    },
+    {
+      "season": 2024,
+      "trades": 10
+    },
+    {
+      "season": 2025,
+      "trades": 24
+    },
+    {
+      "season": 2026,
+      "trades": 17
+    }
+  ],
+  "trade_partners": [
+    {
+      "franchise_1": "Mummanator",
+      "franchise_2": "etmoyer",
+      "trades": 8
+    },
+    {
+      "franchise_1": "Danthecan",
+      "franchise_2": "etmoyer",
+      "trades": 6
+    },
+    {
+      "franchise_1": "Danthecan",
+      "franchise_2": "jackpotFTW",
+      "trades": 6
+    },
+    {
+      "franchise_1": "Danthecan",
+      "franchise_2": "acricci",
+      "trades": 5
+    },
+    {
+      "franchise_1": "etmoyer",
+      "franchise_2": "steeeeeeeeeve",
+      "trades": 5
+    },
+    {
+      "franchise_1": "PhillyBooBird",
+      "franchise_2": "acricci",
+      "trades": 4
+    },
+    {
+      "franchise_1": "PhillyBooBird",
+      "franchise_2": "steeeeeeeeeve",
+      "trades": 4
+    },
+    {
+      "franchise_1": "Danthecan",
+      "franchise_2": "PhillyBooBird",
+      "trades": 3
+    },
+    {
+      "franchise_1": "etmoyer",
+      "franchise_2": "jackpotFTW",
+      "trades": 3
+    },
+    {
+      "franchise_1": "PhillyBooBird",
+      "franchise_2": "etmoyer",
+      "trades": 3
+    },
+    {
+      "franchise_1": "RJRJRJ123",
+      "franchise_2": "steeeeeeeeeve",
+      "trades": 3
+    },
+    {
+      "franchise_1": "acricci",
+      "franchise_2": "etmoyer",
+      "trades": 2
+    },
+    {
+      "franchise_1": "ComradeCMP",
+      "franchise_2": "acricci",
+      "trades": 2
+    },
+    {
+      "franchise_1": "ComradeCMP",
+      "franchise_2": "Danthecan",
+      "trades": 2
+    },
+    {
+      "franchise_1": "ComradeCMP",
+      "franchise_2": "etmoyer",
+      "trades": 2
+    },
+    {
+      "franchise_1": "Danthecan",
+      "franchise_2": "Mummanator",
+      "trades": 2
+    },
+    {
+      "franchise_1": "Danthecan",
+      "franchise_2": "RJRJRJ123",
+      "trades": 2
+    },
+    {
+      "franchise_1": "Mummanator",
+      "franchise_2": "Pnewport",
+      "trades": 2
+    },
+    {
+      "franchise_1": "PhillyBooBird",
+      "franchise_2": "jackpotFTW",
+      "trades": 2
+    },
+    {
+      "franchise_1": "Pnewport",
+      "franchise_2": "etmoyer",
+      "trades": 2
+    },
+    {
+      "franchise_1": "RJRJRJ123",
+      "franchise_2": "jackpotFTW",
+      "trades": 2
+    },
+    {
+      "franchise_1": "acricci",
+      "franchise_2": "jackpotFTW",
+      "trades": 1
+    },
+    {
+      "franchise_1": "ComradeCMP",
+      "franchise_2": "Mummanator",
+      "trades": 1
+    },
+    {
+      "franchise_1": "ComradeCMP",
+      "franchise_2": "steeeeeeeeeve",
+      "trades": 1
+    },
+    {
+      "franchise_1": "Danthecan",
+      "franchise_2": "Pnewport",
+      "trades": 1
+    },
+    {
+      "franchise_1": "Danthecan",
+      "franchise_2": "steeeeeeeeeve",
+      "trades": 1
+    },
+    {
+      "franchise_1": "Mummanator",
+      "franchise_2": "acricci",
+      "trades": 1
+    },
+    {
+      "franchise_1": "Mummanator",
+      "franchise_2": "jackpotFTW",
+      "trades": 1
+    },
+    {
+      "franchise_1": "Mummanator",
+      "franchise_2": "PhillyBooBird",
+      "trades": 1
+    },
+    {
+      "franchise_1": "Mummanator",
+      "franchise_2": "RJRJRJ123",
+      "trades": 1
+    },
+    {
+      "franchise_1": "PhillyBooBird",
+      "franchise_2": "RJRJRJ123",
+      "trades": 1
+    },
+    {
+      "franchise_1": "Pnewport",
+      "franchise_2": "acricci",
+      "trades": 1
+    },
+    {
+      "franchise_1": "Pnewport",
+      "franchise_2": "jackpotFTW",
+      "trades": 1
+    },
+    {
+      "franchise_1": "Pnewport",
+      "franchise_2": "steeeeeeeeeve",
+      "trades": 1
+    },
+    {
+      "franchise_1": "RJRJRJ123",
+      "franchise_2": "acricci",
+      "trades": 1
+    },
+    {
+      "franchise_1": "RJRJRJ123",
+      "franchise_2": "etmoyer",
+      "trades": 1
+    }
+  ],
+  "player_trade_counts": [
+    {
+      "player_id": "5850",
+      "name": "Josh Jacobs",
+      "position": "RB",
+      "times_acquired": 4,
+      "times_traded_away": 4,
+      "trade_movements": 4
+    },
+    {
+      "player_id": "8151",
+      "name": "Kenneth Walker",
+      "position": "RB",
+      "times_acquired": 4,
+      "times_traded_away": 4,
+      "trade_movements": 4
+    },
+    {
+      "player_id": "6819",
+      "name": "Michael Pittman",
+      "position": "WR",
+      "times_acquired": 4,
+      "times_traded_away": 4,
+      "trade_movements": 4
+    },
+    {
+      "player_id": "8121",
+      "name": "Romeo Doubs",
+      "position": "WR",
+      "times_acquired": 4,
+      "times_traded_away": 4,
+      "trade_movements": 4
+    },
+    {
+      "player_id": "5859",
+      "name": "A.J. Brown",
+      "position": "WR",
+      "times_acquired": 3,
+      "times_traded_away": 3,
+      "trade_movements": 3
+    },
+    {
+      "player_id": "4039",
+      "name": "Cooper Kupp",
+      "position": "WR",
+      "times_acquired": 3,
+      "times_traded_away": 3,
+      "trade_movements": 3
+    },
+    {
+      "player_id": "5892",
+      "name": "David Montgomery",
+      "position": "RB",
+      "times_acquired": 3,
+      "times_traded_away": 3,
+      "trade_movements": 3
+    },
+    {
+      "player_id": "8146",
+      "name": "Garrett Wilson",
+      "position": "WR",
+      "times_acquired": 3,
+      "times_traded_away": 3,
+      "trade_movements": 3
+    },
+    {
+      "player_id": "4217",
+      "name": "George Kittle",
+      "position": "TE",
+      "times_acquired": 3,
+      "times_traded_away": 3,
+      "trade_movements": 3
+    },
+    {
+      "player_id": "8137",
+      "name": "George Pickens",
+      "position": "WR",
+      "times_acquired": 3,
+      "times_traded_away": 3,
+      "trade_movements": 3
+    },
+    {
+      "player_id": "6783",
+      "name": "Jerry Jeudy",
+      "position": "WR",
+      "times_acquired": 3,
+      "times_traded_away": 3,
+      "trade_movements": 3
+    },
+    {
+      "player_id": "1479",
+      "name": "Keenan Allen",
+      "position": "WR",
+      "times_acquired": 3,
+      "times_traded_away": 3,
+      "trade_movements": 3
+    },
+    {
+      "player_id": "2216",
+      "name": "Mike Evans",
+      "position": "WR",
+      "times_acquired": 3,
+      "times_traded_away": 3,
+      "trade_movements": 3
+    },
+    {
+      "player_id": "11563",
+      "name": "Bo Nix",
+      "position": "QB",
+      "times_acquired": 2,
+      "times_traded_away": 2,
+      "trade_movements": 2
+    },
+    {
+      "player_id": "8155",
+      "name": "Breece Hall",
+      "position": "RB",
+      "times_acquired": 2,
+      "times_traded_away": 2,
+      "trade_movements": 2
+    },
+    {
+      "player_id": "8154",
+      "name": "Brian Robinson",
+      "position": "RB",
+      "times_acquired": 2,
+      "times_traded_away": 2,
+      "trade_movements": 2
+    },
+    {
+      "player_id": "9758",
+      "name": "C.J. Stroud",
+      "position": "QB",
+      "times_acquired": 2,
+      "times_traded_away": 2,
+      "trade_movements": 2
+    },
+    {
+      "player_id": "6786",
+      "name": "CeeDee Lamb",
+      "position": "WR",
+      "times_acquired": 2,
+      "times_traded_away": 2,
+      "trade_movements": 2
+    },
+    {
+      "player_id": "8144",
+      "name": "Chris Olave",
+      "position": "WR",
+      "times_acquired": 2,
+      "times_traded_away": 2,
+      "trade_movements": 2
+    },
+    {
+      "player_id": "4034",
+      "name": "Christian McCaffrey",
+      "position": "RB",
+      "times_acquired": 2,
+      "times_traded_away": 2,
+      "trade_movements": 2
+    },
+    {
+      "player_id": "6790",
+      "name": "D'Andre Swift",
+      "position": "RB",
+      "times_acquired": 2,
+      "times_traded_away": 2,
+      "trade_movements": 2
+    },
+    {
+      "player_id": "10236",
+      "name": "Dalton Kincaid",
+      "position": "TE",
+      "times_acquired": 2,
+      "times_traded_away": 2,
+      "trade_movements": 2
+    },
+    {
+      "player_id": "1426",
+      "name": "DeAndre Hopkins",
+      "position": "WR",
+      "times_acquired": 2,
+      "times_traded_away": 2,
+      "trade_movements": 2
+    },
+    {
+      "player_id": "4983",
+      "name": "DJ Moore",
+      "position": "WR",
+      "times_acquired": 2,
+      "times_traded_away": 2,
+      "trade_movements": 2
+    },
+    {
+      "player_id": "8112",
+      "name": "Drake London",
+      "position": "WR",
+      "times_acquired": 2,
+      "times_traded_away": 2,
+      "trade_movements": 2
+    },
+    {
+      "player_id": "6943",
+      "name": "Gabe Davis",
+      "position": "WR",
+      "times_acquired": 2,
+      "times_traded_away": 2,
+      "trade_movements": 2
+    },
+    {
+      "player_id": "8138",
+      "name": "James Cook",
+      "position": "RB",
+      "times_acquired": 2,
+      "times_traded_away": 2,
+      "trade_movements": 2
+    },
+    {
+      "player_id": "7588",
+      "name": "Javonte Williams",
+      "position": "RB",
+      "times_acquired": 2,
+      "times_traded_away": 2,
+      "trade_movements": 2
+    },
+    {
+      "player_id": "4098",
+      "name": "Kareem Hunt",
+      "position": "RB",
+      "times_acquired": 2,
+      "times_traded_away": 2,
+      "trade_movements": 2
+    },
+    {
+      "player_id": "1166",
+      "name": "Kirk Cousins",
+      "position": "QB",
+      "times_acquired": 2,
+      "times_traded_away": 2,
+      "trade_movements": 2
+    },
+    {
+      "player_id": "7528",
+      "name": "Najee Harris",
+      "position": "RB",
+      "times_acquired": 2,
+      "times_traded_away": 2,
+      "trade_movements": 2
+    },
+    {
+      "player_id": "8136",
+      "name": "Rachaad White",
+      "position": "RB",
+      "times_acquired": 2,
+      "times_traded_away": 2,
+      "trade_movements": 2
+    },
+    {
+      "player_id": "11638",
+      "name": "Ricky Pearsall",
+      "position": "WR",
+      "times_acquired": 2,
+      "times_traded_away": 2,
+      "trade_movements": 2
+    },
+    {
+      "player_id": "4866",
+      "name": "Saquon Barkley",
+      "position": "RB",
+      "times_acquired": 2,
+      "times_traded_away": 2,
+      "trade_movements": 2
+    },
+    {
+      "player_id": "5967",
+      "name": "Tony Pollard",
+      "position": "RB",
+      "times_acquired": 2,
+      "times_traded_away": 2,
+      "trade_movements": 2
+    },
+    {
+      "player_id": "4199",
+      "name": "Aaron Jones",
+      "position": "RB",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "1689",
+      "name": "Adam Thielen",
+      "position": "WR",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "5987",
+      "name": "Alexander Mattison",
+      "position": "RB",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "5185",
+      "name": "Allen Lazard",
+      "position": "WR",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "4035",
+      "name": "Alvin Kamara",
+      "position": "RB",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "2309",
+      "name": "Amari Cooper",
+      "position": "WR",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "4663",
+      "name": "Austin Ekeler",
+      "position": "RB",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "BAL",
+      "name": "Baltimore Ravens",
+      "position": "DEF",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "2197",
+      "name": "Brandin Cooks",
+      "position": "WR",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "6803",
+      "name": "Brandon Aiyuk",
+      "position": "WR",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "11533",
+      "name": "Brandon Aubrey",
+      "position": "K",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "11584",
+      "name": "Bucky Irving",
+      "position": "RB",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "4981",
+      "name": "Calvin Ridley",
+      "position": "WR",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "12522",
+      "name": "Cam Ward",
+      "position": "QB",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "4037",
+      "name": "Chris Godwin",
+      "position": "WR",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "5045",
+      "name": "Courtland Sutton",
+      "position": "WR",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "3294",
+      "name": "Dak Prescott",
+      "position": "QB",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "5022",
+      "name": "Dallas Goedert",
+      "position": "TE",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "5001",
+      "name": "Dalton Schultz",
+      "position": "TE",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "5870",
+      "name": "Daniel Jones",
+      "position": "QB",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "2133",
+      "name": "Davante Adams",
+      "position": "WR",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "4033",
+      "name": "David Njoku",
+      "position": "TE",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "9226",
+      "name": "De'Von Achane",
+      "position": "RB",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "5846",
+      "name": "DK Metcalf",
+      "position": "WR",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "7561",
+      "name": "Elijah Mitchell",
+      "position": "RB",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "4066",
+      "name": "Evan Engram",
+      "position": "TE",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "3164",
+      "name": "Ezekiel Elliott",
+      "position": "RB",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "4227",
+      "name": "Harrison Butker",
+      "position": "K",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "3214",
+      "name": "Hunter Henry",
+      "position": "TE",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "IND",
+      "name": "Indianapolis Colts",
+      "position": "DEF",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "6806",
+      "name": "J.K. Dobbins",
+      "position": "RB",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "7564",
+      "name": "Ja'Marr Chase",
+      "position": "WR",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "8119",
+      "name": "Jahan Dotson",
+      "position": "WR",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "9221",
+      "name": "Jahmyr Gibbs",
+      "position": "RB",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "8110",
+      "name": "Jake Ferguson",
+      "position": "TE",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "11646",
+      "name": "Jalen Coker",
+      "position": "WR",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "11618",
+      "name": "Jalen McMillan",
+      "position": "WR",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "3163",
+      "name": "Jared Goff",
+      "position": "QB",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "12484",
+      "name": "Jayden Higgins",
+      "position": "WR",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "8228",
+      "name": "Jaylen Warren",
+      "position": "RB",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "8143",
+      "name": "Jerome Ford",
+      "position": "RB",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "6770",
+      "name": "Joe Burrow",
+      "position": "QB",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "4018",
+      "name": "Joe Mixon",
+      "position": "RB",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "6813",
+      "name": "Jonathan Taylor",
+      "position": "RB",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "9500",
+      "name": "Josh Downs",
+      "position": "WR",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "7670",
+      "name": "Joshua Palmer",
+      "position": "WR",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "4040",
+      "name": "JuJu Smith-Schuster",
+      "position": "WR",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "7591",
+      "name": "Justin Fields",
+      "position": "QB",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "13405",
+      "name": "Kaytron Allen",
+      "position": "RB",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "9511",
+      "name": "Keaton Mitchell",
+      "position": "RB",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "9757",
+      "name": "Kendre Miller",
+      "position": "RB",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "11637",
+      "name": "Keon Coleman",
+      "position": "WR",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "11647",
+      "name": "Kimani Vidal",
+      "position": "RB",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "11632",
+      "name": "Malik Nabers",
+      "position": "WR",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "11628",
+      "name": "Marvin Harrison",
+      "position": "WR",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "421",
+      "name": "Matthew Stafford",
+      "position": "QB",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "9482",
+      "name": "Michael Mayer",
+      "position": "TE",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "3199",
+      "name": "Michael Thomas",
+      "position": "WR",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "10232",
+      "name": "Michael Wilson",
+      "position": "WR",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "11575",
+      "name": "Ray Davis",
+      "position": "RB",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "7611",
+      "name": "Rhamondre Stevenson",
+      "position": "RB",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "12489",
+      "name": "RJ Harvey",
+      "position": "RB",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "7601",
+      "name": "Rondale Moore",
+      "position": "WR",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "1234",
+      "name": "Russell Wilson",
+      "position": "QB",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "10859",
+      "name": "Sam LaPorta",
+      "position": "TE",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "12524",
+      "name": "Shedeur Sanders",
+      "position": "QB",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "9502",
+      "name": "Tank Dell",
+      "position": "WR",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "12526",
+      "name": "Tetairoa McMillan",
+      "position": "WR",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "12485",
+      "name": "Tez Johnson",
+      "position": "WR",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "1466",
+      "name": "Travis Kelce",
+      "position": "TE",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "6768",
+      "name": "Tua Tagovailoa",
+      "position": "QB",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "9484",
+      "name": "Tucker Kraft",
+      "position": "TE",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "3321",
+      "name": "Tyreek Hill",
+      "position": "WR",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "9999",
+      "name": "Will Levis",
+      "position": "QB",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    },
+    {
+      "player_id": "8139",
+      "name": "Zamir White",
+      "position": "RB",
+      "times_acquired": 1,
+      "times_traded_away": 1,
+      "trade_movements": 1
+    }
+  ],
+  "pick_stats": [
+    {
+      "franchise": "ComradeCMP",
+      "picks_acquired": 10,
+      "picks_traded_away": 4,
+      "net_pick_movements": 6
+    },
+    {
+      "franchise": "Danthecan",
+      "picks_acquired": 21,
+      "picks_traded_away": 27,
+      "net_pick_movements": -6
+    },
+    {
+      "franchise": "Mummanator",
+      "picks_acquired": 17,
+      "picks_traded_away": 16,
+      "net_pick_movements": 1
+    },
+    {
+      "franchise": "PhillyBooBird",
+      "picks_acquired": 18,
+      "picks_traded_away": 16,
+      "net_pick_movements": 2
+    },
+    {
+      "franchise": "Pnewport",
+      "picks_acquired": 4,
+      "picks_traded_away": 8,
+      "net_pick_movements": -4
+    },
+    {
+      "franchise": "RJRJRJ123",
+      "picks_acquired": 11,
+      "picks_traded_away": 11,
+      "net_pick_movements": 0
+    },
+    {
+      "franchise": "acricci",
+      "picks_acquired": 19,
+      "picks_traded_away": 16,
+      "net_pick_movements": 3
+    },
+    {
+      "franchise": "etmoyer",
+      "picks_acquired": 25,
+      "picks_traded_away": 27,
+      "net_pick_movements": -2
+    },
+    {
+      "franchise": "jackpotFTW",
+      "picks_acquired": 13,
+      "picks_traded_away": 14,
+      "net_pick_movements": -1
+    },
+    {
+      "franchise": "steeeeeeeeeve",
+      "picks_acquired": 13,
+      "picks_traded_away": 12,
+      "net_pick_movements": 1
+    }
+  ]
+}

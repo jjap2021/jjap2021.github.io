@@ -2,1295 +2,3233 @@ const DATA_PATH =
     "../../assets/data/dynasty/";
 
 
-let standings = [];
-let records = {};
-let streaks = [];
-let rivalries = [];
+const DATA_FILES = {
 
+    standings:
+        "standings.json",
 
-let standingsSort = {
-    column: "rank",
-    direction: "asc"
+    records:
+        "records.json",
+
+    streaks:
+        "streaks.json",
+
+    rivalries:
+        "rivalries.json",
+
+    summary:
+        "summary.json",
+
+    tradeStats:
+        "trade_stats.json",
+
+    tradeHistory:
+        "trade_history.json",
+
+    pickButterfly:
+        "pick_butterfly.json",
+
+    playerHistory:
+        "player_history.json",
+
+    playerHistoryIndex:
+        "player_history_index.json",
 };
 
 
+let standingsData = [];
+let rivalryData = [];
+let tradeHistoryData = [];
+let pickButterflyData = [];
 
-/* =========================================
-   LOAD DASHBOARD DATA
-========================================= */
+let playerHistoryData = [];
+let playerHistoryIndexData = [];
+let selectedPlayerId = null;
 
-async function loadDashboard() {
-
-    try {
-
-        const [
-            standingsResponse,
-            recordsResponse,
-            streaksResponse,
-            rivalriesResponse
-        ] = await Promise.all([
-
-            fetch(
-                DATA_PATH +
-                "standings.json"
-            ),
-
-            fetch(
-                DATA_PATH +
-                "records.json"
-            ),
-
-            fetch(
-                DATA_PATH +
-                "streaks.json"
-            ),
-
-            fetch(
-                DATA_PATH +
-                "rivalries.json"
-            )
-
-        ]);
+let filteredPickData = [];
 
 
-        if (
-            !standingsResponse.ok ||
-            !recordsResponse.ok ||
-            !streaksResponse.ok ||
-            !rivalriesResponse.ok
-        ) {
+let standingsSort = {
 
-            throw new Error(
-                "One or more dashboard files could not be loaded."
-            );
-        }
+    key:
+        "rank",
+
+    direction:
+        "asc",
+};
 
 
-        standings =
-            await standingsResponse.json();
+/* ==========================================================
+   GENERIC HELPERS
+========================================================== */
 
-        records =
-            await recordsResponse.json();
+async function loadJSON(file) {
 
-        streaks =
-            await streaksResponse.json();
-
-        rivalries =
-            await rivalriesResponse.json();
-
-
-        /*
-         * Save the original all-time rank.
-         *
-         * This means clicking "#" later
-         * returns the table to the original
-         * standings order.
-         */
-
-        standings =
-            standings.map(
-                (team, index) => ({
-                    ...team,
-                    rank: index + 1
-                })
-            );
-
-
-        renderGameCount();
-
-        renderRecords();
-
-        renderStandings();
-
-        setupStandingsSorting();
-
-        renderStreaks();
-
-        setupRivalryExplorer();
-
-    }
-
-    catch (error) {
-
-        console.error(
-            "Dashboard failed to load:",
-            error
+    const response =
+        await fetch(
+            DATA_PATH + file
         );
 
 
-        document.body.insertAdjacentHTML(
-            "afterbegin",
+    if (!response.ok) {
 
-            `
-            <div
-                style="
-                    background:#7f1d1d;
-                    color:white;
-                    padding:12px;
-                    text-align:center;
-                    font-family:system-ui,sans-serif;
-                "
-            >
-                Dashboard data could not be loaded.
-                Check the browser console for details.
-            </div>
-            `
+        throw new Error(
+            `Could not load ${file}`
         );
     }
+
+
+    return response.json();
 }
 
 
+function safeArray(value) {
 
-/* =========================================
-   HELPERS
-========================================= */
+    return Array.isArray(value)
+        ? value
+        : [];
+}
 
-function number(
-    value,
-    decimals = 2
+
+function firstDefined(
+    ...values
 ) {
 
-    return Number(value)
-        .toFixed(decimals);
-}
-
-
-
-function pct(value) {
-
-    return (
-        Number(value) * 100
-    ).toFixed(1) + "%";
-}
-
-
-
-function createCard(
-    label,
-    value,
-    detail = ""
-) {
-
-    return `
-        <div class="stat-card">
-
-            <div class="label">
-                ${label}
-            </div>
-
-            <div class="value">
-                ${value}
-            </div>
-
-            <div class="detail">
-                ${detail}
-            </div>
-
-        </div>
-    `;
-}
-
-
-
-function gameLabel(record) {
-
-    if (
-        record.phase ===
-        "Postseason"
-    ) {
-
-        return (
-            `${record.season} · ` +
-            `Postseason Week ${record.week}`
-        );
-    }
-
-
-    return (
-        `${record.season} · ` +
-        `Week ${record.week}`
+    return values.find(
+        value =>
+            value !== undefined
+            &&
+            value !== null
+            &&
+            value !== ""
     );
 }
 
 
+function formatNumber(
+    value,
+    decimals = 2
+) {
 
-/* =========================================
-   GAME COUNT
-========================================= */
-
-function renderGameCount() {
-
-    /*
-     * Each rivalry contains every game
-     * played between that pair.
-     *
-     * Since each game belongs to exactly
-     * one unique rivalry, adding the
-     * rivalry game totals gives us the
-     * league-wide number of completed games.
-     */
-
-    const games =
-        rivalries.reduce(
-            (
-                total,
-                rivalry
-            ) => {
-
-                return (
-                    total +
-                    Number(
-                        rivalry.games
-                    )
-                );
-            },
-            0
-        );
+    const number =
+        Number(value);
 
 
-    document.getElementById(
-        "game-count"
-    ).textContent =
-        `${games} Games`;
+    if (
+        Number.isNaN(number)
+    ) {
+        return "—";
+    }
+
+
+    return number.toLocaleString(
+        undefined,
+        {
+            minimumFractionDigits:
+                decimals,
+
+            maximumFractionDigits:
+                decimals,
+        }
+    );
 }
 
 
+function formatInteger(value) {
 
-/* =========================================
-   RECORD BOOK
-========================================= */
+    const number =
+        Number(value);
 
-function renderRecords() {
-
-    const container =
-        document.getElementById(
-            "record-cards"
-        );
-
-
-    const cards = [];
-
-
-    /* BIGGEST BLOWOUT */
 
     if (
-        records.biggest_blowout
+        Number.isNaN(number)
     ) {
-
-        const r =
-            records.biggest_blowout;
-
-
-        cards.push(
-
-            createCard(
-
-                "Biggest Blowout",
-
-                `${number(
-                    r.margin
-                )} pts`,
-
-                `${r.winner} over ` +
-                `${r.loser} · ` +
-                `${gameLabel(r)}`
-
-            )
-
-        );
+        return "—";
     }
 
 
+    return number.toLocaleString();
+}
 
-    /* CLOSEST GAME */
+
+function formatPct(value) {
+
+    const number =
+        Number(value);
+
 
     if (
-        records.closest_game
+        Number.isNaN(number)
     ) {
-
-        const r =
-            records.closest_game;
-
-
-        cards.push(
-
-            createCard(
-
-                "Closest Game",
-
-                `${number(
-                    r.margin
-                )} pts`,
-
-                `${r.winner} over ` +
-                `${r.loser} · ` +
-                `${gameLabel(r)}`
-
-            )
-
-        );
+        return "—";
     }
 
 
+    return number.toFixed(3);
+}
 
-    /* HIGHEST TEAM SCORE */
+
+function formatSigned(value) {
+
+    const number =
+        Number(value);
+
 
     if (
-        records.highest_team_score
+        Number.isNaN(number)
     ) {
-
-        const r =
-            records.highest_team_score;
-
-
-        cards.push(
-
-            createCard(
-
-                "Highest Team Score",
-
-                number(
-                    r.score
-                ),
-
-                `${r.manager} · ` +
-                `${gameLabel(r)}`
-
-            )
-
-        );
+        return "—";
     }
 
 
+    const sign =
+        number > 0
+            ? "+"
+            : "";
 
-    /* MOST POINTS IN A SEASON */
+
+    return (
+        sign
+        + number.toFixed(2)
+    );
+}
+
+
+function valueClass(value) {
+
+    const number =
+        Number(value);
+
 
     if (
-        records.most_points_in_season
+        number > 0
     ) {
-
-        const r =
-            records.most_points_in_season;
-
-
-        cards.push(
-
-            createCard(
-
-                "Most Points — Season",
-
-                number(
-                    r.points_for
-                ),
-
-                `${r.manager} · ` +
-                `${r.season}`
-
-            )
-
-        );
+        return "positive";
     }
 
 
+    if (
+        number < 0
+    ) {
+        return "negative";
+    }
 
-    /* FALLBACK */
+
+    return "";
+}
+
+
+function formatDate(
+    isoDate
+) {
+
+    if (!isoDate) {
+
+        return "Unknown date";
+    }
+
+
+    const date =
+        new Date(isoDate);
+
+
+    return date.toLocaleDateString(
+        undefined,
+        {
+            year:
+                "numeric",
+
+            month:
+                "short",
+
+            day:
+                "numeric",
+        }
+    );
+}
+
+
+function getManager(row) {
+
+    return firstDefined(
+
+        row.manager,
+
+        row.franchise,
+
+        row.name,
+
+        row.team,
+
+        "Unknown"
+    );
+}
+
+
+/* ==========================================================
+   TABS
+========================================================== */
+
+function activateTab(
+    targetTab
+) {
+
+    const buttons =
+        document.querySelectorAll(
+            ".dashboard-nav .tab-button"
+        );
+
+
+    const panels =
+        document.querySelectorAll(
+            ".tab-panel"
+        );
+
+
+    buttons.forEach(
+        button => {
+
+            const isActive =
+                button.dataset.tab
+                === targetTab;
+
+
+            button.classList.toggle(
+                "active",
+                isActive
+            );
+
+
+            button.setAttribute(
+                "aria-selected",
+                isActive
+                    ? "true"
+                    : "false"
+            );
+        }
+    );
+
+
+    panels.forEach(
+        panel => {
+
+            panel.classList.toggle(
+                "active",
+                panel.id === targetTab
+            );
+        }
+    );
+}
+
+
+function setupTabs() {
+
+    const buttons =
+        document.querySelectorAll(
+            ".dashboard-nav .tab-button"
+        );
+
 
     if (
-        cards.length === 0
+        !buttons.length
     ) {
 
-        container.innerHTML =
-            "<p>No record data available.</p>";
+        console.warn(
+            "No dashboard tab buttons found."
+        );
 
         return;
     }
 
 
-    container.innerHTML =
-        cards.join("");
-}
+    buttons.forEach(
+        button => {
+
+            button.setAttribute(
+                "type",
+                "button"
+            );
 
 
-
-/* =========================================
-   ALL-TIME STANDINGS
-========================================= */
-
-function renderStandings() {
-
-    const tbody =
-        document.getElementById(
-            "standings-body"
-        );
+            button.setAttribute(
+                "role",
+                "tab"
+            );
 
 
-    tbody.innerHTML = "";
+            button.addEventListener(
+                "click",
+                event => {
+
+                    event.preventDefault();
 
 
-    const sortedStandings =
-        [...standings].sort(
-            (a, b) => {
-
-                const column =
-                    standingsSort.column;
+                    const target =
+                        button.dataset.tab;
 
 
-                const aValue =
-                    a[column];
-
-                const bValue =
-                    b[column];
-
-
-                /*
-                 * Alphabetical sorting
-                 */
-
-                if (
-                    typeof aValue ===
-                    "string"
-                ) {
-
-                    if (
-                        standingsSort.direction ===
-                        "asc"
-                    ) {
-
-                        return (
-                            aValue.localeCompare(
-                                bValue
-                            )
-                        );
+                    if (!target) {
+                        return;
                     }
 
 
-                    return (
-                        bValue.localeCompare(
-                            aValue
-                        )
+                    activateTab(
+                        target
                     );
                 }
+            );
+        }
+    );
 
 
-                /*
-                 * Numeric sorting
-                 */
-
-                if (
-                    standingsSort.direction ===
-                    "asc"
-                ) {
-
-                    return (
-                        Number(aValue) -
-                        Number(bValue)
-                    );
-                }
-
-
-                return (
-                    Number(bValue) -
-                    Number(aValue)
-                );
-            }
+    const activeButton =
+        document.querySelector(
+            ".dashboard-nav .tab-button.active"
         );
 
 
+    const initialTab =
+        activeButton?.dataset.tab
+        ?? buttons[0].dataset.tab;
 
-    sortedStandings.forEach(
-        team => {
 
-            const row =
+    activateTab(
+        initialTab
+    );
+}
+
+
+/* ==========================================================
+   HERO
+========================================================== */
+
+function renderHero(
+    summary,
+    tradeStats
+) {
+
+    const gameCount =
+        firstDefined(
+
+            summary.completed_games,
+
+            summary.games,
+
+            summary.total_games,
+
+            324
+        );
+
+
+    document
+        .getElementById(
+            "heroGameCount"
+        )
+        .textContent =
+        formatInteger(
+            gameCount
+        );
+
+
+    const totalTrades =
+        firstDefined(
+
+            tradeStats?.summary
+                ?.total_trades,
+
+            tradeHistoryData.length,
+
+            0
+        );
+
+
+    document
+        .getElementById(
+            "heroTradeCount"
+        )
+        .textContent =
+        formatInteger(
+            totalTrades
+        );
+}
+
+
+/* ==========================================================
+   STANDINGS
+========================================================== */
+
+function renderStandings() {
+
+    const body =
+        document.getElementById(
+            "standingsBody"
+        );
+
+
+    body.innerHTML =
+        "";
+
+
+    const sorted = [
+        ...standingsData
+    ];
+
+
+    sorted.sort(
+        (a, b) => {
+
+            const key =
+                standingsSort.key;
+
+
+            let aValue =
+                key === "rank"
+                    ? a.originalRank
+                    : (
+                        key === "manager"
+                            ? getManager(a)
+                            : a[key]
+                    );
+
+
+            let bValue =
+                key === "rank"
+                    ? b.originalRank
+                    : (
+                        key === "manager"
+                            ? getManager(b)
+                            : b[key]
+                    );
+
+
+            if (
+                typeof aValue
+                === "string"
+            ) {
+
+                const result =
+                    aValue.localeCompare(
+                        bValue
+                    );
+
+
+                return (
+                    standingsSort.direction
+                    === "asc"
+                        ? result
+                        : -result
+                );
+            }
+
+
+            aValue =
+                Number(
+                    aValue ?? 0
+                );
+
+
+            bValue =
+                Number(
+                    bValue ?? 0
+                );
+
+
+            return (
+                standingsSort.direction
+                === "asc"
+                    ? aValue - bValue
+                    : bValue - aValue
+            );
+        }
+    );
+
+
+    sorted.forEach(
+        row => {
+
+            const pointDiff =
+                firstDefined(
+
+                    row.point_diff,
+
+                    row.point_differential,
+
+                    0
+                );
+
+
+            const tr =
                 document.createElement(
                     "tr"
                 );
 
 
-            const differential =
-                Number(
-                    team.point_diff
-                );
-
-
-            row.innerHTML = `
+            tr.innerHTML = `
 
                 <td>
-                    ${team.rank}
+                    ${row.originalRank}
                 </td>
 
-
-                <td>
-                    <strong>
-                        ${team.manager}
-                    </strong>
+                <td class="franchise-cell">
+                    ${getManager(row)}
                 </td>
 
-
                 <td>
-                    ${team.wins}-${team.losses}
+                    ${row.wins}
                 </td>
 
+                <td>
+                    ${row.losses}
+                </td>
 
                 <td>
-                    ${pct(
-                        team.win_pct
+                    ${formatPct(
+                        row.win_pct
                     )}
                 </td>
 
-
                 <td>
-                    ${number(
-                        team.points_for
+                    ${formatNumber(
+                        row.points_for
                     )}
                 </td>
 
-
                 <td>
-                    ${number(
-                        team.points_against
+                    ${formatNumber(
+                        row.points_against
                     )}
                 </td>
 
-
-                <td
-                    class="${
-                        differential > 0
-                            ? "positive"
-                            : differential < 0
-                                ? "negative"
-                                : ""
-                    }"
-                >
-
-                    ${
-                        differential > 0
-                            ? "+"
-                            : ""
-                    }
-
-                    ${number(
-                        differential
+                <td class="${valueClass(
+                    pointDiff
+                )}">
+                    ${formatSigned(
+                        pointDiff
                     )}
-
                 </td>
             `;
 
 
-            tbody.appendChild(
-                row
+            body.appendChild(
+                tr
             );
         }
     );
-
-
-    updateSortIndicators();
 }
 
-
-
-/* =========================================
-   STANDINGS SORTING
-========================================= */
 
 function setupStandingsSorting() {
 
-    const headers =
-        document.querySelectorAll(
-            "#standings th[data-sort]"
-        );
+    document
+        .querySelectorAll(
+            "#standingsTable th[data-sort]"
+        )
+        .forEach(
+            header => {
 
+                header.addEventListener(
+                    "click",
+                    () => {
 
-    headers.forEach(
-        header => {
-
-            header.addEventListener(
-                "click",
-                () => {
-
-                    const column =
-                        header.dataset.sort;
-
-
-                    /*
-                     * Clicking the same
-                     * column reverses it.
-                     */
-
-                    if (
-                        standingsSort.column ===
-                        column
-                    ) {
-
-                        standingsSort.direction =
-                            standingsSort.direction ===
-                            "asc"
-                                ? "desc"
-                                : "asc";
-                    }
-
-
-                    /*
-                     * Clicking a new column
-                     * selects a sensible
-                     * default direction.
-                     */
-
-                    else {
-
-                        standingsSort.column =
-                            column;
+                        const key =
+                            header.dataset.sort;
 
 
                         if (
-                            column === "manager" ||
-                            column === "rank"
+                            standingsSort.key
+                            === key
                         ) {
 
                             standingsSort.direction =
-                                "asc";
-                        }
+                                standingsSort.direction
+                                === "asc"
+                                    ? "desc"
+                                    : "asc";
 
-                        else {
+                        } else {
+
+                            standingsSort.key =
+                                key;
+
 
                             standingsSort.direction =
-                                "desc";
+                                (
+                                    key === "manager"
+                                    ||
+                                    key === "rank"
+                                )
+                                    ? "asc"
+                                    : "desc";
                         }
+
+
+                        renderStandings();
                     }
-
-
-                    renderStandings();
-                }
-            );
-        }
-    );
-}
-
-
-
-function updateSortIndicators() {
-
-    const headers =
-        document.querySelectorAll(
-            "#standings th[data-sort]"
+                );
+            }
         );
+}
 
 
-    headers.forEach(
-        header => {
+/* ==========================================================
+   RECORD BOOK HELPERS
+========================================================== */
 
-            const icon =
-                header.querySelector(
-                    ".sort-icon"
-                );
+function recordTeamOne(
+    record
+) {
 
+    return firstDefined(
 
-            header.classList.remove(
-                "active-sort"
-            );
+        record.winner,
 
+        record.team,
 
-            if (
-                header.dataset.sort ===
-                standingsSort.column
-            ) {
+        record.manager,
 
-                header.classList.add(
-                    "active-sort"
-                );
+        record.franchise,
 
+        record.team_1,
 
-                icon.textContent =
-                    standingsSort.direction ===
-                    "asc"
-                        ? "▲"
-                        : "▼";
-            }
+        record.team1,
 
+        record.manager_1,
 
-            else {
+        record.manager1,
 
-                icon.textContent = "";
-            }
-        }
+        record.franchise_1,
+
+        record.franchise1,
+
+        record.high_team,
+
+        record.highest_team
     );
 }
 
 
+function recordTeamTwo(
+    record
+) {
 
-/* =========================================
-   STREAKS
-========================================= */
+    return firstDefined(
 
-function renderStreaks() {
+        record.loser,
 
-    const container =
-        document.getElementById(
-            "streak-cards"
+        record.opponent,
+
+        record.team_2,
+
+        record.team2,
+
+        record.manager_2,
+
+        record.manager2,
+
+        record.franchise_2,
+
+        record.franchise2,
+
+        record.low_team
+    );
+}
+
+
+function recordScoreOne(
+    record
+) {
+
+    return firstDefined(
+
+        record.winner_score,
+
+        record.score,
+
+        record.team_score,
+
+        record.points,
+
+        record.points_for,
+
+        record.team_1_score,
+
+        record.team1_score,
+
+        record.manager_1_score,
+
+        record.score_1,
+
+        record.score1,
+
+        record.high_score
+    );
+}
+
+
+function recordScoreTwo(
+    record
+) {
+
+    return firstDefined(
+
+        record.loser_score,
+
+        record.opponent_score,
+
+        record.team_2_score,
+
+        record.team2_score,
+
+        record.manager_2_score,
+
+        record.score_2,
+
+        record.score2,
+
+        record.low_score
+    );
+}
+
+
+function recordTotal(
+    record,
+    score1,
+    score2
+) {
+
+    const stored =
+        firstDefined(
+
+            record.total_score,
+
+            record.total_points,
+
+            record.combined_score,
+
+            record.combined_points,
+
+            record.game_total
         );
 
 
     if (
-        streaks.length === 0
+        stored !== undefined
+    ) {
+        return stored;
+    }
+
+
+    if (
+        score1 !== undefined
+        &&
+        score2 !== undefined
     ) {
 
-        container.innerHTML =
-            "<p>No streak data available.</p>";
-
-        return;
-    }
-
-
-
-    const longestWin =
-        [...streaks].sort(
-            (a, b) =>
-
-                Number(
-                    b.longest_win_streak
-                ) -
-
-                Number(
-                    a.longest_win_streak
-                )
-        )[0];
-
-
-
-    const longestLoss =
-        [...streaks].sort(
-            (a, b) =>
-
-                Number(
-                    b.longest_loss_streak
-                ) -
-
-                Number(
-                    a.longest_loss_streak
-                )
-        )[0];
-
-
-
-    const activeWin =
-        [...streaks]
-
-            .filter(
-                team =>
-                    team.current_streak_type ===
-                    "W"
-            )
-
-            .sort(
-                (a, b) =>
-
-                    Number(
-                        b.current_streak
-                    ) -
-
-                    Number(
-                        a.current_streak
-                    )
-            )[0];
-
-
-
-    const cards = [];
-
-
-    if (longestWin) {
-
-        cards.push(
-
-            createCard(
-
-                "Longest Win Streak",
-
-                `${longestWin.longest_win_streak} games`,
-
-                longestWin.manager
-
-            )
-
+        return (
+            Number(score1)
+            +
+            Number(score2)
         );
     }
 
 
-
-    if (longestLoss) {
-
-        cards.push(
-
-            createCard(
-
-                "Longest Losing Streak",
-
-                `${longestLoss.longest_loss_streak} games`,
-
-                longestLoss.manager
-
-            )
-
-        );
-    }
-
-
-
-    if (activeWin) {
-
-        cards.push(
-
-            createCard(
-
-                "Longest Active Win Streak",
-
-                `${activeWin.current_streak} games`,
-
-                activeWin.manager
-
-            )
-
-        );
-    }
-
-
-    container.innerHTML =
-        cards.join("");
+    return undefined;
 }
 
 
+function recordMeta(record) {
 
-/* =========================================
-   RIVALRY EXPLORER SETUP
-========================================= */
+    const parts =
+        [];
 
-function setupRivalryExplorer() {
 
-    const managerOne =
-        document.getElementById(
-            "manager-one"
+    if (
+        record.season !== undefined
+    ) {
+
+        parts.push(
+            record.season
+        );
+    }
+
+
+    if (
+        record.week !== undefined
+    ) {
+
+        parts.push(
+            `Week ${record.week}`
+        );
+    }
+
+
+    const phase =
+        firstDefined(
+
+            record.phase,
+
+            record.game_type,
+
+            record.scope
         );
 
 
-    const managerTwo =
-        document.getElementById(
-            "manager-two"
+    if (phase) {
+
+        parts.push(
+            phase
+        );
+    }
+
+
+    return parts.join(
+        " · "
+    );
+}
+
+
+/* ==========================================================
+   RECORD BOOK
+========================================================== */
+
+function gameRecordCard(
+    label,
+    record,
+    mode
+) {
+
+    if (!record) {
+        return "";
+    }
+
+
+    const team1 =
+        recordTeamOne(
+            record
         );
 
 
-    const managers =
-        standings
+    const team2 =
+        recordTeamTwo(
+            record
+        );
 
-            .map(
-                team =>
-                    team.manager
+
+    const score1 =
+        recordScoreOne(
+            record
+        );
+
+
+    const score2 =
+        recordScoreTwo(
+            record
+        );
+
+
+    let main =
+        "";
+
+
+    let value =
+        "";
+
+
+    if (
+        mode === "score"
+    ) {
+
+        main = `
+
+            ${team1 ?? "Unknown"}
+
+            ${
+                score1 !== undefined
+                    ? formatNumber(
+                        score1
+                    )
+                    : ""
+            }
+
+            –
+
+            ${
+                score2 !== undefined
+                    ? formatNumber(
+                        score2
+                    )
+                    : ""
+            }
+
+            ${team2 ?? "Unknown"}
+        `;
+
+
+        const margin =
+            firstDefined(
+
+                record.margin,
+
+                (
+                    score1 !== undefined
+                    &&
+                    score2 !== undefined
+                        ? Math.abs(
+                            Number(score1)
+                            -
+                            Number(score2)
+                        )
+                        : undefined
+                )
+            );
+
+
+        if (
+            margin !== undefined
+        ) {
+
+            value =
+                `Margin ${formatNumber(
+                    margin
+                )}`;
+        }
+
+    } else if (
+        mode === "total"
+    ) {
+
+        main = `
+
+            ${team1 ?? "Unknown"}
+
+            ${
+                score1 !== undefined
+                    ? formatNumber(
+                        score1
+                    )
+                    : ""
+            }
+
+            –
+
+            ${
+                score2 !== undefined
+                    ? formatNumber(
+                        score2
+                    )
+                    : ""
+            }
+
+            ${team2 ?? "Unknown"}
+        `;
+
+
+        const total =
+            recordTotal(
+                record,
+                score1,
+                score2
+            );
+
+
+        if (
+            total !== undefined
+        ) {
+
+            value =
+                `Total ${formatNumber(
+                    total
+                )}`;
+        }
+
+    } else if (
+        mode === "team"
+    ) {
+
+        main = `
+
+            ${team1 ?? "Unknown"}
+
+            ${
+                score1 !== undefined
+                    ? formatNumber(
+                        score1
+                    )
+                    : ""
+            }
+        `;
+
+
+        if (team2) {
+
+            value =
+                `vs ${team2}`;
+        }
+    }
+
+
+    return `
+
+        <article class="record-card">
+
+            <p class="record-label">
+                ${label}
+            </p>
+
+            <div class="record-main">
+                ${main}
+            </div>
+
+            <div class="record-value">
+                ${value}
+            </div>
+
+            <p class="record-detail">
+                ${recordMeta(record)}
+            </p>
+
+        </article>
+    `;
+}
+
+
+function seasonRecordCard(
+    label,
+    record,
+    valueKeys,
+    formatter
+) {
+
+    if (!record) {
+        return "";
+    }
+
+
+    const manager =
+        getManager(
+            record
+        );
+
+
+    const value =
+        firstDefined(
+            ...valueKeys.map(
+                key =>
+                    record[key]
             )
-
-            .sort(
-                (a, b) =>
-                    a.localeCompare(b)
-            );
+        );
 
 
+    const recordText =
+        (
+            record.wins !== undefined
+            &&
+            record.losses !== undefined
+        )
+            ? (
+                ` · ${record.wins}-${record.losses}`
+            )
+            : "";
 
-    managers.forEach(
-        manager => {
 
-            managerOne.add(
-                new Option(
-                    manager,
-                    manager
+    return `
+
+        <article class="record-card">
+
+            <p class="record-label">
+                ${label}
+            </p>
+
+            <div class="record-main">
+                ${manager}
+            </div>
+
+            <div class="record-value">
+                ${
+                    value !== undefined
+                        ? formatter(
+                            value
+                        )
+                        : "—"
+                }
+            </div>
+
+            <p class="record-detail">
+
+                ${record.season ?? ""}
+
+                ${recordText}
+
+            </p>
+
+        </article>
+    `;
+}
+
+
+function renderRecords(records) {
+
+    const grid =
+        document.getElementById(
+            "recordGrid"
+        );
+
+
+    grid.innerHTML = [
+
+        gameRecordCard(
+
+            "Biggest Blowout",
+
+            records.biggest_blowout,
+
+            "score"
+        ),
+
+
+        gameRecordCard(
+
+            "Closest Game",
+
+            records.closest_game,
+
+            "score"
+        ),
+
+
+        gameRecordCard(
+
+            "Highest Scoring Game",
+
+            records.highest_scoring_game,
+
+            "total"
+        ),
+
+
+        gameRecordCard(
+
+            "Lowest Scoring Game",
+
+            records.lowest_scoring_game,
+
+            "total"
+        ),
+
+
+        gameRecordCard(
+
+            "Highest Team Score",
+
+            records.highest_team_score,
+
+            "team"
+        ),
+
+
+        gameRecordCard(
+
+            "Lowest Team Score",
+
+            records.lowest_team_score,
+
+            "team"
+        ),
+
+
+        seasonRecordCard(
+
+            "Most Points in a Season",
+
+            records.most_points_in_season,
+
+            [
+                "points_for",
+                "points",
+                "score"
+            ],
+
+            value =>
+                formatNumber(
+                    value
                 )
-            );
+        ),
 
 
-            managerTwo.add(
-                new Option(
-                    manager,
-                    manager
+        seasonRecordCard(
+
+            "Best Season Win %",
+
+            records.best_win_pct_season,
+
+            [
+                "win_pct",
+                "winning_percentage"
+            ],
+
+            value =>
+                formatPct(
+                    value
                 )
+        ),
+
+
+        seasonRecordCard(
+
+            "Best Season Point Diff",
+
+            records.best_point_diff_season,
+
+            [
+                "point_diff",
+                "point_differential"
+            ],
+
+            value =>
+                formatSigned(
+                    value
+                )
+        ),
+
+
+        seasonRecordCard(
+
+            "Worst Season Point Diff",
+
+            records.worst_point_diff_season,
+
+            [
+                "point_diff",
+                "point_differential"
+            ],
+
+            value =>
+                formatSigned(
+                    value
+                )
+        ),
+
+    ].join("");
+}
+
+
+/* ==========================================================
+   STREAKS
+========================================================== */
+
+function renderStreaks(
+    streaks
+) {
+
+    const body =
+        document.getElementById(
+            "streaksBody"
+        );
+
+
+    const rows =
+        Array.isArray(streaks)
+
+            ? streaks
+
+            : Object.entries(
+                streaks
+            ).map(
+
+                (
+                    [
+                        manager,
+                        values
+                    ]
+                ) => ({
+
+                    manager,
+
+                    ...values,
+                })
             );
+
+
+    body.innerHTML =
+        "";
+
+
+    rows
+        .sort(
+            (a, b) =>
+
+                getManager(a)
+                    .localeCompare(
+                        getManager(b)
+                    )
+        )
+        .forEach(
+            row => {
+
+                const longestWin =
+                    firstDefined(
+
+                        row.longest_win_streak,
+
+                        row.longest_winning_streak,
+
+                        row.longest_win,
+
+                        0
+                    );
+
+
+                const longestLoss =
+                    firstDefined(
+
+                        row.longest_loss_streak,
+
+                        row.longest_losing_streak,
+
+                        row.longest_loss,
+
+                        0
+                    );
+
+
+                const current =
+                    firstDefined(
+
+                        row.current_streak,
+
+                        "—"
+                    );
+
+
+                const tr =
+                    document.createElement(
+                        "tr"
+                    );
+
+
+                tr.innerHTML = `
+
+                    <td class="franchise-cell">
+
+                        ${getManager(row)}
+
+                    </td>
+
+
+                    <td>
+
+                        W${longestWin}
+
+                    </td>
+
+
+                    <td>
+
+                        L${longestLoss}
+
+                    </td>
+
+
+                    <td>
+
+                        ${current}
+
+                    </td>
+                `;
+
+
+                body.appendChild(
+                    tr
+                );
+            }
+        );
+}
+
+
+/* ==========================================================
+   RIVALRIES
+========================================================== */
+
+function getRivalryTeams() {
+
+    const teams =
+        new Set();
+
+
+    rivalryData.forEach(
+        rivalry => {
+
+            const team1 =
+                firstDefined(
+
+                    rivalry.manager_1,
+
+                    rivalry.franchise_1,
+
+                    rivalry.team_1
+                );
+
+
+            const team2 =
+                firstDefined(
+
+                    rivalry.manager_2,
+
+                    rivalry.franchise_2,
+
+                    rivalry.team_2
+                );
+
+
+            if (team1) {
+                teams.add(team1);
+            }
+
+
+            if (team2) {
+                teams.add(team2);
+            }
         }
     );
 
 
-
-    managerOne.addEventListener(
-        "change",
-        renderSelectedRivalry
-    );
-
-
-    managerTwo.addEventListener(
-        "change",
-        renderSelectedRivalry
-    );
+    return [
+        ...teams
+    ].sort();
 }
 
 
+function setupRivalrySelectors() {
 
-/* =========================================
-   FIND SELECTED RIVALRY
-========================================= */
+    const team1 =
+        document.getElementById(
+            "rivalryTeam1"
+        );
+
+
+    const team2 =
+        document.getElementById(
+            "rivalryTeam2"
+        );
+
+
+    const teams =
+        getRivalryTeams();
+
+
+    const options =
+        teams
+            .map(
+                team => `
+
+                    <option value="${team}">
+                        ${team}
+                    </option>
+                `
+            )
+            .join("");
+
+
+    team1.innerHTML =
+        options;
+
+
+    team2.innerHTML =
+        options;
+
+
+    if (
+        teams.length > 1
+    ) {
+
+        team2.selectedIndex =
+            1;
+    }
+
+
+    team1.addEventListener(
+        "change",
+        renderSelectedRivalry
+    );
+
+
+    team2.addEventListener(
+        "change",
+        renderSelectedRivalry
+    );
+
+
+    renderSelectedRivalry();
+}
+
+
+function findRivalry(
+    team1,
+    team2
+) {
+
+    return rivalryData.find(
+        rivalry => {
+
+            const a =
+                firstDefined(
+
+                    rivalry.manager_1,
+
+                    rivalry.franchise_1,
+
+                    rivalry.team_1
+                );
+
+
+            const b =
+                firstDefined(
+
+                    rivalry.manager_2,
+
+                    rivalry.franchise_2,
+
+                    rivalry.team_2
+                );
+
+
+            return (
+
+                (
+                    a === team1
+                    &&
+                    b === team2
+                )
+
+                ||
+
+                (
+                    a === team2
+                    &&
+                    b === team1
+                )
+            );
+        }
+    );
+}
+
 
 function renderSelectedRivalry() {
 
-    const first =
+    const team1 =
         document.getElementById(
-            "manager-one"
+            "rivalryTeam1"
         ).value;
 
 
-    const second =
+    const team2 =
         document.getElementById(
-            "manager-two"
+            "rivalryTeam2"
         ).value;
 
 
     const container =
         document.getElementById(
-            "rivalry-result"
+            "rivalryResults"
         );
 
 
     if (
-        !first ||
-        !second
+        team1 === team2
     ) {
 
-        container.innerHTML =
-            "<p>Select two franchises above.</p>";
+        container.innerHTML = `
+
+            <div class="card empty-state">
+
+                Select two different franchises.
+
+            </div>
+        `;
 
         return;
     }
-
-
-    if (
-        first === second
-    ) {
-
-        container.innerHTML =
-            "<p>Select two different franchises.</p>";
-
-        return;
-    }
-
 
 
     const rivalry =
-        rivalries.find(
-            r => {
-
-                const direct =
-                    r.manager_1 === first &&
-                    r.manager_2 === second;
-
-
-                const reverse =
-                    r.manager_1 === second &&
-                    r.manager_2 === first;
-
-
-                return (
-                    direct ||
-                    reverse
-                );
-            }
+        findRivalry(
+            team1,
+            team2
         );
 
 
-    if (
-        !rivalry
-    ) {
+    if (!rivalry) {
 
-        container.innerHTML =
-            "<p>No rivalry data found.</p>";
+        container.innerHTML = `
+
+            <div class="card empty-state">
+
+                No rivalry data found.
+
+            </div>
+        `;
 
         return;
     }
 
 
-    renderRivalry(
-        rivalry,
-        first,
-        second
-    );
-}
+    const storedTeam1 =
+        firstDefined(
 
+            rivalry.manager_1,
 
+            rivalry.franchise_1,
 
-/* =========================================
-   RENDER RIVALRY
-========================================= */
-
-function renderRivalry(
-    rivalry,
-    first,
-    second
-) {
-
-    const firstIsManagerOne =
-        rivalry.manager_1 ===
-        first;
-
-
-
-    const firstWins =
-        firstIsManagerOne
-
-            ? rivalry.manager_1_wins
-
-            : rivalry.manager_2_wins;
-
-
-
-    const secondWins =
-        firstIsManagerOne
-
-            ? rivalry.manager_2_wins
-
-            : rivalry.manager_1_wins;
-
-
-
-    const firstPoints =
-        firstIsManagerOne
-
-            ? rivalry.manager_1_points
-
-            : rivalry.manager_2_points;
-
-
-
-    const secondPoints =
-        firstIsManagerOne
-
-            ? rivalry.manager_2_points
-
-            : rivalry.manager_1_points;
-
-
-
-    const firstAvg =
-        firstIsManagerOne
-
-            ? rivalry.avg_manager_1_score
-
-            : rivalry.avg_manager_2_score;
-
-
-
-    const secondAvg =
-        firstIsManagerOne
-
-            ? rivalry.avg_manager_2_score
-
-            : rivalry.avg_manager_1_score;
-
-
-
-    const firstPostseasonWins =
-        firstIsManagerOne
-
-            ? rivalry.manager_1_postseason_wins
-
-            : rivalry.manager_2_postseason_wins;
-
-
-
-    const secondPostseasonWins =
-        firstIsManagerOne
-
-            ? rivalry.manager_2_postseason_wins
-
-            : rivalry.manager_1_postseason_wins;
-
-
-
-    const container =
-        document.getElementById(
-            "rivalry-result"
+            rivalry.team_1
         );
 
+
+    let wins1 =
+        firstDefined(
+
+            rivalry.team_1_wins,
+
+            rivalry.manager_1_wins,
+
+            rivalry.wins_1,
+
+            0
+        );
+
+
+    let wins2 =
+        firstDefined(
+
+            rivalry.team_2_wins,
+
+            rivalry.manager_2_wins,
+
+            rivalry.wins_2,
+
+            0
+        );
+
+
+    if (
+        storedTeam1 !== team1
+    ) {
+
+        [
+            wins1,
+            wins2
+        ] = [
+            wins2,
+            wins1
+        ];
+    }
+
+
+    const games =
+        firstDefined(
+
+            rivalry.games,
+
+            rivalry.total_games,
+
+            (
+                Number(wins1)
+                +
+                Number(wins2)
+            )
+        );
+
+
+    const postseason =
+        firstDefined(
+
+            rivalry.postseason_meetings,
+
+            rivalry.postseason_games,
+
+            0
+        );
+
+
+    const pointDiff =
+        firstDefined(
+
+            rivalry.point_differential,
+
+            rivalry.point_diff,
+
+            0
+        );
+
+
+    const currentStreak =
+        firstDefined(
+
+            rivalry.current_streak,
+
+            "—"
+        );
 
 
     container.innerHTML = `
 
-        <div class="rivalry-header">
+        <div class="card rivalry-header-card">
 
-            <div>
+            <h3 class="rivalry-title">
 
-                <div class="eyebrow">
-                    ${rivalry.games}
-                    Meetings
-                </div>
+                ${team1}
 
-                <h3>
-                    ${first}
+                <span>
                     vs
-                    ${second}
-                </h3>
+                </span>
 
-            </div>
+                ${team2}
+
+            </h3>
 
 
-            <div class="rivalry-record">
-                ${firstWins} – ${secondWins}
-            </div>
+            <p class="rivalry-record">
+
+                ${wins1}-${wins2}
+
+            </p>
 
         </div>
 
 
+        <div class="metric-grid">
 
-        <div class="rivalry-stats">
 
+            <div class="metric-card">
 
-            <div class="rivalry-stat">
+                <span class="metric-value">
+                    ${games}
+                </span>
 
-                <strong>
-                    ${number(firstAvg)}
-                    –
-                    ${number(secondAvg)}
-                </strong>
-
-                <span>
-                    Average Score
+                <span class="metric-label">
+                    Meetings
                 </span>
 
             </div>
 
 
+            <div class="metric-card">
 
-            <div class="rivalry-stat">
+                <span class="metric-value">
+                    ${postseason}
+                </span>
 
-                <strong>
-                    ${number(firstPoints)}
-                    –
-                    ${number(secondPoints)}
-                </strong>
-
-                <span>
-                    All-Time Points
+                <span class="metric-label">
+                    Postseason-Week Meetings
                 </span>
 
             </div>
 
 
+            <div class="metric-card">
 
-            <div class="rivalry-stat">
+                <span
+                    class="
+                        metric-value
+                        ${valueClass(
+                            pointDiff
+                        )}
+                    "
+                >
 
-                <strong>
-                    ${rivalry.postseason_meetings}
-                </strong>
-
-                <span>
-                    Postseason Meetings
-                </span>
-
-            </div>
-
-
-
-            <div class="rivalry-stat">
-
-                <strong>
-                    ${firstPostseasonWins}
-                    –
-                    ${secondPostseasonWins}
-                </strong>
-
-                <span>
-                    Postseason-Week Record
-                </span>
-
-            </div>
-
-
-
-            <div class="rivalry-stat">
-
-                <strong>
-                    ${rivalry.current_streak_manager}
-                    W${rivalry.current_streak}
-                </strong>
-
-                <span>
-                    Current Rivalry Streak
-                </span>
-
-            </div>
-
-
-
-            <div class="rivalry-stat">
-
-                <strong>
-                    ${rivalry.longest_streak_manager}
-                    W${rivalry.longest_streak}
-                </strong>
-
-                <span>
-                    Longest Rivalry Streak
-                </span>
-
-            </div>
-
-
-
-            <div class="rivalry-stat">
-
-                <strong>
-                    ${number(
-                        rivalry.closest_game.margin
+                    ${formatSigned(
+                        pointDiff
                     )}
-                    pts
-                </strong>
 
-                <span>
-                    Closest Game ·
-                    ${gameLabel(
-                        rivalry.closest_game
-                    )}
+                </span>
+
+                <span class="metric-label">
+                    Point Differential
                 </span>
 
             </div>
 
 
+            <div class="metric-card">
 
-            <div class="rivalry-stat">
+                <span class="metric-value">
+                    ${currentStreak}
+                </span>
 
-                <strong>
-                    ${number(
-                        rivalry.biggest_blowout.margin
-                    )}
-                    pts
-                </strong>
+                <span class="metric-label">
+                    Current Streak
+                </span>
 
-                <span>
-                    Biggest Blowout ·
-                    ${gameLabel(
-                        rivalry.biggest_blowout
-                    )}
+            </div>
+
+        </div>
+    `;
+}
+
+
+/* ==========================================================
+   TRADE SUMMARY
+========================================================== */
+
+function renderTradeSummary(
+    tradeStats
+) {
+
+    const summary =
+        tradeStats.summary
+        ?? {};
+
+
+    const franchiseStats =
+        safeArray(
+            tradeStats.by_franchise
+        );
+
+
+    const totalTrades =
+        firstDefined(
+
+            summary.total_trades,
+
+            tradeHistoryData.length,
+
+            0
+        );
+
+
+    const totalPlayerMoves =
+        franchiseStats.reduce(
+
+            (
+                sum,
+                row
+            ) =>
+
+                sum
+                +
+                Number(
+                    row.players_acquired
+                    ?? 0
+                ),
+
+            0
+        );
+
+
+    const totalPickMoves =
+        franchiseStats.reduce(
+
+            (
+                sum,
+                row
+            ) =>
+
+                sum
+                +
+                Number(
+                    row.picks_acquired
+                    ?? 0
+                ),
+
+            0
+        );
+
+
+    const mostActive =
+        franchiseStats[0]
+            ?.franchise
+        ?? "—";
+
+
+    document
+        .getElementById(
+            "tradeSummaryGrid"
+        )
+        .innerHTML = `
+
+
+            <div class="trade-summary-card">
+
+                <span class="trade-summary-value">
+                    ${totalTrades}
+                </span>
+
+                <span class="trade-summary-label">
+                    Completed Trades
                 </span>
 
             </div>
 
 
+            <div class="trade-summary-card">
 
-            <div class="rivalry-stat">
-
-                <strong>
-                    ${number(
-                        rivalry.highest_scoring_game.total_points
-                    )}
-                    pts
-                </strong>
-
-                <span>
-                    Highest-Scoring Meeting ·
-                    ${gameLabel(
-                        rivalry.highest_scoring_game
-                    )}
+                <span class="trade-summary-value">
+                    ${totalPlayerMoves}
                 </span>
+
+                <span class="trade-summary-label">
+                    Player Movements
+                </span>
+
+            </div>
+
+
+            <div class="trade-summary-card">
+
+                <span class="trade-summary-value">
+                    ${totalPickMoves}
+                </span>
+
+                <span class="trade-summary-label">
+                    Draft Pick Movements
+                </span>
+
+            </div>
+
+
+            <div class="trade-summary-card">
+
+                <span class="trade-summary-value">
+                    ${mostActive}
+                </span>
+
+                <span class="trade-summary-label">
+                    Most Active Trader
+                </span>
+
+            </div>
+        `;
+}
+
+
+/* ==========================================================
+   TRADE RANKINGS
+========================================================== */
+
+function rankingHTML(
+    rows,
+    nameFunction,
+    valueFunction,
+    detailFunction
+) {
+
+    return rows
+        .map(
+            (
+                row,
+                index
+            ) => `
+
+                <div class="ranking-row">
+
+                    <span class="rank-number">
+                        ${index + 1}
+                    </span>
+
+
+                    <div>
+
+                        <div class="ranking-name">
+
+                            ${nameFunction(
+                                row
+                            )}
+
+                        </div>
+
+
+                        <div class="ranking-detail">
+
+                            ${detailFunction(
+                                row
+                            )}
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="ranking-value">
+
+                        ${valueFunction(
+                            row
+                        )}
+
+                    </div>
+
+                </div>
+            `
+        )
+        .join("");
+}
+
+
+function renderTradeRankings(
+    tradeStats
+) {
+
+    const franchises =
+        safeArray(
+            tradeStats.by_franchise
+        )
+            .slice(
+                0,
+                10
+            );
+
+
+    document
+        .getElementById(
+            "tradeFranchiseList"
+        )
+        .innerHTML =
+        rankingHTML(
+
+            franchises,
+
+            row =>
+                row.franchise,
+
+            row =>
+                row.trades,
+
+            row =>
+                `${row.players_acquired} players acquired · ${row.picks_acquired} picks acquired`
+        );
+
+
+    const partners =
+        safeArray(
+            tradeStats.trade_partners
+        )
+            .slice(
+                0,
+                10
+            );
+
+
+    document
+        .getElementById(
+            "tradePartnerList"
+        )
+        .innerHTML =
+        rankingHTML(
+
+            partners,
+
+            row =>
+                `${row.franchise_1} ↔ ${row.franchise_2}`,
+
+            row =>
+                row.trades,
+
+            () =>
+                "completed trades"
+        );
+
+
+    const players =
+        safeArray(
+            tradeStats.player_trade_counts
+        )
+            .slice(
+                0,
+                10
+            );
+
+
+    document
+        .getElementById(
+            "tradedPlayerList"
+        )
+        .innerHTML =
+        rankingHTML(
+
+            players,
+
+            row =>
+                row.name,
+
+            row =>
+                row.trade_movements,
+
+            row =>
+                `${row.position ?? "—"} · ${row.times_acquired} acquisitions`
+        );
+}
+
+
+/* ==========================================================
+   PICK BUTTERFLY FILTERS
+========================================================== */
+
+function pickHumanName(
+    pick
+) {
+
+    return (
+        `${pick.original_franchise} `
+        +
+        `${pick.pick_season} `
+        +
+        `Round ${pick.round}`
+    );
+}
+
+
+function pickOptionLabel(
+    pick
+) {
+
+    const result =
+        pick.draft_resolved
+
+            ? (
+                `${pick.draft.player_name} `
+                +
+                `(${pick.draft.display_pick})`
+            )
+
+            : "Future Pick";
+
+
+    return (
+        `${pickHumanName(pick)}`
+        +
+        ` — ${pick.times_traded} trade`
+        +
+        (
+            pick.times_traded === 1
+                ? ""
+                : "s"
+        )
+        +
+        ` — ${result}`
+    );
+}
+
+
+function populatePickFilters() {
+
+    const seasonSelect =
+        document.getElementById(
+            "pickSeasonFilter"
+        );
+
+
+    const roundSelect =
+        document.getElementById(
+            "pickRoundFilter"
+        );
+
+
+    const franchiseSelect =
+        document.getElementById(
+            "pickFranchiseFilter"
+        );
+
+
+    const seasons = [
+        ...new Set(
+            pickButterflyData.map(
+                pick =>
+                    pick.pick_season
+            )
+        )
+    ]
+        .sort(
+            (a, b) =>
+                b - a
+        );
+
+
+    seasons.forEach(
+        season => {
+
+            const option =
+                document.createElement(
+                    "option"
+                );
+
+
+            option.value =
+                season;
+
+
+            option.textContent =
+                season;
+
+
+            seasonSelect.appendChild(
+                option
+            );
+        }
+    );
+
+
+    const rounds = [
+        ...new Set(
+            pickButterflyData.map(
+                pick =>
+                    pick.round
+            )
+        )
+    ]
+        .sort(
+            (a, b) =>
+                a - b
+        );
+
+
+    rounds.forEach(
+        round => {
+
+            const option =
+                document.createElement(
+                    "option"
+                );
+
+
+            option.value =
+                round;
+
+
+            option.textContent =
+                `Round ${round}`;
+
+
+            roundSelect.appendChild(
+                option
+            );
+        }
+    );
+
+
+    const franchises = [
+        ...new Set(
+            pickButterflyData.map(
+                pick =>
+                    pick.original_franchise
+            )
+        )
+    ]
+        .sort();
+
+
+    franchises.forEach(
+        franchise => {
+
+            const option =
+                document.createElement(
+                    "option"
+                );
+
+
+            option.value =
+                franchise;
+
+
+            option.textContent =
+                franchise;
+
+
+            franchiseSelect.appendChild(
+                option
+            );
+        }
+    );
+}
+
+
+function getFilteredPicks() {
+
+    const search =
+        document
+            .getElementById(
+                "pickSearch"
+            )
+            .value
+            .trim()
+            .toLowerCase();
+
+
+    const season =
+        document
+            .getElementById(
+                "pickSeasonFilter"
+            )
+            .value;
+
+
+    const round =
+        document
+            .getElementById(
+                "pickRoundFilter"
+            )
+            .value;
+
+
+    const franchise =
+        document
+            .getElementById(
+                "pickFranchiseFilter"
+            )
+            .value;
+
+
+    return pickButterflyData.filter(
+        pick => {
+
+            const seasonMatch =
+                (
+                    season === "all"
+                    ||
+                    String(
+                        pick.pick_season
+                    ) === season
+                );
+
+
+            const roundMatch =
+                (
+                    round === "all"
+                    ||
+                    String(
+                        pick.round
+                    ) === round
+                );
+
+
+            const franchiseMatch =
+                (
+                    franchise === "all"
+                    ||
+                    pick.original_franchise
+                    === franchise
+                );
+
+
+            const searchable =
+                [
+
+                    pick.pick_id,
+
+                    pick.original_franchise,
+
+                    pick.current_franchise,
+
+                    pick.pick_season,
+
+                    pick.round,
+
+                    pick.draft?.player_name,
+
+                    pick.draft?.display_pick,
+
+                    pick.draft?.drafted_by_franchise,
+
+                ]
+                    .filter(
+                        value =>
+                            value !== undefined
+                            &&
+                            value !== null
+                    )
+                    .join(" ")
+                    .toLowerCase();
+
+
+            const searchMatch =
+                (
+                    !search
+                    ||
+                    searchable.includes(
+                        search
+                    )
+                );
+
+
+            return (
+                seasonMatch
+                &&
+                roundMatch
+                &&
+                franchiseMatch
+                &&
+                searchMatch
+            );
+        }
+    );
+}
+
+
+function refreshPickSelector() {
+
+    filteredPickData =
+        getFilteredPicks();
+
+
+    const select =
+        document.getElementById(
+            "pickButterflySelect"
+        );
+
+
+    const count =
+        document.getElementById(
+            "pickResultCount"
+        );
+
+
+    count.textContent =
+        filteredPickData.length;
+
+
+    if (
+        !filteredPickData.length
+    ) {
+
+        select.innerHTML = `
+
+            <option value="">
+                No matching picks
+            </option>
+        `;
+
+
+        document
+            .getElementById(
+                "pickButterflyResult"
+            )
+            .innerHTML = `
+
+                <div class="empty-state">
+
+                    No pick assets match those filters.
+
+                </div>
+            `;
+
+
+        return;
+    }
+
+
+    select.innerHTML =
+        filteredPickData
+            .map(
+                (
+                    pick,
+                    index
+                ) => `
+
+                    <option value="${index}">
+
+                        ${pickOptionLabel(
+                            pick
+                        )}
+
+                    </option>
+                `
+            )
+            .join("");
+
+
+    renderPickButterfly();
+}
+
+
+function setupPickButterfly() {
+
+    populatePickFilters();
+
+
+    const controls = [
+
+        document.getElementById(
+            "pickSearch"
+        ),
+
+        document.getElementById(
+            "pickSeasonFilter"
+        ),
+
+        document.getElementById(
+            "pickRoundFilter"
+        ),
+
+        document.getElementById(
+            "pickFranchiseFilter"
+        ),
+    ];
+
+
+    controls.forEach(
+        control => {
+
+            control.addEventListener(
+                control.tagName === "INPUT"
+                    ? "input"
+                    : "change",
+
+                refreshPickSelector
+            );
+        }
+    );
+
+
+    document
+        .getElementById(
+            "pickButterflySelect"
+        )
+        .addEventListener(
+            "change",
+            renderPickButterfly
+        );
+
+
+    refreshPickSelector();
+}
+
+
+/* ==========================================================
+   ASSET LABELS
+========================================================== */
+
+function assetLabel(
+    asset
+) {
+
+    if (
+        asset.type === "player"
+    ) {
+
+        return asset.name;
+    }
+
+
+    if (
+        asset.type === "pick"
+    ) {
+
+        return (
+            `${asset.original_franchise} `
+            +
+            `${asset.season} `
+            +
+            `R${asset.round}`
+        );
+    }
+
+
+    if (
+        asset.type === "faab"
+    ) {
+
+        return (
+            `${asset.amount} FAAB`
+        );
+    }
+
+
+    return "Unknown asset";
+}
+
+
+/* ==========================================================
+   BUTTERFLY TRADE DETAIL
+========================================================== */
+
+function miniTradeHTML(
+    trade
+) {
+
+    if (
+        !trade
+        ||
+        !safeArray(
+            trade.teams
+        ).length
+    ) {
+
+        return "";
+    }
+
+
+    return `
+
+        <div class="timeline-trade-assets">
+
+            ${
+                trade.teams
+                    .map(
+                        team => {
+
+                            const received =
+                                safeArray(
+                                    team.received
+                                );
+
+
+                            return `
+
+                                <div class="trade-side-mini">
+
+                                    <strong>
+
+                                        ${team.franchise}
+                                        received
+
+                                    </strong>
+
+
+                                    ${
+                                        received.length
+
+                                            ? received
+                                                .map(
+                                                    asset => `
+
+                                                        <div class="asset-mini">
+
+                                                            ${assetLabel(
+                                                                asset
+                                                            )}
+
+                                                        </div>
+                                                    `
+                                                )
+                                                .join("")
+
+                                            : `
+
+                                                <div class="asset-mini">
+
+                                                    No listed assets
+
+                                                </div>
+                                            `
+                                    }
+
+                                </div>
+                            `;
+                        }
+                    )
+                    .join("")
+            }
+
+        </div>
+    `;
+}
+
+
+/* ==========================================================
+   BUTTERFLY RENDERING
+========================================================== */
+
+function renderPickButterfly() {
+
+    const select =
+        document.getElementById(
+            "pickButterflySelect"
+        );
+
+
+    const index =
+        Number(
+            select.value
+        );
+
+
+    const pick =
+        filteredPickData[
+            index
+        ];
+
+
+    const container =
+        document.getElementById(
+            "pickButterflyResult"
+        );
+
+
+    if (!pick) {
+
+        container.innerHTML = `
+
+            <div class="empty-state">
+
+                No pick data found.
+
+            </div>
+        `;
+
+        return;
+    }
+
+
+    const draft =
+        pick.draft;
+
+
+    const finalValue =
+        pick.draft_resolved
+
+            ? (
+                `${draft.display_pick} `
+                +
+                `${draft.player_name}`
+            )
+
+            : (
+                `${pick.pick_season} `
+                +
+                `Round ${pick.round}`
+            );
+
+
+    const finalFranchise =
+        pick.draft_resolved
+
+            ? draft.drafted_by_franchise
+
+            : pick.current_franchise;
+
+
+    const timeline =
+        safeArray(
+            pick.movements
+        )
+            .map(
+                movement => `
+
+                    <div class="timeline-item">
+
+
+                        <div class="timeline-dot"></div>
+
+
+                        <div class="timeline-content">
+
+
+                            <p class="timeline-transfer">
+
+                                ${movement.from_franchise}
+
+                                →
+
+                                ${movement.to_franchise}
+
+                            </p>
+
+
+                            <p class="timeline-meta">
+
+                                ${formatDate(
+                                    movement.created
+                                )}
+
+                                ·
+
+                                ${movement.league_season}
+                                Season
+
+                            </p>
+
+
+                            ${miniTradeHTML(
+                                movement.trade
+                            )}
+
+
+                        </div>
+
+                    </div>
+                `
+            )
+            .join("");
+
+
+    let draftHTML =
+        "";
+
+
+    if (
+        pick.draft_resolved
+    ) {
+
+        draftHTML = `
+
+            <div class="draft-destination">
+
+
+                <div class="timeline-dot"></div>
+
+
+                <div class="draft-destination-content">
+
+
+                    <p class="section-kicker">
+
+                        DRAFT RESULT
+
+                    </p>
+
+
+                    <div class="draft-result-player">
+
+                        ${draft.display_pick}
+
+                        ·
+
+                        ${draft.player_name}
+
+                    </div>
+
+
+                    <div class="ranking-detail">
+
+                        Drafted by
+
+                        ${draft.drafted_by_franchise}
+
+                        ·
+
+                        ${draft.position ?? "—"}
+
+                        ${
+                            draft.nfl_team
+
+                                ? ` · ${draft.nfl_team}`
+
+                                : ""
+                        }
+
+                    </div>
+
+
+                </div>
+
+            </div>
+        `;
+
+    } else {
+
+        draftHTML = `
+
+            <div class="draft-destination">
+
+
+                <div class="timeline-dot"></div>
+
+
+                <div class="draft-destination-content">
+
+
+                    <p class="section-kicker">
+
+                        CURRENT STATUS
+
+                    </p>
+
+
+                    <div class="draft-result-player">
+
+                        Future
+
+                        ${pick.pick_season}
+
+                        Round ${pick.round}
+
+                        Pick
+
+                    </div>
+
+
+                    <div class="ranking-detail">
+
+                        Currently held by
+
+                        ${pick.current_franchise}
+
+                    </div>
+
+
+                </div>
+
+            </div>
+        `;
+    }
+
+
+    container.innerHTML = `
+
+
+        <div class="butterfly-overview">
+
+
+            <div class="butterfly-stat">
+
+                <span class="butterfly-stat-value">
+
+                    ${pick.original_franchise}
+
+                </span>
+
+                <span class="butterfly-stat-label">
+
+                    Original Franchise
+
+                </span>
+
+            </div>
+
+
+            <div class="butterfly-stat">
+
+                <span class="butterfly-stat-value">
+
+                    ${pick.times_traded}
+
+                </span>
+
+                <span class="butterfly-stat-label">
+
+                    Times Traded
+
+                </span>
+
+            </div>
+
+
+            <div class="butterfly-stat">
+
+                <span class="butterfly-stat-value">
+
+                    ${finalFranchise}
+
+                </span>
+
+                <span class="butterfly-stat-label">
+
+                    Final / Current Holder
+
+                </span>
+
+            </div>
+
+
+            <div class="butterfly-stat">
+
+                <span class="butterfly-stat-value">
+
+                    ${finalValue}
+
+                </span>
+
+                <span class="butterfly-stat-label">
+
+                    Draft Result
+
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="pick-timeline">
+
+            ${timeline}
+
+            ${draftHTML}
+
+        </div>
+    `;
+}
+
+
+/* ==========================================================
+   TRADE HISTORY FILTERS
+========================================================== */
+
+function setupTradeHistoryFilters() {
+
+    const seasonSelect =
+        document.getElementById(
+            "tradeSeasonFilter"
+        );
+
+
+    const franchiseSelect =
+        document.getElementById(
+            "tradeFranchiseFilter"
+        );
+
+
+    const seasons = [
+
+        ...new Set(
+
+            tradeHistoryData.map(
+                trade =>
+                    trade.season
+            )
+        )
+    ]
+        .sort(
+            (a, b) =>
+                b - a
+        );
+
+
+    seasons.forEach(
+        season => {
+
+            const option =
+                document.createElement(
+                    "option"
+                );
+
+
+            option.value =
+                season;
+
+
+            option.textContent =
+                season;
+
+
+            seasonSelect.appendChild(
+                option
+            );
+        }
+    );
+
+
+    const franchises = [
+
+        ...new Set(
+
+            tradeHistoryData.flatMap(
+                trade =>
+
+                    safeArray(
+                        trade.teams
+                    )
+                        .map(
+                            team =>
+                                team.franchise
+                        )
+            )
+        )
+    ]
+        .sort();
+
+
+    franchises.forEach(
+        franchise => {
+
+            const option =
+                document.createElement(
+                    "option"
+                );
+
+
+            option.value =
+                franchise;
+
+
+            option.textContent =
+                franchise;
+
+
+            franchiseSelect.appendChild(
+                option
+            );
+        }
+    );
+
+
+    seasonSelect.addEventListener(
+        "change",
+        renderTradeHistory
+    );
+
+
+    franchiseSelect.addEventListener(
+        "change",
+        renderTradeHistory
+    );
+
+
+    renderTradeHistory();
+}
+
+
+/* ==========================================================
+   TRADE CARD
+========================================================== */
+
+function tradeSideHTML(
+    team
+) {
+
+    const received =
+        safeArray(
+            team.received
+        );
+
+
+    return `
+
+        <div class="trade-side">
+
+
+            <h4>
+
+                ${team.franchise}
+
+                received
+
+            </h4>
+
+
+            <div class="asset-list">
+
+                ${
+                    received.length
+
+                        ? received
+                            .map(
+                                asset => `
+
+                                    <div class="asset-item">
+
+                                        <span class="asset-type">
+
+                                            ${asset.type}
+
+                                        </span>
+
+                                        ${assetLabel(
+                                            asset
+                                        )}
+
+                                    </div>
+                                `
+                            )
+                            .join("")
+
+                        : `
+
+                            <div class="asset-item">
+
+                                No listed assets
+
+                            </div>
+                        `
+                }
 
             </div>
 
@@ -1300,9 +3238,1591 @@ function renderRivalry(
 }
 
 
+/* ==========================================================
+   TRADE HISTORY
+========================================================== */
 
-/* =========================================
-   START DASHBOARD
-========================================= */
+function renderTradeHistory() {
 
-loadDashboard();
+    const seasonFilter =
+        document
+            .getElementById(
+                "tradeSeasonFilter"
+            )
+            .value;
+
+
+    const franchiseFilter =
+        document
+            .getElementById(
+                "tradeFranchiseFilter"
+            )
+            .value;
+
+
+    const container =
+        document.getElementById(
+            "tradeHistoryList"
+        );
+
+
+    const filtered =
+        tradeHistoryData
+            .filter(
+                trade => {
+
+                    const seasonMatch =
+                        (
+                            seasonFilter
+                            === "all"
+
+                            ||
+
+                            String(
+                                trade.season
+                            )
+                            === seasonFilter
+                        );
+
+
+                    const franchiseMatch =
+                        (
+                            franchiseFilter
+                            === "all"
+
+                            ||
+
+                            safeArray(
+                                trade.teams
+                            )
+                                .some(
+                                    team =>
+                                        team.franchise
+                                        === franchiseFilter
+                                )
+                        );
+
+
+                    return (
+                        seasonMatch
+                        &&
+                        franchiseMatch
+                    );
+                }
+            )
+            .sort(
+                (a, b) =>
+
+                    (
+                        b.created_timestamp
+                        ?? 0
+                    )
+
+                    -
+
+                    (
+                        a.created_timestamp
+                        ?? 0
+                    )
+            );
+
+
+    if (
+        !filtered.length
+    ) {
+
+        container.innerHTML = `
+
+            <div class="card empty-state">
+
+                No trades match those filters.
+
+            </div>
+        `;
+
+        return;
+    }
+
+
+    container.innerHTML =
+        filtered
+            .map(
+                trade => `
+
+                    <article class="trade-card">
+
+
+                        <div class="trade-card-header">
+
+
+                            <div class="trade-card-season">
+
+                                ${trade.season}
+
+                                Trade
+
+                            </div>
+
+
+                            <div class="trade-card-date">
+
+                                ${formatDate(
+                                    trade.created
+                                )}
+
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="trade-sides">
+
+                            ${
+                                safeArray(
+                                    trade.teams
+                                )
+                                    .map(
+                                        tradeSideHTML
+                                    )
+                                    .join("")
+                            }
+
+                        </div>
+
+
+                    </article>
+                `
+            )
+            .join("");
+}
+
+
+
+/* ==========================================================
+   PLAYER HISTORY
+========================================================== */
+
+function escapeHTML(value) {
+
+    return String(
+        value ?? ""
+    )
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+}
+
+
+function playerEventLabel(type) {
+
+    const labels = {
+
+        draft:
+            "Drafted",
+
+        trade:
+            "Trade",
+
+        waiver_add:
+            "Waiver Claim",
+
+        free_agent_add:
+            "Free Agent Add",
+
+        drop:
+            "Dropped",
+    };
+
+
+    return labels[type]
+        ?? type
+        ?? "Transaction";
+}
+
+
+function playerEventDate(event) {
+
+    return firstDefined(
+
+        event.timestamp,
+
+        event.created,
+
+        event.date,
+
+        null
+    );
+}
+
+
+function playerEventFranchise(event) {
+
+    return firstDefined(
+
+        event.franchise,
+
+        event.drafted_by_franchise,
+
+        event.to_franchise,
+
+        event.from_franchise,
+
+        "Unknown"
+    );
+}
+
+
+function playerEventDescription(event) {
+
+    const type =
+        event.type;
+
+
+    if (
+        type === "draft"
+    ) {
+
+        const franchise =
+            firstDefined(
+
+                event.drafted_by_franchise,
+
+                event.franchise,
+
+                event.owner_after,
+
+                "Unknown"
+            );
+
+
+        const pick =
+            firstDefined(
+
+                event.display_pick,
+
+                event.pick,
+
+                event.pick_number
+            );
+
+
+        return (
+            `Drafted by <strong>${escapeHTML(
+                franchise
+            )}</strong>`
+            +
+            (
+                pick
+                    ? ` at ${escapeHTML(pick)}`
+                    : ""
+            )
+        );
+    }
+
+
+    if (
+        type === "trade"
+    ) {
+
+        return `
+
+            <strong>
+                ${escapeHTML(
+                    event.from_franchise
+                    ?? event.owner_before
+                    ?? "Unknown"
+                )}
+            </strong>
+
+            →
+
+            <strong>
+                ${escapeHTML(
+                    event.to_franchise
+                    ?? event.owner_after
+                    ?? "Unknown"
+                )}
+            </strong>
+        `;
+    }
+
+
+    if (
+        type === "waiver_add"
+    ) {
+
+        return `
+
+            Claimed by
+
+            <strong>
+                ${escapeHTML(
+                    event.franchise
+                    ?? event.owner_after
+                    ?? "Unknown"
+                )}
+            </strong>
+        `;
+    }
+
+
+    if (
+        type === "free_agent_add"
+    ) {
+
+        return `
+
+            Added by
+
+            <strong>
+                ${escapeHTML(
+                    event.franchise
+                    ?? event.owner_after
+                    ?? "Unknown"
+                )}
+            </strong>
+        `;
+    }
+
+
+    if (
+        type === "drop"
+    ) {
+
+        return `
+
+            Dropped by
+
+            <strong>
+                ${escapeHTML(
+                    event.franchise
+                    ?? event.owner_before
+                    ?? "Unknown"
+                )}
+            </strong>
+        `;
+    }
+
+
+    return escapeHTML(
+        playerEventFranchise(
+            event
+        )
+    );
+}
+
+
+function playerDraftText(player) {
+
+    const draft =
+        player.draft_origin;
+
+
+    if (!draft) {
+
+        return (
+            "Not drafted in recorded league history"
+        );
+    }
+
+
+    const parts =
+        [];
+
+
+    if (
+        draft.season
+    ) {
+
+        parts.push(
+            String(
+                draft.season
+            )
+        );
+    }
+
+
+    const pick =
+        firstDefined(
+
+            draft.display_pick,
+
+            draft.pick,
+
+            draft.pick_number
+        );
+
+
+    if (pick) {
+
+        parts.push(
+            `Pick ${pick}`
+        );
+
+    } else if (
+        draft.round
+    ) {
+
+        parts.push(
+            `Round ${draft.round}`
+        );
+    }
+
+
+    const draftedBy =
+        firstDefined(
+
+            draft.drafted_by_franchise,
+
+            draft.franchise
+        );
+
+
+    if (draftedBy) {
+
+        parts.push(
+            `by ${draftedBy}`
+        );
+    }
+
+
+    return parts.join(
+        " · "
+    );
+}
+
+
+function playerSearchText(player) {
+
+    return [
+
+        player.name,
+
+        player.position,
+
+        player.nfl_team,
+
+        player.current_franchise,
+
+        ...safeArray(
+            player.franchises_owned_by
+        ),
+
+    ]
+        .filter(Boolean)
+        .join(" ")
+        .toLowerCase();
+}
+
+
+function renderPlayerSearchResults(
+    query = ""
+) {
+
+    const container =
+        document.getElementById(
+            "playerSearchResults"
+        );
+
+
+    const count =
+        document.getElementById(
+            "playerResultCount"
+        );
+
+
+    if (
+        !container
+        ||
+        !count
+    ) {
+
+        return;
+    }
+
+
+    const normalized =
+        query
+            .trim()
+            .toLowerCase();
+
+
+    let matches =
+        playerHistoryIndexData.filter(
+            player =>
+
+                !normalized
+
+                ||
+
+                playerSearchText(
+                    player
+                ).includes(
+                    normalized
+                )
+        );
+
+
+    matches.sort(
+        (a, b) =>
+
+            (
+                a.name
+                ?? ""
+            )
+                .localeCompare(
+                    b.name
+                    ?? ""
+                )
+    );
+
+
+    count.textContent =
+        normalized
+            ? `${formatInteger(
+                matches.length
+            )} / ${formatInteger(
+                playerHistoryIndexData.length
+            )}`
+            : formatInteger(
+                playerHistoryIndexData.length
+            );
+
+
+    if (!normalized) {
+
+        container.innerHTML = `
+
+            <div class="player-search-prompt">
+
+                Start typing to search
+                ${formatInteger(
+                    playerHistoryIndexData.length
+                )}
+                players.
+
+            </div>
+        `;
+
+        return;
+    }
+
+
+    if (
+        !matches.length
+    ) {
+
+        container.innerHTML = `
+
+            <div class="player-search-prompt">
+
+                No players matched
+                “${escapeHTML(
+                    query
+                )}”.
+
+            </div>
+        `;
+
+        return;
+    }
+
+
+    const visible =
+        matches.slice(
+            0,
+            12
+        );
+
+
+    container.innerHTML =
+        visible
+            .map(
+                player => `
+
+                    <button
+                        type="button"
+                        class="
+                            player-result-row
+                            ${
+                                String(
+                                    player.player_id
+                                )
+                                ===
+                                String(
+                                    selectedPlayerId
+                                )
+                                    ? "active"
+                                    : ""
+                            }
+                        "
+                        data-player-id="${escapeHTML(
+                            player.player_id
+                        )}"
+                    >
+
+                        <span class="player-result-main">
+
+                            <strong>
+                                ${escapeHTML(
+                                    player.name
+                                    ?? "Unknown Player"
+                                )}
+                            </strong>
+
+                            <span>
+
+                                ${escapeHTML(
+                                    player.position
+                                    ?? "—"
+                                )}
+
+                                ${
+                                    player.nfl_team
+                                        ? ` · ${escapeHTML(
+                                            player.nfl_team
+                                        )}`
+                                        : ""
+                                }
+
+                            </span>
+
+                        </span>
+
+
+                        <span class="player-result-owner">
+
+                            ${
+                                player.current_franchise
+
+                                    ? `Current: ${escapeHTML(
+                                        player.current_franchise
+                                    )}`
+
+                                    : "Free Agent"
+                            }
+
+                        </span>
+
+                    </button>
+                `
+            )
+            .join("");
+
+
+    if (
+        matches.length
+        >
+        visible.length
+    ) {
+
+        container.insertAdjacentHTML(
+
+            "beforeend",
+
+            `
+
+                <div class="player-search-more">
+
+                    ${
+                        matches.length
+                        -
+                        visible.length
+                    }
+                    more matches —
+                    keep typing to narrow the search.
+
+                </div>
+            `
+        );
+    }
+
+
+    container
+        .querySelectorAll(
+            ".player-result-row"
+        )
+        .forEach(
+            button => {
+
+                button.addEventListener(
+
+                    "click",
+
+                    () => {
+
+                        selectPlayer(
+                            button.dataset.playerId
+                        );
+                    }
+                );
+            }
+        );
+}
+
+function findTradeForPlayerEvent(
+    event
+) {
+
+    if (
+        event.type !== "trade"
+    ) {
+
+        return null;
+    }
+
+
+    const transactionId =
+        firstDefined(
+
+            event.transaction_id,
+
+            event.transactionId,
+
+            event.id
+        );
+
+
+    if (!transactionId) {
+
+        return null;
+    }
+
+
+    return tradeHistoryData.find(
+        trade =>
+
+            String(
+                firstDefined(
+
+                    trade.transaction_id,
+
+                    trade.transactionId,
+
+                    trade.id
+                )
+            )
+
+            ===
+
+            String(
+                transactionId
+            )
+    )
+    ?? null;
+}
+
+
+function playerTimelineTradeHTML(
+    event
+) {
+
+    const trade =
+        findTradeForPlayerEvent(
+            event
+        );
+
+
+    if (!trade) {
+
+        return "";
+    }
+
+
+    const teams =
+        safeArray(
+            trade.teams
+        );
+
+
+    if (!teams.length) {
+
+        return "";
+    }
+
+
+    return `
+
+        <div class="player-timeline-trade">
+
+            <div class="player-timeline-trade-heading">
+
+                Full Trade
+
+            </div>
+
+
+            <div class="trade-sides">
+
+                ${
+                    teams
+                        .map(
+                            tradeSideHTML
+                        )
+                        .join("")
+                }
+
+            </div>
+
+        </div>
+    `;
+}
+
+function renderPlayerDetail(
+    player
+) {
+
+    const container =
+        document.getElementById(
+            "playerDetail"
+        );
+
+
+    if (
+        !container
+        ||
+        !player
+    ) {
+
+        return;
+    }
+
+
+    const currentOwner =
+        player.current_franchise
+        ?? "Free Agent";
+
+
+    const ownership =
+        safeArray(
+            player.franchises_owned_by
+        );
+
+
+    const events =
+        safeArray(
+            player.events
+        );
+
+
+    const metrics = [
+
+        [
+            "Trades",
+            player.trade_count
+            ?? 0
+        ],
+
+        [
+            "Waiver Adds",
+            player.waiver_count
+            ?? 0
+        ],
+
+        [
+            "FA Adds",
+            player.free_agent_count
+            ?? 0
+        ],
+
+        [
+            "Drops",
+            player.drop_count
+            ?? 0
+        ],
+    ];
+
+
+    container.innerHTML = `
+
+        <article class="card player-profile-card">
+
+            <div class="player-profile-header">
+
+                <div>
+
+                    <p class="section-kicker">
+                        PLAYER PROFILE
+                    </p>
+
+                    <h3>
+                        ${escapeHTML(
+                            player.name
+                            ?? "Unknown Player"
+                        )}
+                    </h3>
+
+                    <p class="player-position-line">
+
+                        ${escapeHTML(
+                            player.position
+                            ?? "—"
+                        )}
+
+                        ${
+                            player.nfl_team
+                                ? ` · ${escapeHTML(
+                                    player.nfl_team
+                                )}`
+                                : ""
+                        }
+
+                    </p>
+
+                </div>
+
+
+                <div class="player-current-owner">
+
+                    <span>
+                        Current Franchise
+                    </span>
+
+                    <strong>
+                        ${escapeHTML(
+                            currentOwner
+                        )}
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="player-metric-grid">
+
+                ${
+                    metrics
+                        .map(
+                            (
+                                [
+                                    label,
+                                    value
+                                ]
+                            ) => `
+
+                                <div class="player-metric-card">
+
+                                    <span class="player-metric-value">
+                                        ${formatInteger(
+                                            value
+                                        )}
+                                    </span>
+
+                                    <span class="player-metric-label">
+                                        ${label}
+                                    </span>
+
+                                </div>
+                            `
+                        )
+                        .join("")
+                }
+
+            </div>
+
+
+            <div class="player-profile-grid">
+
+                <div>
+
+                    <span class="player-info-label">
+                        Draft Origin
+                    </span>
+
+                    <strong>
+                        ${escapeHTML(
+                            playerDraftText(
+                                player
+                            )
+                        )}
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="player-info-label">
+                        Franchises Owned By
+                    </span>
+
+                    <strong>
+                        ${formatInteger(
+                            ownership.length
+                        )}
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span class="player-info-label">
+                        Recorded Events
+                    </span>
+
+                    <strong>
+                        ${formatInteger(
+                            events.length
+                        )}
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="ownership-path-block">
+
+                <span class="player-info-label">
+                    Ownership Path
+                </span>
+
+                <div class="ownership-path">
+
+                    ${
+                        ownership.length
+
+                            ? ownership
+                                .map(
+                                    (
+                                        owner,
+                                        index
+                                    ) => `
+
+                                        ${
+                                            index
+
+                                                ? `
+                                                    <span class="ownership-arrow">
+                                                        →
+                                                    </span>
+                                                `
+
+                                                : ""
+                                        }
+
+                                        <span class="ownership-chip">
+                                            ${escapeHTML(
+                                                owner
+                                            )}
+                                        </span>
+                                    `
+                                )
+                                .join("")
+
+                            : `
+
+                                <span class="player-muted">
+                                    No franchise ownership recorded.
+                                </span>
+                            `
+                    }
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <div class="
+            subsection-heading
+            player-timeline-heading
+        ">
+
+            <div>
+
+                <p class="section-kicker">
+                    CAREER LOG
+                </p>
+
+                <h3>
+                    League Timeline
+                </h3>
+
+            </div>
+
+            <p>
+                ${formatInteger(
+                    events.length
+                )}
+                recorded league events.
+            </p>
+
+        </div>
+
+
+        <div class="player-timeline">
+
+            ${
+                events.length
+
+                    ? events
+                        .map(
+                            event => {
+
+                                const eventDate =
+                                    playerEventDate(
+                                        event
+                                    );
+
+
+                                return `
+
+                                    <article
+                                        class="
+                                            card
+                                            player-timeline-event
+                                            player-event-${escapeHTML(
+                                                event.type
+                                                ?? "transaction"
+                                            )}
+                                        "
+                                    >
+
+                                        <div class="player-timeline-marker"></div>
+
+
+                                        <div class="player-timeline-content">
+
+                                            <div class="player-timeline-topline">
+
+                                                <span class="player-event-type">
+
+                                                    ${escapeHTML(
+                                                        playerEventLabel(
+                                                            event.type
+                                                        )
+                                                    )}
+
+                                                </span>
+
+
+                                                <span class="player-event-date">
+
+                                                    ${
+                                                        eventDate
+
+                                                            ? formatDate(
+                                                                eventDate
+                                                            )
+
+                                                            : (
+                                                                event.season
+                                                                ?? "Unknown date"
+                                                            )
+                                                    }
+
+                                                </span>
+
+                                            </div>
+
+
+                                            <div class="player-event-description">
+
+                                                ${playerEventDescription(
+                                                    event
+                                                )}
+
+                                            </div>
+
+
+                                            ${
+                                                event.type === "trade"
+
+                                                    ? playerTimelineTradeHTML(
+                                                        event
+                                                    )
+
+                                                    : ""
+                                            }
+
+
+                                            <div class="player-event-meta">
+
+                                                ${
+                                                    event.season
+                                                        ? escapeHTML(
+                                                            event.season
+                                                        )
+                                                        : ""
+                                                }
+
+                                                ${
+                                                    event.type === "draft"
+                                                    &&
+                                                    event.original_franchise
+                                                    &&
+                                                    event.original_franchise
+                                                    !==
+                                                    firstDefined(
+                                                        event.drafted_by_franchise,
+                                                        event.franchise
+                                                    )
+
+                                                        ? ` · Original pick: ${escapeHTML(
+                                                            event.original_franchise
+                                                        )}`
+
+                                                        : ""
+                                                }
+
+                                            </div>
+
+                                        </div>
+
+                                    </article>
+                                `;
+                            }
+                        )
+                        .join("")
+
+                    : `
+
+                        <div class="card empty-state">
+                            No player events found.
+                        </div>
+                    `
+            }
+
+        </div>
+    `;
+}
+
+
+function selectPlayer(
+    playerId
+) {
+
+    const player =
+        playerHistoryData.find(
+            item =>
+
+                String(
+                    item.player_id
+                )
+
+                ===
+
+                String(
+                    playerId
+                )
+        );
+
+
+    if (!player) {
+
+        return;
+    }
+
+
+    selectedPlayerId =
+        String(
+            playerId
+        );
+
+
+    renderPlayerDetail(
+        player
+    );
+
+
+    const search =
+        document.getElementById(
+            "playerSearch"
+        );
+
+
+    renderPlayerSearchResults(
+        search?.value
+        ?? ""
+    );
+}
+
+
+function setupPlayerSearch() {
+
+    const input =
+        document.getElementById(
+            "playerSearch"
+        );
+
+
+    if (!input) {
+
+        return;
+    }
+
+
+    renderPlayerSearchResults(
+        ""
+    );
+
+
+    input.addEventListener(
+
+        "input",
+
+        () => {
+
+            renderPlayerSearchResults(
+                input.value
+            );
+        }
+    );
+
+
+    input.addEventListener(
+
+        "keydown",
+
+        event => {
+
+            if (
+                event.key
+                !== "Enter"
+            ) {
+
+                return;
+            }
+
+
+            const firstResult =
+                document.querySelector(
+                    ".player-result-row"
+                );
+
+
+            if (firstResult) {
+
+                event.preventDefault();
+
+
+                selectPlayer(
+                    firstResult.dataset.playerId
+                );
+            }
+        }
+    );
+}
+
+
+/* ==========================================================
+   INITIALIZATION
+========================================================== */
+
+async function initializeDashboard() {
+
+    try {
+
+        const [
+
+            standings,
+
+            records,
+
+            streaks,
+
+            rivalries,
+
+            summary,
+
+            tradeStats,
+
+            tradeHistory,
+
+            pickButterfly,
+
+            playerHistory,
+
+            playerHistoryIndex,
+
+        ] = await Promise.all([
+
+
+            loadJSON(
+                DATA_FILES.standings
+            ),
+
+
+            loadJSON(
+                DATA_FILES.records
+            ),
+
+
+            loadJSON(
+                DATA_FILES.streaks
+            ),
+
+
+            loadJSON(
+                DATA_FILES.rivalries
+            ),
+
+
+            loadJSON(
+                DATA_FILES.summary
+            ),
+
+
+            loadJSON(
+                DATA_FILES.tradeStats
+            ),
+
+
+            loadJSON(
+                DATA_FILES.tradeHistory
+            ),
+
+
+            loadJSON(
+                DATA_FILES.pickButterfly
+            ),
+
+
+            loadJSON(
+                DATA_FILES.playerHistory
+            ),
+
+
+            loadJSON(
+                DATA_FILES.playerHistoryIndex
+            ),
+
+        ]);
+
+
+        standingsData =
+            standings.map(
+                (
+                    row,
+                    index
+                ) => ({
+
+                    ...row,
+
+                    originalRank:
+                        row.rank
+                        ?? index + 1,
+                })
+            );
+
+
+        rivalryData =
+            rivalries;
+
+
+        tradeHistoryData =
+            tradeHistory;
+
+
+        pickButterflyData =
+            pickButterfly;
+
+
+        playerHistoryData =
+            safeArray(
+                playerHistory
+            );
+
+
+        playerHistoryIndexData =
+            safeArray(
+                playerHistoryIndex
+            );
+
+
+        setupTabs();
+
+
+        renderHero(
+            summary,
+            tradeStats
+        );
+
+
+        renderStandings();
+
+
+        setupStandingsSorting();
+
+
+        renderRecords(
+            records
+        );
+
+
+        renderStreaks(
+            streaks
+        );
+
+
+        setupRivalrySelectors();
+
+
+        renderTradeSummary(
+            tradeStats
+        );
+
+
+        renderTradeRankings(
+            tradeStats
+        );
+
+
+        setupPickButterfly();
+
+
+        setupTradeHistoryFilters();
+
+
+        setupPlayerSearch();
+
+
+    } catch (error) {
+
+        console.error(
+
+            "Dashboard initialization failed:",
+
+            error
+        );
+
+
+        document.body.insertAdjacentHTML(
+
+            "beforeend",
+
+            `
+
+                <div
+                    style="
+                        position: fixed;
+                        left: 20px;
+                        right: 20px;
+                        bottom: 20px;
+                        padding: 16px;
+                        background: #3b1117;
+                        border: 1px solid #8e2f3b;
+                        color: #ffdce0;
+                        border-radius: 12px;
+                        z-index: 9999;
+                    "
+                >
+
+                    Dashboard data failed to load.
+                    Check the browser console for details.
+
+                </div>
+            `
+        );
+    }
+}
+
+
+initializeDashboard();

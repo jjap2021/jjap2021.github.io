@@ -1,0 +1,67 @@
+[
+  {
+    "season": 2022,
+    "league_id": "863147630094610432",
+    "draft_count": 1,
+    "drafts": [
+      {
+        "draft_id": "863147672972935168",
+        "status": "complete",
+        "type": "snake"
+      }
+    ]
+  },
+  {
+    "season": 2023,
+    "league_id": "916397172126535680",
+    "draft_count": 1,
+    "drafts": [
+      {
+        "draft_id": "916397172126535681",
+        "status": "complete",
+        "type": "linear"
+      }
+    ]
+  },
+  {
+    "season": 2024,
+    "league_id": "1057489749553864704",
+    "draft_count": 1,
+    "drafts": [
+      {
+        "draft_id": "1057489749553864705",
+        "status": "complete",
+        "type": "linear"
+      }
+    ]
+  },
+  {
+    "season": 2025,
+    "league_id": "1181453879404199936",
+    "draft_count": 1,
+    "drafts": [
+      {
+        "draft_id": "1181453879404199937",
+        "status": "complete",
+        "type": "linear"
+      }
+    ]
+  },
+  {
+    "season": 2026,
+    "league_id": "1312085809582579712",
+    "draft_count": 2,
+    "drafts": [
+      {
+        "draft_id": "1392692254979665920",
+        "status": "complete",
+        "type": "linear"
+      },
+      {
+        "draft_id": "1312085809586765824",
+        "status": "complete",
+        "type": "linear"
+      }
+    ]
+  }
+]

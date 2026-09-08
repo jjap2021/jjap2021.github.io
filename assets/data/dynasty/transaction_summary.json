@@ -1,0 +1,37 @@
+[
+  {
+    "season": 2022,
+    "transactions": 281,
+    "trades": 11,
+    "waivers": 85,
+    "free_agents": 185
+  },
+  {
+    "season": 2023,
+    "transactions": 328,
+    "trades": 23,
+    "waivers": 73,
+    "free_agents": 232
+  },
+  {
+    "season": 2024,
+    "transactions": 230,
+    "trades": 10,
+    "waivers": 51,
+    "free_agents": 168
+  },
+  {
+    "season": 2025,
+    "transactions": 299,
+    "trades": 24,
+    "waivers": 56,
+    "free_agents": 219
+  },
+  {
+    "season": 2026,
+    "transactions": 80,
+    "trades": 17,
+    "waivers": 0,
+    "free_agents": 60
+  }
+]

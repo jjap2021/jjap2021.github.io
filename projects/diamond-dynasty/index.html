@@ -13,10 +13,13 @@
         Diamond Dynasty | Fantasy Football League History
     </title>
 
-    <link
-        rel="stylesheet"
-        href="dashboard.css"
-    >
+    <script>
+        const assetVersion = Date.now();
+
+        document.write(
+            `<link rel="stylesheet" href="dashboard.css?v=${assetVersion}">`
+        );
+    </script>
 </head>
 
 
@@ -24,34 +27,84 @@
 
 <header class="hero">
 
-    <div class="container">
+    <div class="container hero-content">
+
+        <p class="eyebrow">
+            DIAMOND DYNASTY
+        </p>
 
         <h1>
             Fantasy Football League History
         </h1>
 
-        <p class="league-name">
+        <p class="hero-subtitle">
             Diamond Dynasty
         </p>
 
-        <p class="subtitle">
-            Records, rivalries, streaks, and statistics
-            from the Diamond Dynasty fantasy football league.
+        <p class="hero-description">
+            Historical records, rivalries, trades,
+            draft capital, streaks, and franchise performance.
         </p>
 
-        <div class="hero-meta">
 
-            <span>
-                10 Franchises
-            </span>
+        <div class="hero-stats">
 
-            <span>
-                2022–Present
-            </span>
+            <div class="hero-stat">
 
-            <span id="game-count">
-                Loading games...
-            </span>
+                <span class="hero-stat-value">
+                    10
+                </span>
+
+                <span class="hero-stat-label">
+                    Franchises
+                </span>
+
+            </div>
+
+
+            <div class="hero-stat">
+
+                <span class="hero-stat-value">
+                    2022–Present
+                </span>
+
+                <span class="hero-stat-label">
+                    League History
+                </span>
+
+            </div>
+
+
+            <div class="hero-stat">
+
+                <span
+                    class="hero-stat-value"
+                    id="heroGameCount"
+                >
+                    —
+                </span>
+
+                <span class="hero-stat-label">
+                    Completed Games
+                </span>
+
+            </div>
+
+
+            <div class="hero-stat">
+
+                <span
+                    class="hero-stat-value"
+                    id="heroTradeCount"
+                >
+                    —
+                </span>
+
+                <span class="hero-stat-label">
+                    Trades
+                </span>
+
+            </div>
 
         </div>
 
@@ -60,149 +113,148 @@
 </header>
 
 
+<!-- ======================================================
+     TAB NAVIGATION
+======================================================= -->
+
 <nav class="dashboard-nav">
 
-    <div class="container nav-links">
+    <div class="container nav-inner">
 
-        <a href="#standings">
+        <button
+            class="tab-button active"
+            data-tab="standings"
+        >
             Standings
-        </a>
+        </button>
 
-        <a href="#records">
+        <button
+            class="tab-button"
+            data-tab="records"
+        >
             Records
-        </a>
+        </button>
 
-        <a href="#streaks">
+        <button
+            class="tab-button"
+            data-tab="streaks"
+        >
             Streaks
-        </a>
+        </button>
 
-        <a href="#rivalries">
+        <button
+            class="tab-button"
+            data-tab="rivalries"
+        >
             Rivalries
-        </a>
+        </button>
+
+        <button
+            class="tab-button"
+            data-tab="players"
+        >
+            Players
+        </button>
+
+        <button
+            class="tab-button"
+            data-tab="trades"
+        >
+            Trades
+        </button>
 
     </div>
 
 </nav>
 
 
-<main class="container">
+<main class="container dashboard-main">
 
 
-    <!-- RECORD BOOK -->
-
-    <section
-        id="records"
-        class="section"
-    >
-
-        <div class="section-heading">
-
-            <p class="eyebrow">
-                League History
-            </p>
-
-            <h2>
-                Record Book
-            </h2>
-
-        </div>
-
-        <div
-            id="record-cards"
-            class="record-grid"
-        >
-            <p>
-                Loading records...
-            </p>
-        </div>
-
-    </section>
-
-
-
-    <!-- ALL-TIME STANDINGS -->
+    <!-- ==================================================
+         STANDINGS
+    =================================================== -->
 
     <section
+        class="dashboard-section tab-panel active"
         id="standings"
-        class="section"
     >
 
         <div class="section-heading">
 
-            <p class="eyebrow">
-                Franchise History
-            </p>
+            <div>
 
-            <h2>
-                All-Time Standings
-            </h2>
+                <p class="section-kicker">
+                    FRANCHISE HISTORY
+                </p>
+
+                <h2>
+                    All-Time Standings
+                </h2>
+
+            </div>
+
 
             <p class="section-description">
-                Click any column heading to sort the standings.
+                Regular season and postseason-week games
+                across all completed seasons.
             </p>
 
         </div>
 
 
-        <div class="table-wrapper">
+        <div class="card table-card">
 
-            <table>
+            <div class="table-scroll">
 
-                <thead>
+                <table id="standingsTable">
+
+                    <thead>
 
                     <tr>
 
                         <th data-sort="rank">
-                            #
-                            <span class="sort-icon"></span>
+                            Rank
                         </th>
 
                         <th data-sort="manager">
                             Franchise
-                            <span class="sort-icon"></span>
                         </th>
 
                         <th data-sort="wins">
-                            Record
-                            <span class="sort-icon"></span>
+                            W
+                        </th>
+
+                        <th data-sort="losses">
+                            L
                         </th>
 
                         <th data-sort="win_pct">
                             Win %
-                            <span class="sort-icon"></span>
                         </th>
 
                         <th data-sort="points_for">
                             PF
-                            <span class="sort-icon"></span>
                         </th>
 
                         <th data-sort="points_against">
                             PA
-                            <span class="sort-icon"></span>
                         </th>
 
                         <th data-sort="point_diff">
                             Diff
-                            <span class="sort-icon"></span>
                         </th>
 
                     </tr>
 
-                </thead>
+                    </thead>
 
 
-                <tbody id="standings-body">
+                    <tbody id="standingsBody"></tbody>
 
-                    <tr>
-                        <td colspan="7">
-                            Loading standings...
-                        </td>
-                    </tr>
+                </table>
 
-                </tbody>
-
-            </table>
+            </div>
 
         </div>
 
@@ -210,34 +262,116 @@
 
 
 
-    <!-- STREAKS -->
+    <!-- ==================================================
+         RECORDS
+    =================================================== -->
 
     <section
-        id="streaks"
-        class="section"
+        class="dashboard-section tab-panel"
+        id="records"
     >
 
         <div class="section-heading">
 
-            <p class="eyebrow">
-                Hot & Cold
-            </p>
+            <div>
 
-            <h2>
-                League Streaks
-            </h2>
+                <p class="section-kicker">
+                    LEAGUE RECORD BOOK
+                </p>
+
+                <h2>
+                    Records
+                </h2>
+
+            </div>
+
+
+            <p class="section-description">
+                The biggest, closest, highest,
+                and lowest performances in league history.
+            </p>
 
         </div>
 
 
         <div
-            id="streak-cards"
-            class="streak-grid"
-        >
+            class="record-grid"
+            id="recordGrid"
+        ></div>
 
-            <p>
-                Loading streaks...
+    </section>
+
+
+
+    <!-- ==================================================
+         STREAKS
+    =================================================== -->
+
+    <section
+        class="dashboard-section tab-panel"
+        id="streaks"
+    >
+
+        <div class="section-heading">
+
+            <div>
+
+                <p class="section-kicker">
+                    MOMENTUM
+                </p>
+
+                <h2>
+                    League Streaks
+                </h2>
+
+            </div>
+
+
+            <p class="section-description">
+                Longest winning streaks,
+                longest losing streaks,
+                and each franchise's current run.
             </p>
+
+        </div>
+
+
+        <div class="card table-card">
+
+            <div class="table-scroll">
+
+                <table>
+
+                    <thead>
+
+                    <tr>
+
+                        <th>
+                            Franchise
+                        </th>
+
+                        <th>
+                            Longest Win Streak
+                        </th>
+
+                        <th>
+                            Longest Loss Streak
+                        </th>
+
+                        <th>
+                            Current Streak
+                        </th>
+
+                    </tr>
+
+                    </thead>
+
+
+                    <tbody id="streaksBody"></tbody>
+
+                </table>
+
+            </div>
 
         </div>
 
@@ -245,68 +379,465 @@
 
 
 
-    <!-- RIVALRIES -->
+    <!-- ==================================================
+         RIVALRIES
+    =================================================== -->
 
     <section
+        class="dashboard-section tab-panel"
         id="rivalries"
-        class="section"
     >
 
         <div class="section-heading">
 
-            <p class="eyebrow">
-                Head-to-Head
-            </p>
+            <div>
 
-            <h2>
-                Rivalry Explorer
-            </h2>
+                <p class="section-kicker">
+                    HEAD TO HEAD
+                </p>
+
+                <h2>
+                    Rivalry Explorer
+                </h2>
+
+            </div>
+
 
             <p class="section-description">
-                Select two franchises to explore
+                Select any two franchises to see
                 their complete matchup history.
             </p>
 
         </div>
 
 
-        <div class="rivalry-selector">
+        <div class="card rivalry-control-card">
 
-            <select id="manager-one">
+            <div class="selector-grid">
 
-                <option value="">
-                    Select franchise
-                </option>
+                <label>
 
-            </select>
+                    Franchise One
 
+                    <select id="rivalryTeam1"></select>
 
-            <span class="versus">
-                vs
-            </span>
+                </label>
 
 
-            <select id="manager-two">
+                <div class="versus">
+                    VS
+                </div>
 
-                <option value="">
-                    Select franchise
-                </option>
 
-            </select>
+                <label>
+
+                    Franchise Two
+
+                    <select id="rivalryTeam2"></select>
+
+                </label>
+
+            </div>
 
         </div>
 
 
         <div
-            id="rivalry-result"
-            class="rivalry-result"
-        >
+            class="rivalry-results"
+            id="rivalryResults"
+        ></div>
 
-            <p>
-                Select two franchises above.
+    </section>
+
+
+
+    <!-- ==================================================
+         PLAYERS
+    =================================================== -->
+
+    <section
+        class="dashboard-section tab-panel"
+        id="players"
+    >
+
+        <div class="section-heading">
+            <div>
+                <p class="section-kicker">
+                    PLAYER MOVEMENT
+                </p>
+                <h2>
+                    Player History
+                </h2>
+            </div>
+
+            <p class="section-description">
+                Search every player who has appeared in Diamond Dynasty
+                and follow their path through drafts, trades, waivers,
+                free agency, and drops.
+            </p>
+        </div>
+
+        <div class="card player-search-card">
+            <label for="playerSearch">
+                Search Players
+                <input
+                    type="search"
+                    id="playerSearch"
+                    placeholder="Search by player name, position, NFL team, or franchise..."
+                    autocomplete="off"
+                >
+            </label>
+
+            <div class="player-search-meta">
+                <span id="playerResultCount">—</span> players in league history
+            </div>
+
+            <div
+                class="player-search-results"
+                id="playerSearchResults"
+            ></div>
+        </div>
+
+        <div
+            class="player-detail"
+            id="playerDetail"
+        >
+            <div class="card player-empty-state">
+                <p class="section-kicker">PLAYER ARCHIVE</p>
+                <h3>Select a player to explore their league history.</h3>
+                <p>
+                    Draft origin, ownership stops, trades, waiver claims,
+                    free-agent pickups, and drops will appear here.
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         TRADES
+    =================================================== -->
+
+    <section
+        class="dashboard-section tab-panel"
+        id="trades"
+    >
+
+        <div class="section-heading">
+
+            <div>
+
+                <p class="section-kicker">
+                    TRANSACTION HISTORY
+                </p>
+
+                <h2>
+                    Trade Center
+                </h2>
+
+            </div>
+
+
+            <p class="section-description">
+                Explore league-wide trading activity,
+                franchise tendencies, repeat trade partners,
+                and the journeys of traded draft picks.
             </p>
 
         </div>
+
+
+
+        <!-- TRADE SUMMARY -->
+
+        <div
+            class="trade-summary-grid"
+            id="tradeSummaryGrid"
+        ></div>
+
+
+
+        <!-- TRADE RANKINGS -->
+
+        <div class="trade-dashboard-grid">
+
+
+            <div class="card">
+
+                <div class="card-heading">
+
+                    <div>
+
+                        <p class="card-kicker">
+                            FRANCHISE ACTIVITY
+                        </p>
+
+                        <h3>
+                            Most Active Traders
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="ranking-list"
+                    id="tradeFranchiseList"
+                ></div>
+
+            </div>
+
+
+
+            <div class="card">
+
+                <div class="card-heading">
+
+                    <div>
+
+                        <p class="card-kicker">
+                            REPEAT BUSINESS
+                        </p>
+
+                        <h3>
+                            Top Trade Partners
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="ranking-list"
+                    id="tradePartnerList"
+                ></div>
+
+            </div>
+
+
+
+            <div class="card">
+
+                <div class="card-heading">
+
+                    <div>
+
+                        <p class="card-kicker">
+                            FREQUENT FLYERS
+                        </p>
+
+                        <h3>
+                            Most-Traded Players
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="ranking-list"
+                    id="tradedPlayerList"
+                ></div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             BUTTERFLY EFFECT
+        ================================================== -->
+
+        <div class="subsection-heading">
+
+            <div>
+
+                <p class="section-kicker">
+                    PICK MOVEMENT
+                </p>
+
+                <h3>
+                    Draft Pick Butterfly Effect
+                </h3>
+
+            </div>
+
+
+            <p>
+                Follow a draft asset from its original franchise,
+                through every trade, to the player it eventually became.
+            </p>
+
+        </div>
+
+
+        <div class="card butterfly-card">
+
+
+            <div class="butterfly-filter-grid">
+
+
+                <label>
+
+                    Search
+
+                    <input
+                        type="text"
+                        id="pickSearch"
+                        placeholder="Player, franchise, pick ID..."
+                    >
+
+                </label>
+
+
+                <label>
+
+                    Draft Year
+
+                    <select id="pickSeasonFilter">
+
+                        <option value="all">
+                            All Years
+                        </option>
+
+                    </select>
+
+                </label>
+
+
+                <label>
+
+                    Round
+
+                    <select id="pickRoundFilter">
+
+                        <option value="all">
+                            All Rounds
+                        </option>
+
+                    </select>
+
+                </label>
+
+
+                <label>
+
+                    Original Franchise
+
+                    <select id="pickFranchiseFilter">
+
+                        <option value="all">
+                            All Franchises
+                        </option>
+
+                    </select>
+
+                </label>
+
+            </div>
+
+
+            <div class="pick-result-count">
+
+                <span id="pickResultCount">
+                    —
+                </span>
+
+                matching pick assets
+
+            </div>
+
+
+            <div class="butterfly-picker">
+
+                <label>
+
+                    Select Pick
+
+                    <select id="pickButterflySelect"></select>
+
+                </label>
+
+            </div>
+
+
+            <div
+                id="pickButterflyResult"
+            ></div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             TRADE HISTORY
+        ================================================== -->
+
+        <div class="subsection-heading">
+
+            <div>
+
+                <p class="section-kicker">
+                    TRADE ARCHIVE
+                </p>
+
+                <h3>
+                    Trade History
+                </h3>
+
+            </div>
+
+
+            <p>
+                Browse completed trades across every season.
+            </p>
+
+        </div>
+
+
+        <div class="card trade-history-controls">
+
+            <label>
+
+                Season
+
+                <select id="tradeSeasonFilter">
+
+                    <option value="all">
+                        All Seasons
+                    </option>
+
+                </select>
+
+            </label>
+
+
+            <label>
+
+                Franchise
+
+                <select id="tradeFranchiseFilter">
+
+                    <option value="all">
+                        All Franchises
+                    </option>
+
+                </select>
+
+            </label>
+
+        </div>
+
+
+        <div
+            class="trade-history-list"
+            id="tradeHistoryList"
+        ></div>
 
     </section>
 
@@ -314,14 +845,13 @@
 </main>
 
 
-<footer>
+
+<footer class="site-footer">
 
     <div class="container">
 
         <p>
-            Diamond Dynasty League Dashboard
-            · Data sourced from Sleeper 
-            · Built by <a href="https://jjap2021.github.io/">Jack Poleto</a>
+            Diamond Dynasty historical dashboard
         </p>
 
     </div>
@@ -329,7 +859,16 @@
 </footer>
 
 
-<script src="dashboard.js"></script>
+<script>
+    const dashboardScript = document.createElement("script");
+
+    dashboardScript.src =
+        `dashboard.js?v=${assetVersion}`;
+
+    document.body.appendChild(
+        dashboardScript
+    );
+</script>
 
 </body>
 
