@@ -31,8 +31,11 @@ const DATA_FILES = {
     playerHistory:
         "player_history.json",
 
-    playerHistoryIndex:
+        playerHistoryIndex:
         "player_history_index.json",
+
+    scoringEras:
+        "scoring_eras.json",
 };
 
 
@@ -44,6 +47,20 @@ let pickButterflyData = [];
 let playerHistoryData = [];
 let playerHistoryIndexData = [];
 let selectedPlayerId = null;
+
+
+let scoringErasData = {
+    methodology: {},
+    league_eras: [],
+    franchise_seasons: [],
+};
+
+
+let scoringSort = {
+    key: "score_index",
+    direction: "desc",
+};
+
 
 let filteredPickData = [];
 
@@ -4642,6 +4659,8 @@ async function initializeDashboard() {
 
             playerHistoryIndex,
 
+            scoringEras,
+
         ] = await Promise.all([
 
 
@@ -4694,6 +4713,10 @@ async function initializeDashboard() {
                 DATA_FILES.playerHistoryIndex
             ),
 
+            loadJSON(
+                DATA_FILES.scoringEras
+            ),
+
         ]);
 
 
@@ -4735,6 +4758,15 @@ async function initializeDashboard() {
             safeArray(
                 playerHistoryIndex
             );
+
+        scoringErasData =
+            scoringEras
+            ??
+            {
+                methodology: {},
+                league_eras: [],
+                franchise_seasons: [],
+            };
 
 
         setupTabs();
@@ -4781,6 +4813,12 @@ async function initializeDashboard() {
         setupTradeHistoryFilters();
 
 
+        setupScoringControls();
+
+
+        renderScoringEras();
+
+
         setupPlayerSearch();
 
 
@@ -4824,5 +4862,1144 @@ async function initializeDashboard() {
     }
 }
 
+/* ==========================================================
+   SCORING & ERAS
+========================================================== */
+
+function scoringValueClass(
+    value,
+    baseline = 0
+) {
+
+    const number =
+        Number(value);
+
+
+    if (
+        Number.isNaN(number)
+    ) {
+        return "";
+    }
+
+
+    if (
+        number > baseline
+    ) {
+        return "positive";
+    }
+
+
+    if (
+        number < baseline
+    ) {
+        return "negative";
+    }
+
+
+    return "";
+}
+
+
+
+function renderScoringSummary() {
+
+    const grid =
+        document.getElementById(
+            "scoringSummaryGrid"
+        );
+
+
+    if (!grid) {
+        return;
+    }
+
+
+    const eras =
+        safeArray(
+            scoringErasData.league_eras
+        );
+
+
+    const seasons =
+        safeArray(
+            scoringErasData.franchise_seasons
+        );
+
+
+    if (
+        !eras.length
+        ||
+        !seasons.length
+    ) {
+
+        grid.innerHTML =
+            "";
+
+        return;
+    }
+
+
+    const highestEra =
+        [...eras].sort(
+            (a, b) =>
+                Number(
+                    b.league_ppg
+                )
+                -
+                Number(
+                    a.league_ppg
+                )
+        )[0];
+
+
+    const lowestEra =
+        [...eras].sort(
+            (a, b) =>
+                Number(
+                    a.league_ppg
+                )
+                -
+                Number(
+                    b.league_ppg
+                )
+        )[0];
+
+
+    const bestSeason =
+        [...seasons].sort(
+            (a, b) =>
+                Number(
+                    b.score_index
+                )
+                -
+                Number(
+                    a.score_index
+                )
+        )[0];
+
+
+    const bestPpgPlus =
+        [...seasons].sort(
+            (a, b) =>
+                Number(
+                    b.ppg_plus
+                )
+                -
+                Number(
+                    a.ppg_plus
+                )
+        )[0];
+
+
+    grid.innerHTML = `
+
+        <article class="scoring-summary-card">
+
+            <span class="scoring-summary-label">
+                Highest-Scoring Era
+            </span>
+
+            <strong class="scoring-summary-value">
+                ${highestEra.season}
+            </strong>
+
+            <span class="scoring-summary-detail">
+                ${formatNumber(
+                    highestEra.league_ppg,
+                    2
+                )} league PPG
+            </span>
+
+        </article>
+
+
+        <article class="scoring-summary-card">
+
+            <span class="scoring-summary-label">
+                Lowest-Scoring Era
+            </span>
+
+            <strong class="scoring-summary-value">
+                ${lowestEra.season}
+            </strong>
+
+            <span class="scoring-summary-detail">
+                ${formatNumber(
+                    lowestEra.league_ppg,
+                    2
+                )} league PPG
+            </span>
+
+        </article>
+
+
+        <article class="scoring-summary-card">
+
+            <span class="scoring-summary-label">
+                Best Score Index
+            </span>
+
+            <strong class="scoring-summary-value">
+                ${formatNumber(
+                    bestSeason.score_index,
+                    1
+                )}
+            </strong>
+
+            <span class="scoring-summary-detail">
+                ${bestSeason.manager}
+                ·
+                ${bestSeason.season}
+            </span>
+
+        </article>
+
+
+        <article class="scoring-summary-card">
+
+            <span class="scoring-summary-label">
+                Best PPG+
+            </span>
+
+            <strong class="scoring-summary-value">
+                ${formatNumber(
+                    bestPpgPlus.ppg_plus,
+                    1
+                )}
+            </strong>
+
+            <span class="scoring-summary-detail">
+                ${bestPpgPlus.manager}
+                ·
+                ${bestPpgPlus.season}
+            </span>
+
+        </article>
+    `;
+}
+
+
+
+function renderLeaguePpgChart() {
+
+    const container =
+        document.getElementById(
+            "leaguePpgChart"
+        );
+
+
+    if (!container) {
+        return;
+    }
+
+
+    const data =
+        [
+            ...safeArray(
+                scoringErasData.league_eras
+            )
+        ].sort(
+            (a, b) =>
+                Number(
+                    a.season
+                )
+                -
+                Number(
+                    b.season
+                )
+        );
+
+
+    if (!data.length) {
+
+        container.innerHTML =
+            "<p>No scoring era data available.</p>";
+
+        return;
+    }
+
+
+    const width =
+        720;
+
+    const height =
+        310;
+
+    const padLeft =
+        58;
+
+    const padRight =
+        24;
+
+    const padTop =
+        28;
+
+    const padBottom =
+        48;
+
+
+    const values =
+        data.map(
+            row =>
+                Number(
+                    row.league_ppg
+                )
+        );
+
+
+    const rawMin =
+        Math.min(
+            ...values
+        );
+
+
+    const rawMax =
+        Math.max(
+            ...values
+        );
+
+
+    const range =
+        Math.max(
+            rawMax - rawMin,
+            1
+        );
+
+
+    const minY =
+        Math.floor(
+            rawMin
+            -
+            range * 0.25
+        );
+
+
+    const maxY =
+        Math.ceil(
+            rawMax
+            +
+            range * 0.25
+        );
+
+
+    const xFor =
+        index =>
+
+            data.length === 1
+
+                ? width / 2
+
+                : (
+                    padLeft
+                    +
+                    index
+                    *
+                    (
+                        (
+                            width
+                            -
+                            padLeft
+                            -
+                            padRight
+                        )
+                        /
+                        (
+                            data.length
+                            -
+                            1
+                        )
+                    )
+                );
+
+
+    const yFor =
+        value =>
+
+            padTop
+            +
+            (
+                (
+                    maxY
+                    -
+                    value
+                )
+                /
+                (
+                    maxY
+                    -
+                    minY
+                )
+            )
+            *
+            (
+                height
+                -
+                padTop
+                -
+                padBottom
+            );
+
+
+    const points =
+        data.map(
+            (
+                row,
+                index
+            ) =>
+
+                `${xFor(index)},${yFor(
+                    Number(
+                        row.league_ppg
+                    )
+                )}`
+        ).join(
+            " "
+        );
+
+
+    const ticks =
+        4;
+
+
+    const gridLines =
+        Array.from(
+            {
+                length:
+                    ticks + 1
+            },
+
+            (
+                _,
+                index
+            ) => {
+
+                const value =
+                    minY
+                    +
+                    (
+                        (
+                            maxY
+                            -
+                            minY
+                        )
+                        *
+                        index
+                        /
+                        ticks
+                    );
+
+
+                const y =
+                    yFor(
+                        value
+                    );
+
+
+                return `
+
+                    <line
+                        x1="${padLeft}"
+                        y1="${y}"
+                        x2="${width - padRight}"
+                        y2="${y}"
+                        class="scoring-chart-grid"
+                    />
+
+
+                    <text
+                        x="${padLeft - 12}"
+                        y="${y + 4}"
+                        text-anchor="end"
+                        class="scoring-chart-axis"
+                    >
+                        ${value.toFixed(0)}
+                    </text>
+                `;
+            }
+        ).join(
+            ""
+        );
+
+
+    const pointMarkup =
+        data.map(
+            (
+                row,
+                index
+            ) => {
+
+                const x =
+                    xFor(
+                        index
+                    );
+
+
+                const y =
+                    yFor(
+                        Number(
+                            row.league_ppg
+                        )
+                    );
+
+
+                return `
+
+                    <circle
+                        cx="${x}"
+                        cy="${y}"
+                        r="5"
+                        class="scoring-chart-point"
+                    />
+
+
+                    <text
+                        x="${x}"
+                        y="${y - 14}"
+                        text-anchor="middle"
+                        class="scoring-chart-value"
+                    >
+                        ${formatNumber(
+                            row.league_ppg,
+                            1
+                        )}
+                    </text>
+
+
+                    <text
+                        x="${x}"
+                        y="${height - 18}"
+                        text-anchor="middle"
+                        class="
+                            scoring-chart-axis
+                            scoring-chart-season
+                        "
+                    >
+                        ${row.season}
+                    </text>
+                `;
+            }
+        ).join(
+            ""
+        );
+
+
+    container.innerHTML = `
+
+        <svg
+            viewBox="0 0 ${width} ${height}"
+            role="img"
+            aria-label="League points per game by season"
+        >
+
+            ${gridLines}
+
+
+            <polyline
+                points="${points}"
+                class="scoring-chart-line"
+            />
+
+
+            ${pointMarkup}
+
+        </svg>
+    `;
+}
+
+
+
+function renderScoringLeaderboard() {
+
+    const container =
+        document.getElementById(
+            "scoringLeaderboard"
+        );
+
+
+    if (!container) {
+        return;
+    }
+
+
+    const top =
+        [
+            ...safeArray(
+                scoringErasData.franchise_seasons
+            )
+        ]
+        .sort(
+            (a, b) =>
+                Number(
+                    b.score_index
+                )
+                -
+                Number(
+                    a.score_index
+                )
+        )
+        .slice(
+            0,
+            7
+        );
+
+
+    container.innerHTML =
+        top.map(
+            (
+                row,
+                index
+            ) => `
+
+                <div class="scoring-leader-row">
+
+                    <span class="rank-number">
+                        ${index + 1}
+                    </span>
+
+
+                    <div class="scoring-leader-name">
+
+                        <strong>
+                            ${row.manager}
+                        </strong>
+
+                        <span>
+                            ${row.season}
+                            ·
+                            ${formatNumber(
+                                row.raw_ppg,
+                                1
+                            )}
+                            PPG
+                            ·
+                            ${formatNumber(
+                                row.ppg_plus,
+                                1
+                            )}
+                            PPG+
+                        </span>
+
+                    </div>
+
+
+                    <strong class="scoring-leader-value">
+
+                        ${formatNumber(
+                            row.score_index,
+                            1
+                        )}
+
+                    </strong>
+
+                </div>
+            `
+        ).join(
+            ""
+        );
+}
+
+
+
+function populateScoringFilters() {
+
+    const seasonSelect =
+        document.getElementById(
+            "scoringSeasonFilter"
+        );
+
+
+    const franchiseSelect =
+        document.getElementById(
+            "scoringFranchiseFilter"
+        );
+
+
+    if (
+        !seasonSelect
+        ||
+        !franchiseSelect
+    ) {
+        return;
+    }
+
+
+    const rows =
+        safeArray(
+            scoringErasData.franchise_seasons
+        );
+
+
+    const seasons =
+        [
+            ...new Set(
+                rows.map(
+                    row =>
+                        row.season
+                )
+            )
+        ].sort(
+            (a, b) =>
+                Number(a)
+                -
+                Number(b)
+        );
+
+
+    const franchises =
+        [
+            ...new Set(
+                rows.map(
+                    row =>
+                        row.manager
+                )
+            )
+        ].sort(
+            (a, b) =>
+                a.localeCompare(
+                    b
+                )
+        );
+
+
+    seasonSelect.innerHTML =
+
+        '<option value="all">All Seasons</option>'
+
+        +
+
+        seasons.map(
+            season =>
+                `
+                    <option value="${season}">
+                        ${season}
+                    </option>
+                `
+        ).join(
+            ""
+        );
+
+
+    franchiseSelect.innerHTML =
+
+        '<option value="all">All Franchises</option>'
+
+        +
+
+        franchises.map(
+            manager =>
+                `
+                    <option value="${manager}">
+                        ${manager}
+                    </option>
+                `
+        ).join(
+            ""
+        );
+}
+
+
+
+function getFilteredScoringRows() {
+
+    const season =
+        document.getElementById(
+            "scoringSeasonFilter"
+        )?.value
+        ??
+        "all";
+
+
+    const franchise =
+        document.getElementById(
+            "scoringFranchiseFilter"
+        )?.value
+        ??
+        "all";
+
+
+    return safeArray(
+        scoringErasData.franchise_seasons
+    ).filter(
+        row =>
+
+            (
+                season === "all"
+                ||
+                String(
+                    row.season
+                )
+                ===
+                season
+            )
+
+            &&
+
+            (
+                franchise === "all"
+                ||
+                row.manager
+                ===
+                franchise
+            )
+    );
+}
+
+
+
+function renderScoringTable() {
+
+    const body =
+        document.getElementById(
+            "scoringBody"
+        );
+
+
+    if (!body) {
+        return;
+    }
+
+
+    const rows =
+        [
+            ...getFilteredScoringRows()
+        ];
+
+
+    rows.sort(
+        (a, b) => {
+
+            const key =
+                scoringSort.key;
+
+
+            const aValue =
+                key === "manager"
+
+                    ? String(
+                        a[key]
+                        ??
+                        ""
+                    )
+
+                    : Number(
+                        a[key]
+                        ??
+                        0
+                    );
+
+
+            const bValue =
+                key === "manager"
+
+                    ? String(
+                        b[key]
+                        ??
+                        ""
+                    )
+
+                    : Number(
+                        b[key]
+                        ??
+                        0
+                    );
+
+
+            if (
+                key === "manager"
+            ) {
+
+                const result =
+                    aValue.localeCompare(
+                        bValue
+                    );
+
+
+                return (
+                    scoringSort.direction
+                    ===
+                    "asc"
+                )
+                    ? result
+                    : -result;
+            }
+
+
+            return (
+                scoringSort.direction
+                ===
+                "asc"
+            )
+                ? aValue - bValue
+                : bValue - aValue;
+        }
+    );
+
+
+    body.innerHTML =
+        rows.map(
+            row => `
+
+                <tr>
+
+                    <td>
+                        ${row.season}
+                    </td>
+
+
+                    <td class="franchise-cell">
+                        ${row.manager}
+                    </td>
+
+
+                    <td>
+                        ${row.games}
+                    </td>
+
+
+                    <td>
+                        ${formatNumber(
+                            row.points_for,
+                            2
+                        )}
+                    </td>
+
+
+                    <td>
+                        ${formatNumber(
+                            row.raw_ppg,
+                            2
+                        )}
+                    </td>
+
+
+                    <td class="${
+                        scoringValueClass(
+                            row.ppg_plus,
+                            100
+                        )
+                    }">
+
+                        ${formatNumber(
+                            row.ppg_plus,
+                            1
+                        )}
+
+                    </td>
+
+
+                    <td class="${
+                        scoringValueClass(
+                            row.z_score
+                        )
+                    }">
+
+                        ${
+                            Number(
+                                row.z_score
+                            ) > 0
+                                ? "+"
+                                : ""
+                        }
+
+                        ${formatNumber(
+                            row.z_score,
+                            2
+                        )}
+
+                    </td>
+
+
+                    <td class="${
+                        scoringValueClass(
+                            row.score_index,
+                            100
+                        )
+                    }">
+
+                        ${formatNumber(
+                            row.score_index,
+                            1
+                        )}
+
+                    </td>
+
+
+                    <td>
+                        #${row.season_rank}
+                    </td>
+
+                </tr>
+            `
+        ).join(
+            ""
+        );
+}
+
+
+
+function setupScoringControls() {
+
+    populateScoringFilters();
+
+
+    [
+        "scoringSeasonFilter",
+        "scoringFranchiseFilter",
+    ].forEach(
+        id => {
+
+            document
+                .getElementById(
+                    id
+                )
+                ?.addEventListener(
+                    "change",
+                    renderScoringTable
+                );
+        }
+    );
+
+
+    document
+        .querySelectorAll(
+            "#scoringTable th[data-scoring-sort]"
+        )
+        .forEach(
+            header => {
+
+                header.addEventListener(
+                    "click",
+                    () => {
+
+                        const key =
+                            header.dataset
+                                .scoringSort;
+
+
+                        if (
+                            scoringSort.key
+                            ===
+                            key
+                        ) {
+
+                            scoringSort.direction =
+                                scoringSort.direction
+                                ===
+                                "asc"
+                                    ? "desc"
+                                    : "asc";
+
+                        } else {
+
+                            scoringSort.key =
+                                key;
+
+
+                            scoringSort.direction =
+                                (
+                                    key === "manager"
+                                    ||
+                                    key === "season"
+                                    ||
+                                    key === "season_rank"
+                                )
+                                    ? "asc"
+                                    : "desc";
+                        }
+
+
+                        renderScoringTable();
+                    }
+                );
+            }
+        );
+}
+
+
+
+function renderScoringMethodology() {
+
+    const container =
+        document.getElementById(
+            "scoringMethodology"
+        );
+
+
+    if (!container) {
+        return;
+    }
+
+
+    const methodology =
+        scoringErasData.methodology
+        ??
+        {};
+
+
+    const keys = [
+
+        "raw_ppg",
+
+        "ppg_plus",
+
+        "z_score",
+
+        "score_index",
+    ];
+
+
+    container.innerHTML =
+        keys.map(
+            key => {
+
+                const metric =
+                    methodology[key];
+
+
+                if (!metric) {
+                    return "";
+                }
+
+
+                return `
+
+                    <article class="card methodology-card">
+
+                        <p class="card-kicker">
+                            ${metric.name}
+                        </p>
+
+
+                        <div class="methodology-formula">
+                            ${metric.formula}
+                        </div>
+
+
+                        <p>
+                            ${metric.description}
+                        </p>
+
+                    </article>
+                `;
+            }
+        ).join(
+            ""
+        );
+}
+
+
+
+function renderScoringEras() {
+
+    renderScoringSummary();
+
+    renderLeaguePpgChart();
+
+    renderScoringLeaderboard();
+
+    renderScoringTable();
+
+    renderScoringMethodology();
+}
 
 initializeDashboard();

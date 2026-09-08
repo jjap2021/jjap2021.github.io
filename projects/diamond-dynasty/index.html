@@ -151,6 +151,13 @@
 
         <button
             class="tab-button"
+            data-tab="scoring"
+        >
+            Scoring &amp; Eras
+        </button>
+
+        <button
+            class="tab-button"
             data-tab="players"
         >
             Players
@@ -449,6 +456,161 @@
 
     </section>
 
+
+
+    <!-- ==================================================
+         SCORING & ERAS
+    =================================================== -->
+
+    <section
+        class="dashboard-section tab-panel"
+        id="scoring"
+    >
+        <div class="section-heading">
+            <div>
+                <p class="section-kicker">
+                    ERA-ADJUSTED OFFENSE
+                </p>
+                <h2>
+                    Scoring &amp; Eras
+                </h2>
+            </div>
+
+            <p class="section-description">
+                Compare franchise scoring across different league environments.
+                All normalization uses regular-season games only.
+            </p>
+        </div>
+
+        <div
+            class="scoring-summary-grid"
+            id="scoringSummaryGrid"
+        ></div>
+
+        <div class="scoring-dashboard-grid">
+            <div class="card scoring-chart-card">
+                <div class="card-heading">
+                    <div>
+                        <p class="card-kicker">
+                            LEAGUE ENVIRONMENT
+                        </p>
+                        <h3>
+                            League PPG by Season
+                        </h3>
+                    </div>
+                </div>
+
+                <p class="scoring-card-description">
+                    Average franchise points per game in each regular season.
+                    This is the baseline used by PPG+ and the standardized metrics.
+                </p>
+
+                <div
+                    class="scoring-chart"
+                    id="leaguePpgChart"
+                ></div>
+            </div>
+
+            <div class="card scoring-chart-card">
+                <div class="card-heading">
+                    <div>
+                        <p class="card-kicker">
+                            ERA-ADJUSTED LEADERBOARD
+                        </p>
+                        <h3>
+                            Best Scoring Seasons
+                        </h3>
+                    </div>
+                </div>
+
+                <p class="scoring-card-description">
+                    The strongest franchise seasons by Score Index,
+                    where 100 is league average and 15 points is one standard deviation.
+                </p>
+
+                <div
+                    class="scoring-leaderboard"
+                    id="scoringLeaderboard"
+                ></div>
+            </div>
+        </div>
+
+        <div class="subsection-heading">
+            <div>
+                <p class="section-kicker">
+                    FRANCHISE SEASONS
+                </p>
+                <h3>
+                    Era-Adjusted Scoring Table
+                </h3>
+            </div>
+
+            <p>
+                Sort every completed franchise-season by raw scoring
+                or by its performance relative to that season's league environment.
+            </p>
+        </div>
+
+        <div class="card scoring-controls-card">
+            <div class="scoring-filter-grid">
+                <label>
+                    Season
+                    <select id="scoringSeasonFilter">
+                        <option value="all">All Seasons</option>
+                    </select>
+                </label>
+
+                <label>
+                    Franchise
+                    <select id="scoringFranchiseFilter">
+                        <option value="all">All Franchises</option>
+                    </select>
+                </label>
+            </div>
+        </div>
+
+        <div class="card table-card scoring-table-card">
+            <div class="table-scroll">
+                <table id="scoringTable">
+                    <thead>
+                        <tr>
+                            <th data-scoring-sort="season">Season</th>
+                            <th data-scoring-sort="manager">Franchise</th>
+                            <th data-scoring-sort="games">GP</th>
+                            <th data-scoring-sort="points_for">PF</th>
+                            <th data-scoring-sort="raw_ppg">Raw PPG</th>
+                            <th data-scoring-sort="ppg_plus">PPG+</th>
+                            <th data-scoring-sort="z_score">Z</th>
+                            <th data-scoring-sort="score_index">Score Index</th>
+                            <th data-scoring-sort="season_rank">Season Rank</th>
+                        </tr>
+                    </thead>
+                    <tbody id="scoringBody"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="subsection-heading">
+            <div>
+                <p class="section-kicker">
+                    METHODOLOGY
+                </p>
+                <h3>
+                    How the Metrics Work
+                </h3>
+            </div>
+
+            <p>
+                Every equation used by the dashboard is shown here so the
+                normalization remains transparent and reproducible.
+            </p>
+        </div>
+
+        <div
+            class="methodology-grid"
+            id="scoringMethodology"
+        ></div>
+    </section>
 
 
     <!-- ==================================================

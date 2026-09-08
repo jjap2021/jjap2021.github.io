@@ -991,6 +991,206 @@ def build_rivalries(results, managers):
 
     return rivalries_df
 
+
+# ==================================================
+# Scoring & Eras
+# ==================================================
+
+def build_scoring_eras(results):
+    """
+    Build regular-season scoring normalization by franchise and season.
+
+    Raw PPG     = Points Scored / Games Played
+    PPG+        = 100 * (Raw PPG / League PPG)
+    Z-score     = (Raw PPG - League PPG) / population SD of franchise PPG
+    Score Index = 100 + (15 * Z-score)
+    """
+
+    regular_results = results[
+        results["phase"].astype(str).str.lower().eq("regular season")
+    ].copy()
+
+    score_rows = []
+
+    for _, game in regular_results.iterrows():
+        score_1 = float(game["score_1"])
+        score_2 = float(game["score_2"])
+
+        # Ignore Sleeper's future 0-0 schedule placeholders.
+        if score_1 <= 0 and score_2 <= 0:
+            continue
+
+        score_rows.extend(
+            [
+                {
+                    "season": int(game["season"]),
+                    "week": int(game["week"]),
+                    "manager": game["manager_1"],
+                    "score": score_1,
+                },
+                {
+                    "season": int(game["season"]),
+                    "week": int(game["week"]),
+                    "manager": game["manager_2"],
+                    "score": score_2,
+                },
+            ]
+        )
+
+    team_scores = pd.DataFrame(score_rows)
+
+    if team_scores.empty:
+        return {
+            "methodology": {},
+            "league_eras": [],
+            "franchise_seasons": [],
+        }
+
+    franchise_seasons = (
+        team_scores
+        .groupby(["season", "manager"], as_index=False)
+        .agg(
+            points_for=("score", "sum"),
+            games=("score", "size"),
+        )
+    )
+
+    franchise_seasons["raw_ppg"] = (
+        franchise_seasons["points_for"]
+        / franchise_seasons["games"]
+    )
+
+    league_eras = (
+        franchise_seasons
+        .groupby("season", as_index=False)
+        .agg(
+            league_ppg=("raw_ppg", "mean"),
+            franchise_count=("manager", "nunique"),
+        )
+    )
+
+    season_sd = (
+        franchise_seasons
+        .groupby("season")["raw_ppg"]
+        .std(ddof=0)
+        .rename("franchise_ppg_sd")
+        .reset_index()
+    )
+
+    league_eras = league_eras.merge(
+        season_sd,
+        on="season",
+        how="left",
+    )
+
+    franchise_seasons = franchise_seasons.merge(
+        league_eras[
+            ["season", "league_ppg", "franchise_ppg_sd"]
+        ],
+        on="season",
+        how="left",
+    )
+
+    franchise_seasons["ppg_plus"] = (
+        100
+        * franchise_seasons["raw_ppg"]
+        / franchise_seasons["league_ppg"]
+    )
+
+    franchise_seasons["z_score"] = (
+        (
+            franchise_seasons["raw_ppg"]
+            - franchise_seasons["league_ppg"]
+        )
+        / franchise_seasons["franchise_ppg_sd"]
+    )
+
+    franchise_seasons["score_index"] = (
+        100 + 15 * franchise_seasons["z_score"]
+    )
+
+    franchise_seasons["season_rank"] = (
+        franchise_seasons
+        .groupby("season")["score_index"]
+        .rank(method="min", ascending=False)
+        .astype(int)
+    )
+
+    for column in [
+        "points_for",
+        "raw_ppg",
+        "league_ppg",
+        "franchise_ppg_sd",
+        "ppg_plus",
+        "z_score",
+        "score_index",
+    ]:
+        franchise_seasons[column] = (
+            franchise_seasons[column].round(3)
+        )
+
+    for column in ["league_ppg", "franchise_ppg_sd"]:
+        league_eras[column] = league_eras[column].round(3)
+
+    franchise_seasons = (
+        franchise_seasons
+        .sort_values(["season", "season_rank", "manager"])
+        .reset_index(drop=True)
+    )
+
+    league_eras = (
+        league_eras
+        .sort_values("season")
+        .reset_index(drop=True)
+    )
+
+    methodology = {
+        "scope": (
+            "Regular-season scoring only. Postseason games are "
+            "excluded from era normalization."
+        ),
+        "raw_ppg": {
+            "name": "Raw PPG",
+            "formula": "Points Scored / Games Played",
+            "description": (
+                "Actual average points scored per regular-season game."
+            ),
+        },
+        "ppg_plus": {
+            "name": "PPG+",
+            "formula": "100 × (Raw PPG / League PPG)",
+            "description": (
+                "Era-adjusted scoring rate. 100 is league average."
+            ),
+        },
+        "z_score": {
+            "name": "Z-score",
+            "formula": (
+                "(Raw PPG - League PPG) / "
+                "Franchise PPG Standard Deviation"
+            ),
+            "description": (
+                "Standard deviations above or below the season average. "
+                "Population standard deviation is used."
+            ),
+        },
+        "score_index": {
+            "name": "Score Index",
+            "formula": "100 + (15 × Z-score)",
+            "description": (
+                "Readable era-adjusted rating centered at 100. "
+                "15 points equals one standard deviation."
+            ),
+        },
+    }
+
+    return {
+        "methodology": methodology,
+        "league_eras": league_eras.to_dict(orient="records"),
+        "franchise_seasons": franchise_seasons.to_dict(orient="records"),
+    }
+
+
 # ==================================================
 # Export files
 # ==================================================
@@ -1003,6 +1203,7 @@ def export_data(
     league_records,
     streaks_df,
     rivalries_df,
+    scoring_eras,
 ):
     """Export all dashboard data files."""
 
@@ -1013,6 +1214,7 @@ def export_data(
         "records": DATA_DIR / "records.json",
         "streaks": DATA_DIR / "streaks.json",
         "rivalries": DATA_DIR / "rivalries.json",
+            "scoring_eras": DATA_DIR / "scoring_eras.json",
     }
 
     standings_df.to_json(
@@ -1055,6 +1257,17 @@ def export_data(
     orient="records",
     indent=2,
 )
+
+    with open(
+        files["scoring_eras"],
+        "w",
+        encoding="utf-8",
+    ) as file:
+        json.dump(
+            scoring_eras,
+            file,
+            indent=2,
+        )
 
     return files
 
@@ -1213,6 +1426,10 @@ def main():
     managers,
 )
     
+    scoring_eras = build_scoring_eras(
+        results
+    )
+
     exported_files = export_data(
         standings_df,
         h2h_df,
@@ -1220,6 +1437,7 @@ def main():
         league_records,
         streaks_df,
         rivalries_df,
+        scoring_eras,
     )
 
     print_summary(

@@ -2602,3 +2602,235 @@ select:focus {
         0.025
     );
 }
+
+/* ==========================================================
+   SCORING & ERAS
+========================================================== */
+
+.scoring-summary-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+    margin-bottom: 15px;
+}
+
+.scoring-summary-card {
+    padding: 21px;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(18, 33, 58, 0.98),
+            rgba(13, 23, 39, 0.98)
+        );
+    border: 1px solid var(--border);
+    border-radius: 15px;
+}
+
+.scoring-summary-label,
+.scoring-summary-detail {
+    display: block;
+}
+
+.scoring-summary-label {
+    color: var(--text-muted);
+    font-size: 0.74rem;
+    font-weight: 800;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+.scoring-summary-value {
+    display: block;
+    margin-top: 8px;
+    color: var(--blue-light);
+    font-size: 1.7rem;
+    font-weight: 900;
+}
+
+.scoring-summary-detail {
+    margin-top: 4px;
+    color: var(--text-soft);
+    font-size: 0.82rem;
+}
+
+.scoring-dashboard-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(340px, 0.85fr);
+    gap: 15px;
+}
+
+.scoring-chart-card {
+    padding: 22px;
+}
+
+.scoring-card-description {
+    margin: -4px 0 18px;
+    color: var(--text-soft);
+    font-size: 0.86rem;
+}
+
+.scoring-chart {
+    width: 100%;
+    min-height: 310px;
+}
+
+.scoring-chart svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+}
+
+.scoring-chart-grid {
+    stroke: var(--border);
+    stroke-width: 1;
+}
+
+.scoring-chart-line {
+    fill: none;
+    stroke: var(--blue);
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.scoring-chart-point {
+    fill: var(--blue-light);
+    stroke: var(--bg);
+    stroke-width: 3;
+}
+
+.scoring-chart-axis {
+    fill: var(--text-muted);
+    font-size: 12px;
+}
+
+.scoring-chart-season {
+    font-weight: 800;
+}
+
+.scoring-chart-value {
+    fill: var(--text);
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.scoring-leaderboard {
+    display: grid;
+    gap: 0;
+}
+
+.scoring-leader-row {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 11px;
+    padding: 11px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.scoring-leader-row:last-child {
+    border-bottom: 0;
+}
+
+.scoring-leader-name {
+    min-width: 0;
+}
+
+.scoring-leader-name strong,
+.scoring-leader-name span {
+    display: block;
+}
+
+.scoring-leader-name strong {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.scoring-leader-name span {
+    margin-top: 2px;
+    color: var(--text-muted);
+    font-size: 0.76rem;
+}
+
+.scoring-leader-value {
+    color: var(--blue-light);
+    font-size: 1.05rem;
+}
+
+.scoring-controls-card {
+    padding: 18px 22px;
+    margin-bottom: 14px;
+}
+
+.scoring-filter-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+#scoringTable th[data-scoring-sort] {
+    cursor: pointer;
+    user-select: none;
+}
+
+#scoringTable th[data-scoring-sort]:hover {
+    color: var(--blue-light);
+}
+
+.methodology-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.methodology-card {
+    padding: 22px;
+}
+
+.methodology-formula {
+    margin: 14px 0 12px;
+    padding: 14px 16px;
+    color: var(--blue-light);
+    background: rgba(93, 169, 255, 0.07);
+    border: 1px solid rgba(93, 169, 255, 0.2);
+    border-radius: 11px;
+    font-family:
+        "SFMono-Regular",
+        Consolas,
+        "Liberation Mono",
+        monospace;
+    font-size: 0.92rem;
+    font-weight: 700;
+    overflow-x: auto;
+}
+
+.methodology-card > p:last-child {
+    margin: 0;
+    color: var(--text-soft);
+    font-size: 0.88rem;
+}
+
+@media (max-width: 900px) {
+    .scoring-summary-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .scoring-dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 620px) {
+    .scoring-summary-grid,
+    .scoring-filter-grid,
+    .methodology-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .scoring-chart-card {
+        padding: 18px;
+    }
+}
+
