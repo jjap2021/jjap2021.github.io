@@ -1,0 +1,88 @@
+{
+  "biggest_blowout": {
+    "season": 2024,
+    "week": 10,
+    "phase": "Regular Season",
+    "winner": "etmoyer",
+    "loser": "ComradeCMP",
+    "manager_1": "ComradeCMP",
+    "manager_2": "etmoyer",
+    "score_1": 76.98,
+    "score_2": 197.02,
+    "margin": 120.04
+  },
+  "closest_game": {
+    "season": 2025,
+    "week": 9,
+    "phase": "Regular Season",
+    "winner": "acricci",
+    "loser": "etmoyer",
+    "manager_1": "etmoyer",
+    "manager_2": "acricci",
+    "score_1": 158.36,
+    "score_2": 158.56,
+    "margin": 0.2
+  },
+  "highest_scoring_game": {
+    "season": 2022,
+    "week": 4,
+    "phase": "Regular Season",
+    "manager_1": "ComradeCMP",
+    "manager_2": "RJRJRJ123",
+    "score_1": 191.45,
+    "score_2": 181.73,
+    "total_points": 373.18
+  },
+  "lowest_scoring_game": {
+    "season": 2024,
+    "week": 11,
+    "phase": "Regular Season",
+    "manager_1": "steeeeeeeeeve",
+    "manager_2": "ComradeCMP",
+    "score_1": 91.74,
+    "score_2": 88.54,
+    "total_points": 180.28
+  },
+  "highest_team_score": {
+    "season": 2025,
+    "week": 10,
+    "phase": "Regular Season",
+    "manager": "jackpotFTW",
+    "opponent": "acricci",
+    "score": 214.86,
+    "opponent_score": 143.1
+  },
+  "lowest_team_score": {
+    "season": 2024,
+    "week": 7,
+    "phase": "Regular Season",
+    "manager": "ComradeCMP",
+    "opponent": "Mummanator",
+    "score": 38.64,
+    "opponent_score": 156.84
+  },
+  "most_points_in_season": {
+    "season": 2025,
+    "manager": "jackpotFTW",
+    "points_for": 2510.34,
+    "wins": 12,
+    "losses": 4
+  },
+  "best_win_pct_season": {
+    "season": 2024,
+    "manager": "Mummanator",
+    "wins": 14,
+    "losses": 2,
+    "win_pct": 0.875
+  },
+  "best_point_diff_season": {
+    "season": 2024,
+    "manager": "Mummanator",
+    "point_diff": 446.46
+  },
+  "worst_point_diff_season": {
+    "season": 2024,
+    "manager": "ComradeCMP",
+    "point_diff": -723.76
+  }
+}

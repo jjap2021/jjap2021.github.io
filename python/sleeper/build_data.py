@@ -17,8 +17,8 @@ FRANCHISE_MAP = {
 FRANCHISE_NAMES = {
     "1002342256092762112": "steeeeeeeeeve",
     "517080755628453888": "RJRJRJ123",
+    "559193893851738112": "acricci",
 }
-
 regular = pd.read_csv(
     RAW_DATA / "sleeper_matchups.csv",
     dtype={
